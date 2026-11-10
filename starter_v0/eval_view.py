@@ -1,4 +1,4 @@
-"""Streamlit screen: browse eval runs and compare versions side by side.
+"""Streamlit screen: run an eval for a chosen version and compare versions side by side.
 
 Reads every runs/*.json written by run_eval.py, so new versions (v2, v3, v4-local, ...)
 show up automatically; nothing here hard-codes a version name.
@@ -6,19 +6,24 @@ show up automatically; nothing here hard-codes a version name.
 from __future__ import annotations
 
 import json
+import os
 import re
+import subprocess
+import sys
 from pathlib import Path
 from typing import Any
 
 import pandas as pd
 import streamlit as st
 
+ROOT = Path(__file__).parent
 METRICS = [
     ("case_accuracy", "Case accuracy"),
     ("tool_routing_accuracy", "Tool routing"),
     ("argument_accuracy", "Argument"),
     ("multiturn_accuracy", "Multi-turn"),
 ]
+GREEN, RED = "#3fb950", "#f85149"
 
 
 def _natural_key(text: str) -> list[Any]:
@@ -53,7 +58,7 @@ def _load_runs(runs_dir: str, signature: tuple) -> list[dict[str, Any]]:
 
 
 def _pct(value: Any) -> str:
-    return "—" if value is None else f"{value * 100:.0f}%"
+    return "—" if value is None or pd.isna(value) else f"{value * 100:.0f}%"
 
 
 def _label(run: dict[str, Any], taken: set[str]) -> str:
@@ -72,35 +77,102 @@ def _status(result: dict[str, Any] | None) -> str:
     return "✅" if result["result"].get("passed") else "❌"
 
 
-def render(runs_dir: Path) -> None:
-    st.title("📊 So sánh version")
-    st.caption("Đọc từ các file `runs/*.json`. Chạy thêm `run_eval.py` với `--version` mới là version đó tự xuất hiện ở đây.")
+def run_eval_subprocess(
+    *,
+    version: str,
+    prompt_path: Path,
+    tools_path: Path,
+    provider: str,
+    model: str | None = None,
+    eval_cases: Path = ROOT / "data" / "eval_base.json",
+    runs_dir: Path = ROOT / "runs",
+    suite: str = "base",
+    timeout: int = 900,
+) -> tuple[int, str]:
+    """Run run_eval.py with the given version's prompt/tools. Returns (exit_code, combined output)."""
+    cmd = [
+        sys.executable, str(ROOT / "run_eval.py"),
+        "--provider", provider, "--version", version, "--suite", suite,
+        "--eval-cases", str(eval_cases),
+        "--system-prompt", str(prompt_path), "--tools", str(tools_path),
+        "--runs-dir", str(runs_dir),
+    ]
+    if model:
+        cmd += ["--model", model]
+    env = {**os.environ, "PYTHONUTF8": "1", "PYTHONIOENCODING": "utf-8"}
+    try:
+        proc = subprocess.run(cmd, cwd=ROOT, env=env, capture_output=True, text=True, encoding="utf-8",
+                              errors="replace", timeout=timeout)
+    except subprocess.TimeoutExpired:
+        return 124, f"Hết thời gian chờ ({timeout}s)."
+    return proc.returncode, (proc.stdout or "") + (proc.stderr or "")
+
+
+def _delta_style(value: Any) -> str:
+    if value is None or pd.isna(value) or value == 0:
+        return "color: #8b949e"
+    return f"color: {GREEN}; font-weight: 600" if value > 0 else f"color: {RED}; font-weight: 600"
+
+
+def render(
+    runs_dir: Path,
+    *,
+    version: str,
+    run_label: str,
+    prompt_path: Path,
+    tools_path: Path,
+    provider: str,
+    model: str | None,
+) -> None:
+    # ---------- 0. Run an eval for the selected version ----------
+    st.subheader("▶ Chạy eval cho version đang chọn")
+    left, right = st.columns([3, 2])
+    with left:
+        st.write(f"Version: **{version}** · prompt `{prompt_path.parent.name}/{prompt_path.name}` · tools `{tools_path.name}`")
+        st.caption(f"Provider: `{provider}` · model: `{model or 'mặc định'}` · 20 case base, mất khoảng 1 phút và **tốn credit API**. "
+                   f"Kết quả ghi vào `runs/` với nhãn `{run_label}`.")
+    with right:
+        go = st.button("▶ Chạy eval ngay", type="primary", width="stretch")
+    if go:
+        with st.spinner(f"Đang chạy eval cho {run_label}… (khoảng 1 phút)"):
+            code, output = run_eval_subprocess(
+                version=run_label, prompt_path=prompt_path, tools_path=tools_path,
+                provider=provider, model=model, runs_dir=runs_dir,
+            )
+        tail = "\n".join(output.strip().splitlines()[-30:])
+        if code == 0:
+            st.success(f"Xong. Run `{run_label}` đã được thêm vào bảng bên dưới.")
+        else:
+            st.error(f"Eval thất bại (exit code {code}).")
+        with st.expander("Output", expanded=code != 0):
+            st.code(tail or "(không có output)")
+
+    st.divider()
+    st.subheader("📊 So sánh version")
+    st.caption("Đọc từ `runs/*.json`. Chạy eval cho một version mới là nó tự xuất hiện ở đây.")
 
     signature = tuple((p.name, p.stat().st_mtime_ns) for p in sorted(runs_dir.glob("*.json"))) if runs_dir.exists() else ()
     runs = _load_runs(str(runs_dir), signature)
     if not runs:
-        st.info("Chưa có run nào. Chạy: `python run_eval.py --provider openrouter --version v0 --suite base --eval-cases data/eval_base.json`")
+        st.info("Chưa có run nào. Bấm **▶ Chạy eval ngay** ở trên để tạo run đầu tiên.")
         return
 
     # ---------- 1. All runs ----------
-    st.subheader("1. Tất cả các lần chạy")
-    table = pd.DataFrame([{
-        "Version": r["version"],
-        "Thời gian": r["generated_at"].replace("T", " "),
-        "Đạt": f"{r['summary'].get('passed_cases')}/{r['summary'].get('total_cases')}",
-        "Case acc": _pct(r["summary"].get("case_accuracy")),
-        "Routing": _pct(r["summary"].get("tool_routing_accuracy")),
-        "Args": _pct(r["summary"].get("argument_accuracy")),
-        "Multi-turn": _pct(r["summary"].get("multiturn_accuracy")),
-        "Suite": r["suite"],
-        "Model": r["model"],
-        "Prompt hash": r["prompt_hash"],
-        "Tools hash": r["tools_hash"],
-        "File": r["file"],
-    } for r in runs])
-    st.dataframe(table, width="stretch", hide_index=True)
+    with st.expander(f"Tất cả các lần chạy ({len(runs)})", expanded=False):
+        st.dataframe(pd.DataFrame([{
+            "Version": r["version"],
+            "Thời gian": r["generated_at"].replace("T", " "),
+            "Đạt": f"{r['summary'].get('passed_cases')}/{r['summary'].get('total_cases')}",
+            "Case acc": _pct(r["summary"].get("case_accuracy")),
+            "Routing": _pct(r["summary"].get("tool_routing_accuracy")),
+            "Args": _pct(r["summary"].get("argument_accuracy")),
+            "Multi-turn": _pct(r["summary"].get("multiturn_accuracy")),
+            "Model": r["model"],
+            "Prompt hash": r["prompt_hash"],
+            "Tools hash": r["tools_hash"],
+            "File": r["file"],
+        } for r in runs]), width="stretch", hide_index=True)
 
-    # Same label but different prompt/tools hash means the artifacts changed under the same name.
     by_version: dict[str, set[tuple[str, str]]] = {}
     for r in runs:
         by_version.setdefault(r["version"], set()).add((r["prompt_hash"], r["tools_hash"]))
@@ -113,64 +185,70 @@ def render(runs_dir: Path) -> None:
         )
 
     # ---------- 2. Pick runs ----------
-    st.subheader("2. Chọn các run để so sánh")
     taken: set[str] = set()
     labels = [_label(r, taken) for r in runs]
     by_label = dict(zip(labels, runs))
-    # Default: latest run of each version, in version order.
     latest: dict[str, str] = {}
     for label, run in zip(labels, runs):
         latest[run["version"]] = label
-    default = list(latest.values())[:4]
-    chosen = st.multiselect("Run", labels, default=default, help="Chọn từ 2 run trở lên. Run đầu tiên được dùng làm mốc để tính chênh lệch.")
+    chosen = st.multiselect(
+        "Chọn các run để so sánh", labels, default=list(latest.values())[:4],
+        help="Mặc định: lần chạy mới nhất của mỗi version. Chọn từ 2 run trở lên.",
+    )
     if len(chosen) < 2:
         st.info("Chọn ít nhất 2 run để so sánh.")
         return
     selected = [by_label[label] for label in chosen]
+    baseline_label = st.selectbox("Mốc so sánh (Δ tính so với run này)", chosen, index=0)
+    baseline = by_label[baseline_label]
 
-    # ---------- 3. Metrics ----------
-    st.subheader("3. Chỉ số")
-    metric_rows = []
-    for key, name in METRICS:
-        row: dict[str, Any] = {"Chỉ số": name}
-        base = selected[0]["summary"].get(key)
-        for label, run in zip(chosen, selected):
-            row[label] = run["summary"].get(key)
-        last = selected[-1]["summary"].get(key)
-        row["Δ (cuối − đầu)"] = None if base is None or last is None else last - base
-        metric_rows.append(row)
-    metrics = pd.DataFrame(metric_rows).set_index("Chỉ số")
-    st.dataframe(
-        metrics.style.format(lambda v: "—" if v is None or pd.isna(v) else f"{v * 100:.0f}%", subset=chosen)
-        .format(lambda v: "—" if v is None or pd.isna(v) else f"{v * 100:+.0f} điểm", subset=["Δ (cuối − đầu)"]),
-        width="stretch",
+    # ---------- 3. Metrics with delta ----------
+    rows: list[dict[str, Any]] = []
+    for label, run in zip(chosen, selected):
+        row: dict[str, Any] = {"Run": label}
+        for key, name in METRICS:
+            value, base_value = run["summary"].get(key), baseline["summary"].get(key)
+            row[name] = value
+            is_base = label == baseline_label
+            row[f"Δ {name}"] = None if is_base or value is None or base_value is None else (value - base_value) * 100
+        rows.append(row)
+    table = pd.DataFrame(rows).set_index("Run")
+    metric_cols = [name for _, name in METRICS]
+    delta_cols = [f"Δ {name}" for name in metric_cols]
+    styler = (
+        table.style
+        .format(lambda v: _pct(v), subset=metric_cols)
+        .format(lambda v: "mốc" if v is None or pd.isna(v) else f"{v:+.0f} điểm", subset=delta_cols)
     )
-    st.bar_chart(metrics[chosen].astype(float).T, height=260)
+    (styler.map if hasattr(styler, "map") else styler.applymap)(_delta_style, subset=delta_cols)
+    st.markdown("##### Chỉ số")
+    st.dataframe(styler, width="stretch")
+    st.bar_chart(table[metric_cols].astype(float).T, height=260)
 
     # ---------- 4. Per-case matrix ----------
-    st.subheader("4. Từng case: version nào đúng, version nào sai")
+    st.markdown("##### Từng case: run nào đúng, run nào sai")
     case_ids: list[str] = []
     for run in selected:
         for item in run["results"]:
             if item["id"] not in case_ids:
                 case_ids.append(item["id"])
     index = [{item["id"]: item for item in run["results"]} for run in selected]
-
-    rows = []
+    matrix_rows = []
     for cid in case_ids:
         marks = [_status(idx.get(cid)) for idx in index]
         row = {"Case": cid, **dict(zip(chosen, marks))}
         row["Khác nhau"] = "⚠️" if len(set(m for m in marks if m != "—")) > 1 else ""
-        rows.append(row)
-    matrix = pd.DataFrame(rows)
+        matrix_rows.append(row)
+    matrix = pd.DataFrame(matrix_rows)
     changed_only = st.checkbox("Chỉ hiện case có kết quả khác nhau giữa các run", value=False)
     shown = matrix[matrix["Khác nhau"] == "⚠️"] if changed_only else matrix
     st.dataframe(shown, width="stretch", hide_index=True)
-    st.caption(f"{(matrix['Khác nhau'] == '⚠️').sum()}/{len(matrix)} case có kết quả khác nhau giữa các run đã chọn. ✅ đúng · ❌ sai · — run đó không có case này.")
+    st.caption(f"{(matrix['Khác nhau'] == '⚠️').sum()}/{len(matrix)} case có kết quả khác nhau. ✅ đúng · ❌ sai · — run đó không có case này.")
 
     # ---------- 5. Case detail ----------
-    st.subheader("5. Chi tiết một case")
-    focus = st.selectbox("Case", case_ids, index=case_ids.index(shown["Case"].iloc[0]) if len(shown) else 0)
+    st.markdown("##### Chi tiết một case")
+    options = list(shown["Case"]) or case_ids
+    focus = st.selectbox("Case", options)
     columns = st.columns(len(selected))
     for column, label, idx in zip(columns, chosen, index):
         item = idx.get(focus)
@@ -191,7 +269,7 @@ def render(runs_dir: Path) -> None:
             if result.get("actual_text"):
                 st.caption("Text trả lời")
                 st.write(result["actual_text"])
-    first = index[0].get(focus) or next((i.get(focus) for i in index if i.get(focus)), None)
+    first = next((i.get(focus) for i in index if i.get(focus)), None)
     if first:
         with st.expander("Đầu vào và kết quả mong đợi"):
             st.write(first.get("input"))

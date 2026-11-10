@@ -1,0 +1,88 @@
+{
+  "transcript_id": "v0_ui_openrouter_20261110T113013828979",
+  "version": "v0",
+  "artifact_version": "v0+peb1c8179815b+t5b22a2476d41",
+  "prompt_hash": "eb1c8179815bd79d34de7d326420bb99b3072e6e8ae96464c02d4411f905fc68",
+  "tools_hash": "5b22a2476d41b989d5dc1e54f24ce7890e781909deb2f7afafb856ab53a6d7c0",
+  "provider": "openrouter",
+  "model": "openai/gpt-4o-mini",
+  "system_prompt": "D:\\VIN_AI_ThucChien\\K5-L3-DAY03-BuiNgocVu-2A202603463-ResearchAgentToolEval\\starter_v0\\artifacts\\versions\\v0\\system_prompt.md",
+  "tools": "D:\\VIN_AI_ThucChien\\K5-L3-DAY03-BuiNgocVu-2A202603463-ResearchAgentToolEval\\starter_v0\\artifacts\\versions\\v0\\tools.yaml",
+  "history_window": 5,
+  "max_tool_rounds": 4,
+  "created_at": "2026-11-10T11:30:09",
+  "turns": [
+    {
+      "turn_index": 1,
+      "started_at": "2026-11-10T11:30:09",
+      "user": "hilo",
+      "status": "answered",
+      "assistant_text": "Hello! How can I assist you today?",
+      "rounds": [
+        {
+          "round": 1,
+          "assistant_text": null,
+          "tool_calls": [
+            {
+              "name": "send",
+              "args": {
+                "text": "Hello! How can I assist you today?"
+              }
+            }
+          ],
+          "tool_results": [
+            {
+              "tool": "send",
+              "args": {
+                "text": "Hello! How can I assist you today?"
+              },
+              "result": {
+                "tool": "send_telegram",
+                "status": "needs_confirmation",
+                "message": "Only send after the user explicitly confirms."
+              }
+            }
+          ]
+        },
+        {
+          "round": 2,
+          "assistant_text": "Hello! How can I assist you today?",
+          "tool_calls": [],
+          "tool_results": []
+        }
+      ],
+      "tool_events": [
+        {
+          "tool": "send",
+          "args": {
+            "text": "Hello! How can I assist you today?"
+          },
+          "result": {
+            "tool": "send_telegram",
+            "status": "needs_confirmation",
+            "message": "Only send after the user explicitly confirms."
+          }
+        }
+      ],
+      "ended_at": "2026-11-10T11:30:13"
+    },
+    {
+      "turn_index": 2,
+      "started_at": "2026-11-10T11:31:27",
+      "user": "chào bạn",
+      "status": "answered",
+      "assistant_text": "Chào bạn! Bạn cần tôi giúp gì hôm nay?",
+      "rounds": [
+        {
+          "round": 1,
+          "assistant_text": "Chào bạn! Bạn cần tôi giúp gì hôm nay?",
+          "tool_calls": [],
+          "tool_results": []
+        }
+      ],
+      "tool_events": [],
+      "ended_at": "2026-11-10T11:31:28"
+    }
+  ],
+  "updated_at": "2026-11-10T11:31:28"
+}
