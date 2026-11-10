@@ -21,6 +21,7 @@ for _stream in (sys.stdout, sys.stderr):
         _stream.reconfigure(encoding="utf-8", errors="replace")
 
 from chat import ARTIFACTS_DIR, ROOT, now_iso, run_model_tool_loop, safe_slug, trim_history, write_transcript
+from eval_view import render as render_eval_view
 from providers import make_provider
 from tools import load_tool_declarations, to_openai_tools
 from versioning import artifact_version_dict, build_artifact_version
@@ -74,6 +75,13 @@ def pending_yes_no(events: list[dict[str, Any]]) -> dict[str, Any] | None:
 
 init_state()
 
+# ---------------- Screen switch ----------------
+with st.sidebar:
+    view = st.radio("Màn hình", ["💬 Chat", "📊 So sánh version"], key="view")
+if view.startswith("📊"):
+    render_eval_view(ROOT / "runs")
+    st.stop()
+
 # ---------------- Sidebar ----------------
 with st.sidebar:
     st.header("⚙️ Cấu hình")
@@ -84,14 +92,14 @@ with st.sidebar:
     tools_path = Path(st.text_input("Tools", value=str(ARTIFACTS_DIR / "tools.yaml")))
     history_window = st.slider("Số cặp hội thoại giữ lại", 1, 10, 5)
     max_rounds = st.slider("Số vòng tool tối đa", 1, 6, 4)
-    if st.button("🗑️ Cuộc trò chuyện mới", use_container_width=True):
+    if st.button("🗑️ Cuộc trò chuyện mới", width="stretch"):
         reset_chat()
         st.rerun()
 
     st.divider()
     st.subheader("Câu hỏi mẫu")
     for sample in SAMPLES:
-        st.button(sample, key=f"sample_{sample}", on_click=queue, args=(sample,), use_container_width=True)
+        st.button(sample, key=f"sample_{sample}", on_click=queue, args=(sample,), width="stretch")
 
 try:
     system_prompt = system_prompt_path.read_text(encoding="utf-8")
