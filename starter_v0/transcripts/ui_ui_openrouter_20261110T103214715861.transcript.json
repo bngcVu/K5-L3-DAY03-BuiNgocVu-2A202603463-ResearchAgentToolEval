@@ -1,0 +1,68 @@
+{
+  "transcript_id": "ui_ui_openrouter_20261110T103214715861",
+  "version": "ui",
+  "artifact_version": "ui+p3b171a41dff1+t5c4542f1e40f",
+  "prompt_hash": "3b171a41dff12ac60eb6c1df4872ce56d7871327d1fe02cd0ab286fdcf686509",
+  "tools_hash": "5c4542f1e40f99bbe857116281f489f72aec2e41d52dd21abf111d0f6f6b7a45",
+  "provider": "openrouter",
+  "model": "openai/gpt-4o-mini",
+  "system_prompt": "D:\\VIN_AI_ThucChien\\K5-L3-DAY03-BuiNgocVu-2A202603463-ResearchAgentToolEval\\starter_v0\\artifacts\\system_prompt.md",
+  "tools": "D:\\VIN_AI_ThucChien\\K5-L3-DAY03-BuiNgocVu-2A202603463-ResearchAgentToolEval\\starter_v0\\artifacts\\tools.yaml",
+  "history_window": 5,
+  "max_tool_rounds": 4,
+  "created_at": "2026-11-10T10:32:12",
+  "turns": [
+    {
+      "turn_index": 1,
+      "started_at": "2026-11-10T10:32:12",
+      "user": "hi",
+      "status": "answered",
+      "assistant_text": "Hello! How can I assist you today?",
+      "rounds": [
+        {
+          "round": 1,
+          "assistant_text": "Hello! How can I assist you today?",
+          "tool_calls": [],
+          "tool_results": []
+        }
+      ],
+      "tool_events": [],
+      "ended_at": "2026-11-10T10:32:14"
+    },
+    {
+      "turn_index": 2,
+      "started_at": "2026-11-10T10:32:24",
+      "user": "how are you today",
+      "status": "answered",
+      "assistant_text": "I'm here and ready to help you with any research or information you need. What can I assist you with today?",
+      "rounds": [
+        {
+          "round": 1,
+          "assistant_text": "I'm here and ready to help you with any research or information you need. What can I assist you with today?",
+          "tool_calls": [],
+          "tool_results": []
+        }
+      ],
+      "tool_events": [],
+      "ended_at": "2026-11-10T10:32:25"
+    },
+    {
+      "turn_index": 3,
+      "started_at": "2026-11-10T10:33:09",
+      "user": "how can i guess your age?",
+      "status": "answered",
+      "assistant_text": "I don't have an age like a human does, as I'm an AI language model created by OpenAI. I'm designed to assist with research and provide information. If you have any questions or need assistance, feel free to ask!",
+      "rounds": [
+        {
+          "round": 1,
+          "assistant_text": "I don't have an age like a human does, as I'm an AI language model created by OpenAI. I'm designed to assist with research and provide information. If you have any questions or need assistance, feel free to ask!",
+          "tool_calls": [],
+          "tool_results": []
+        }
+      ],
+      "tool_events": [],
+      "ended_at": "2026-11-10T10:33:10"
+    }
+  ],
+  "updated_at": "2026-11-10T10:33:10"
+}
