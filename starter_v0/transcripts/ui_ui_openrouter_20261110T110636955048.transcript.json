@@ -1,0 +1,62 @@
+{
+  "transcript_id": "ui_ui_openrouter_20261110T110636955048",
+  "version": "ui",
+  "artifact_version": "ui+pf0c107a9d7a1+t8db0ba629f52",
+  "prompt_hash": "f0c107a9d7a14032c948d642d7c36f2a85cb6d69a099530093a874c94d472446",
+  "tools_hash": "8db0ba629f52ad1ec171bae4e4e84472c12f950fa1a6db5e1d27bad6e749b740",
+  "provider": "openrouter",
+  "model": "openai/gpt-4o-mini",
+  "system_prompt": "D:\\VIN_AI_ThucChien\\K5-L3-DAY03-BuiNgocVu-2A202603463-ResearchAgentToolEval\\starter_v0\\artifacts\\system_prompt.md",
+  "tools": "D:\\VIN_AI_ThucChien\\K5-L3-DAY03-BuiNgocVu-2A202603463-ResearchAgentToolEval\\starter_v0\\artifacts\\tools.yaml",
+  "history_window": 5,
+  "max_tool_rounds": 4,
+  "created_at": "2026-11-10T11:06:35",
+  "turns": [
+    {
+      "turn_index": 1,
+      "started_at": "2026-11-10T11:06:35",
+      "user": "hi",
+      "status": "answered",
+      "assistant_text": "Hello! How can I assist you today?",
+      "rounds": [
+        {
+          "round": 1,
+          "assistant_text": "Hello! How can I assist you today?",
+          "tool_calls": [],
+          "tool_results": []
+        }
+      ],
+      "tool_events": [],
+      "ended_at": "2026-11-10T11:06:36"
+    },
+    {
+      "turn_index": 2,
+      "started_at": "2026-11-10T11:06:41",
+      "user": "5 nhân 5 bằng mấy",
+      "status": "answered",
+      "assistant_text": "5 nhân 5 bằng 25.",
+      "rounds": [
+        {
+          "round": 1,
+          "assistant_text": "5 nhân 5 bằng 25.",
+          "tool_calls": [],
+          "tool_results": []
+        }
+      ],
+      "tool_events": [],
+      "ended_at": "2026-11-10T11:06:43"
+    },
+    {
+      "turn_index": 3,
+      "started_at": "2026-11-10T11:06:51",
+      "user": "thời tiết hôm nay chưa nào",
+      "status": "provider_error",
+      "assistant_text": null,
+      "rounds": [],
+      "tool_events": [],
+      "error": "UnicodeEncodeError: 'charmap' codec can't encode character '\\U0001f527' in position 0: character maps to <undefined>",
+      "ended_at": "2026-11-10T11:06:53"
+    }
+  ],
+  "updated_at": "2026-11-10T11:06:53"
+}

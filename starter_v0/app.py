@@ -7,11 +7,18 @@ and every session is logged to transcripts/*.transcript.json like chat.py does.
 from __future__ import annotations
 
 import json
+import sys
 from datetime import datetime
 from pathlib import Path
 from typing import Any
 
 import streamlit as st
+
+# chat.run_model_tool_loop prints an emoji; on Windows the default console codec (cp1252)
+# cannot encode it and raises UnicodeEncodeError. Force UTF-8 so the UI works everywhere.
+for _stream in (sys.stdout, sys.stderr):
+    if hasattr(_stream, "reconfigure"):
+        _stream.reconfigure(encoding="utf-8", errors="replace")
 
 from chat import ARTIFACTS_DIR, ROOT, now_iso, run_model_tool_loop, safe_slug, trim_history, write_transcript
 from providers import make_provider
