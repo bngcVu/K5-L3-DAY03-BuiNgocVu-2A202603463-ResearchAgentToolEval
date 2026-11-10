@@ -49,7 +49,7 @@ tools:
     parameters:
       type: object
       properties:
-        query: {type: string, default: "", description: "Chủ đề ngắn gọn, chỉ gồm danh từ chủ đề, không kèm từ như news/tin tức/hôm nay. Ví dụ: AI, robotics, OpenAI"}
+        query: {type: string, minLength: 1, default: "", description: "Chủ đề cần tìm, ngắn gọn, viết bằng NGÔN NGỮ của người dùng (người dùng nói tiếng Việt thì query tiếng Việt; KHÔNG dịch sang tiếng Anh vì kết quả sẽ ra tin nước ngoài). Không kèm từ chỉ thời gian như hôm nay/tuần này (đã có timeframe). Nếu người dùng chỉ hỏi tin tức chung, không nêu chủ đề, dùng query tin tức nổi bật. KHÔNG BAO GIỜ để trống."}
         topic: {type: string, enum: [general, news], default: "general", description: "Luôn dùng news khi người dùng hỏi tin tức/tin mới/tin nổi bật; general cho tra cứu thông thường"}
         timeframe: {type: string, enum: [day, week, month, year], default: "week", description: "CHỈ được là một trong day/week/month/year, không viết chữ tự do. hôm nay -> day, tuần này -> week, tháng này -> month, năm nay -> year. Nếu người dùng giữ nguyên khoảng thời gian ở lượt trước (ví dụ vẫn là tin hôm nay) thì dùng lại giá trị đó"}
         max_results: {type: integer, default: 5, description: "Số kết quả tối đa"}

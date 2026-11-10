@@ -15,7 +15,8 @@ def _bullet(item: dict[str, Any]) -> str:
     text = (item.get("summary") or item.get("title") or "").strip().replace("\n", " ")
     if len(text) > 280:
         text = text[:277] + "..."
-    return f"- {text} - {_src(item)}"
+    src = _src(item)
+    return f"- {text} - {src}" if src else f"- {text}"
 
 
 def render_digest(items: list[dict[str, Any]] | None = None, template: str = "sections", headline: str = "") -> dict[str, Any]:

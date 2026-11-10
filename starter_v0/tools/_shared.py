@@ -36,3 +36,21 @@ def terms(text: str) -> set[str]:
     folded = fold_text(text)
     return {term for term in re.findall(r"[a-z0-9]+", folded) if len(term) > 1 and term not in stopwords}
 
+
+
+def positive_int(value: Any, default: int, name: str = "value") -> int:
+    """Coerce a model-supplied count to an int >= 1.
+
+    None / "" mean "not provided" -> `default`. Numeric strings ("5") are accepted.
+    0, negatives and non-numeric values raise ValueError so the tool returns an error
+    dict instead of silently substituting the default (the old `int(x or default)` bug).
+    """
+    if value is None or value == "":
+        return default
+    try:
+        number = int(value)
+    except (TypeError, ValueError):
+        raise ValueError(f"{name} must be an integer >= 1, got {value!r}") from None
+    if number < 1:
+        raise ValueError(f"{name} must be an integer >= 1, got {value!r}")
+    return number

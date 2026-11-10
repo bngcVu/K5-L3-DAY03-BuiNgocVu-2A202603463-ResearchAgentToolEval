@@ -97,6 +97,19 @@ def case_messages(case: dict[str, Any]) -> list[dict[str, str]]:
     return [{"role": "user", "content": case.get("input") or case.get("query", "")}]
 
 
+# String args that must never be empty when the model calls a tool (an empty query/URL/handle
+# always makes the real tool fail, even if the tool name and the other args look right).
+REQUIRED_TEXT_ARGS = ("query", "screenname", "url", "arxiv_url")
+
+
+def tool_error(tool_result: Any) -> Any:
+    """Return the error marker of one executed tool result, or None if it succeeded."""
+    if not isinstance(tool_result, dict):
+        return None
+    inner = tool_result.get("result")
+    return tool_result.get("error") or (inner.get("error") if isinstance(inner, dict) else None)
+
+
 def normalize_value(value: Any) -> Any:
     if isinstance(value, str):
         return value.strip().lower()
@@ -201,6 +214,14 @@ def evaluate_phase_b(case: dict[str, Any], tool_calls: list[dict[str, Any]], tex
         observed_mismatch = observed_mismatch or "extra_tool_call"
         failures.append(f"extra tool call {actual_call['name']}")
 
+    for actual_call in tool_calls:
+        for arg_name in REQUIRED_TEXT_ARGS:
+            value = (actual_call.get("args") or {}).get(arg_name)
+            if isinstance(value, str) and not value.strip():
+                args_correct = False
+                observed_mismatch = observed_mismatch or "empty_required_arg"
+                failures.append(f"empty required arg {actual_call['name']}.{arg_name}")
+
     passed = routing_correct and args_correct and not failures
     return {
         "passed": passed,
@@ -238,6 +259,11 @@ def summarize(results: list[dict[str, Any]]) -> dict[str, Any]:
             "argument_accuracy": round(args / len(phase_b), 4),
             "multiturn_accuracy": round(sum(1 for item in multi if item["result"]["passed"]) / len(multi), 4) if multi else None,
         })
+
+    executions = [tr for item in measured for tr in (item.get("tool_results") or [])]
+    if executions:
+        # Share of executed tool calls that returned no error (the eval above only grades the call itself).
+        summary["tool_success_rate"] = round(sum(1 for tr in executions if not tool_error(tr)) / len(executions), 4)
 
     failure_counts: dict[str, int] = {}
     observed_mismatch_counts: dict[str, int] = {}

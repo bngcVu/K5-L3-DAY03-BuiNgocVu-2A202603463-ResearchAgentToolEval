@@ -1,0 +1,32 @@
+{
+  "dataset_id": "day03_v1_clarify",
+  "dataset_role": "group",
+  "description": "Hành vi MỤC TIÊU CỦA v1: yêu cầu tin tức chung chung (không nêu chủ đề/khu vực) thì phải hỏi lại bằng clarify (choice) trước khi tìm. Chỉ chạy cho v1; v2 và v3 cố ý KHÔNG hỏi (xem G11-G13 trong eval_group.json).",
+  "allowed_failure_types": ["wrong_tool", "wrong_arg_value", "wrong_boundary", "unnecessary_tool", "out_of_scope", "missing_info"],
+  "cases": [
+    {
+      "id": "C01_news_no_subject_asks",
+      "phase": "B",
+      "query": "tin tức hôm nay",
+      "failure_type": "missing_info",
+      "expect": {"tool_calls": [{"name": "clarify", "args": {"response_type": "choice"}}]},
+      "metadata": {"what_it_tests": "v1: tin tức chung, thiếu chủ đề/khu vực → hỏi lại bằng lựa chọn, không đoán."}
+    },
+    {
+      "id": "C02_new_news_asks",
+      "phase": "B",
+      "query": "cho mình xem tin mới",
+      "failure_type": "missing_info",
+      "expect": {"tool_calls": [{"name": "clarify", "args": {"response_type": "choice"}}]},
+      "metadata": {"what_it_tests": "v1: yêu cầu mơ hồ → hỏi lại."}
+    },
+    {
+      "id": "C03_news_with_subject_no_ask",
+      "phase": "B",
+      "query": "Tin AI hôm nay có gì nổi bật?",
+      "failure_type": "unnecessary_tool",
+      "expect": {"tool_calls": [{"name": "lookup", "args": {"query": "AI", "topic": "news", "timeframe": "day"}}]},
+      "metadata": {"what_it_tests": "v1: đã có chủ đề thì KHÔNG hỏi thừa, đi thẳng lookup."}
+    }
+  ]
+}

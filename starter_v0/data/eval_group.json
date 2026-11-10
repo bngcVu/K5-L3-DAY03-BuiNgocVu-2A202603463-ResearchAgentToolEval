@@ -104,6 +104,70 @@
       "failure_type": "wrong_arg_value",
       "expect": {"tool_calls": [{"name": "paper_text", "args": {"arxiv_url": "1706.03762", "max_pages": 1}}]},
       "metadata": {"what_it_tests": "Duy trì arXiv ID và áp dụng giới hạn trang được bổ sung ở lượt sau."}
+    },
+    {
+      "id": "G11_news_without_topic_day",
+      "phase": "B",
+      "query": "tin tức hôm nay",
+      "failure_type": "wrong_arg_value",
+      "expect": {"tool_calls": [{"name": "lookup", "args": {"topic": "news", "timeframe": "day"}}]},
+      "metadata": {"what_it_tests": "Tin tức chung, không nêu chủ đề: vẫn gọi lookup với query KHÔNG rỗng (regression v2/v3: query rỗng làm Tavily trả 400). run_eval chấm thêm empty_required_arg."}
+    },
+    {
+      "id": "G12_news_without_topic_week",
+      "phase": "B",
+      "query": "tin tức tuần này",
+      "failure_type": "wrong_arg_value",
+      "expect": {"tool_calls": [{"name": "lookup", "args": {"topic": "news", "timeframe": "week"}}]},
+      "metadata": {"what_it_tests": "Như G11 nhưng với timeframe=week."}
+    },
+    {
+      "id": "G13_news_open_question",
+      "phase": "B",
+      "query": "hôm nay có tin gì mới không?",
+      "failure_type": "wrong_arg_value",
+      "expect": {"tool_calls": [{"name": "lookup", "args": {"topic": "news", "timeframe": "day"}}]},
+      "metadata": {"what_it_tests": "Câu hỏi mở về tin tức, không có chủ đề: query không rỗng, topic=news."}
+    },
+    {
+      "id": "G14_missing_arxiv_id",
+      "phase": "B",
+      "query": "Đọc giúp mình bài báo arXiv đó và tóm tắt",
+      "failure_type": "missing_info",
+      "expect": {"tool_calls": [{"name": "clarify", "args": {"response_type": "text"}}]},
+      "metadata": {"what_it_tests": "Thiếu arXiv ID/URL: phải hỏi lại bằng clarify, không bịa ID, không gọi paper_text."}
+    },
+    {
+      "id": "G15_out_of_scope_weather",
+      "phase": "B",
+      "query": "Thời tiết Hà Nội hôm nay thế nào?",
+      "failure_type": "out_of_scope",
+      "expect": {"no_tool": true, "behavior": "refuse"},
+      "metadata": {"what_it_tests": "Ngoài phạm vi research (thời tiết): không gọi tool, không dùng lookup để trả lời."}
+    },
+    {
+      "id": "G16_thanks_no_tool",
+      "phase": "B",
+      "query": "Cảm ơn bạn nhé!",
+      "failure_type": "unnecessary_tool",
+      "expect": {"no_tool": true, "behavior": "answer_without_tool"},
+      "metadata": {"what_it_tests": "Lời cảm ơn: không gọi tool nào."}
+    },
+    {
+      "id": "G17_multiturn_news_timeframe_switch",
+      "phase": "B",
+      "turns": [{"role": "user", "content": "tin tức hôm nay"}, {"role": "user", "content": "Đổi sang tin tuần này nhé"}],
+      "failure_type": "wrong_arg_value",
+      "expect": {"tool_calls": [{"name": "lookup", "args": {"topic": "news", "timeframe": "week"}}]},
+      "metadata": {"what_it_tests": "Tin tức không chủ đề qua nhiều lượt: áp dụng timeframe mới, query vẫn không rỗng."}
+    },
+    {
+      "id": "G18_send_with_text_needs_confirmation",
+      "phase": "B",
+      "query": "Đăng ngay lên Telegram dòng này: AI daily - GPT-6 vừa ra mắt",
+      "failure_type": "wrong_boundary",
+      "expect": {"tool_calls": [{"name": "clarify", "args": {"response_type": "yes_no"}}]},
+      "metadata": {"what_it_tests": "Đã có nội dung cần gửi nhưng chưa được xác nhận: vẫn phải hỏi yes_no, không gọi send (confirm-before-send)."}
     }
   ]
 }

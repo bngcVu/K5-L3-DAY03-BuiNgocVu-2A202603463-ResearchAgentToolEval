@@ -1,0 +1,709 @@
+{
+  "run_id": "v2-before_answers_openrouter_20261110T163115577664",
+  "version": "v2-before",
+  "artifact_version": "v2-before+pc3e508553a00+t010a41c1b7a9",
+  "prompt_hash": "c3e508553a00f02d61ba4921bae6982164bb61752fd7d98c3b8f1a45eab9ec0d",
+  "tools_hash": "010a41c1b7a9420786641f38690a7294cc022a9451f096d0cd5e66c2f9d25668",
+  "suite": "answers",
+  "provider": "openrouter",
+  "model": "openai/gpt-4o-mini",
+  "system_prompt": "artifacts\\versions\\v2\\system_prompt.md",
+  "tools": "artifacts\\versions\\v2\\tools.yaml",
+  "eval_cases": "data\\eval_answers.json",
+  "generated_at": "2026-11-10T16:31:15",
+  "summary": {
+    "total_cases": 8,
+    "passed_cases": 1,
+    "answer_pass_rate": 0.125,
+    "language_rate": 0.375,
+    "grounded_rate": 0.8333,
+    "fresh_rate": 1.0,
+    "no_duplicates_rate": 0.8333,
+    "sources_rate": 0.8571,
+    "clarify_rate": 0.0
+  },
+  "results": [
+    {
+      "id": "A01_news_no_subject",
+      "turns": [
+        "tin tức hôm nay"
+      ],
+      "asked_clarify": false,
+      "answered": true,
+      "passed": false,
+      "grade": {
+        "language_ok": false,
+        "grounded_ok": true,
+        "no_duplicates_ok": true,
+        "fresh_ok": true,
+        "sources_ok": true,
+        "failures": [
+          "answer is not Vietnamese (english_ratio=0.06)"
+        ]
+      },
+      "final_text": "Here are some notable news articles from today:\n\n1. **[Tin tức nổi bật ngày 9/11: Hành khách có thể mua vé tàu hỏa trên VNeID](https://petrotimes.vn/tin-tuc-noi-bat-ngay-9-11-hanh-khach-co-the-mua-ve-tau-hoa-tren-vneid-747742.html)** - VPBank giành “cú đúp” giải thưởng về quản lý dòng tiền tại The Euromoney Transaction Banking Awards. Agribank đồng hành cùng chương trình “Go Global - Cùng doanh nghiệp vươn ra thế giới”. (Published on Nov 9, 2026)\n\n2. **[Tin tức nổi bật ngày 10/11/2026 có gì?](https://htv.vn/tin-tuc-noi-bat-ngay-10-11-2026-co-gi-22226111011494945.htm)** - Nhiều cây xanh ở Đà Nẵng ngã đổ tối qua do mưa lớn kèm gió giật mạnh. (Published on Nov 10, 2026)\n\n3. **[Tin tức quốc tế ngày 10.11: Tổng thống Trump ra một loạt tuyên bố quan trọng](https://thanhnien.vn/tin-tuc-quoc-te-sang-1011-tong-thong-trump-ra-tuyen-bo-moi-185261110000427831.htm)** - Nhiều tuyên bố mới của Tổng thống Mỹ Donald Trump; Pháp ra cáo buộc với Iran. (Published on Nov 9, 2026)\n\n4. **[Ủy ban Bầu cử Trung ương ra mắt video tuyên truyền quy định bầu cử cùng đại sứ cộng đồng tân di dân Đới Khải Văn](https://www.rti.org.tw/vn/news?uid=3&pid=1050628)** - Ủy ban Bầu cử Trung ương nhấn mạnh sẽ luôn giữ vững lập trường độc lập, công bằng, trung lập, khách quan và chuyên nghiệp. (Published on Nov 10, 2026)\n\n5. **[Thời báo Tân di dân toàn cầu-Nam Đầu kết nối mùa hoa mận và hoa anh đào trong chuỗi du lịch kéo dài ba tháng](https://news.immigration.gov.tw/NewsSection/Detail/bf4bec2a-c1ce-4d90-b439-a736e8657bf2?lang=VN)** - Kết nối mùa hoa mận và hoa anh đào trong chuỗi du lịch kéo dài ba tháng. (Published on Nov 10, 2026)\n\nFeel free to ask if you need more information on any specific topic!",
+      "transcript": [
+        {
+          "user": "tin tức hôm nay",
+          "status": "answered",
+          "assistant_text": "Here are some notable news articles from today:\n\n1. **[Tin tức nổi bật ngày 9/11: Hành khách có thể mua vé tàu hỏa trên VNeID](https://petrotimes.vn/tin-tuc-noi-bat-ngay-9-11-hanh-khach-co-the-mua-ve-tau-hoa-tren-vneid-747742.html)** - VPBank giành “cú đúp” giải thưởng về quản lý dòng tiền tại The Euromoney Transaction Banking Awards. Agribank đồng hành cùng chương trình “Go Global - Cùng doanh nghiệp vươn ra thế giới”. (Published on Nov 9, 2026)\n\n2. **[Tin tức nổi bật ngày 10/11/2026 có gì?](https://htv.vn/tin-tuc-noi-bat-ngay-10-11-2026-co-gi-22226111011494945.htm)** - Nhiều cây xanh ở Đà Nẵng ngã đổ tối qua do mưa lớn kèm gió giật mạnh. (Published on Nov 10, 2026)\n\n3. **[Tin tức quốc tế ngày 10.11: Tổng thống Trump ra một loạt tuyên bố quan trọng](https://thanhnien.vn/tin-tuc-quoc-te-sang-1011-tong-thong-trump-ra-tuyen-bo-moi-185261110000427831.htm)** - Nhiều tuyên bố mới của Tổng thống Mỹ Donald Trump; Pháp ra cáo buộc với Iran. (Published on Nov 9, 2026)\n\n4. **[Ủy ban Bầu cử Trung ương ra mắt video tuyên truyền quy định bầu cử cùng đại sứ cộng đồng tân di dân Đới Khải Văn](https://www.rti.org.tw/vn/news?uid=3&pid=1050628)** - Ủy ban Bầu cử Trung ương nhấn mạnh sẽ luôn giữ vững lập trường độc lập, công bằng, trung lập, khách quan và chuyên nghiệp. (Published on Nov 10, 2026)\n\n5. **[Thời báo Tân di dân toàn cầu-Nam Đầu kết nối mùa hoa mận và hoa anh đào trong chuỗi du lịch kéo dài ba tháng](https://news.immigration.gov.tw/NewsSection/Detail/bf4bec2a-c1ce-4d90-b439-a736e8657bf2?lang=VN)** - Kết nối mùa hoa mận và hoa anh đào trong chuỗi du lịch kéo dài ba tháng. (Published on Nov 10, 2026)\n\nFeel free to ask if you need more information on any specific topic!",
+          "tool_calls": [
+            {
+              "name": "lookup",
+              "args": {
+                "query": "",
+                "topic": "news",
+                "timeframe": "day"
+              }
+            }
+          ]
+        }
+      ],
+      "tool_events": [
+        {
+          "tool": "lookup",
+          "args": {
+            "query": "",
+            "topic": "news",
+            "timeframe": "day"
+          },
+          "result": {
+            "tool": "web_search",
+            "query": "tin tức nổi bật",
+            "topic": "news",
+            "timeframe": "day",
+            "items": [
+              {
+                "title": "Tin tức nổi bật ngày 9/11: Hành khách có thể mua vé tàu hỏa trên VNeID",
+                "url": "https://petrotimes.vn/tin-tuc-noi-bat-ngay-9-11-hanh-khach-co-the-mua-ve-tau-hoa-tren-vneid-747742.html",
+                "source": "petrotimes.vn",
+                "summary": "VPBank giành “cú đúp” giải thưởng về quản lý dòng tiền tại The Euromoney Transaction Banking Awards \n\n  VPBank giành “cú đúp” giải thưởng về quản lý dòng tiền tại The Euromoney Transaction Banking Awards\n Agribank đồng hành cùng chương trình “Go Global - Cùng doanh nghiệp vươn ra thế giới” \n\n  Agribank đồng hành cùng chương trình “Go Global - Cùng doanh nghiệp vươn ra thế giới”\n Agribank - Top 20 doanh nghiệp văn hóa uy tín có xếp hạng cao nhất năm 2026 [...] ### Tin tức nổi bật ngày 6/11: Du lịch Hà Nội xác lập kỷ lục mới với hơn 30 triệu lượt khách\n VPBank giành “cú đúp” giải thưởng về quản lý dòng tiền tại The Euromoney Transaction Banking Awards \n\n  ### VPBank giành “cú đúp” giải thưởng về quản lý dòng tiền tại The Euromoney Transaction Banking Awards\n Điều gì tạo sức bật cho doanh nghiệp năng lượng trong năm 2026? [...] TP HCM đề xuất tăng mức vay, kéo dài thời hạn hỗ trợ vốn mua nhà ở xã hội\n\nMột nội dung được doanh nghiệp quan tm là chính sách hỗ trợ lãi suất đối với các dự án nhà ở xã hội, nhà ở cho thuê.\n\nPhó giám đốc Sở Tài chính TP HCM Nguyễn Thanh Toàn cho biết, thành phố đang thực hiện cơ chế hỗ trợ theo Nghị quyết số 09/2023/NQ-HĐND.",
+                "score": 0.6493563,
+                "published_date": "Mon, 09 Nov 2026 13:13:48 GMT"
+              },
+              {
+                "title": "Tin tức nổi bật ngày 10/11/2026 có gì?",
+                "url": "https://htv.vn/tin-tuc-noi-bat-ngay-10-11-2026-co-gi-22226111011494945.htm",
+                "source": "htv.vn",
+                "summary": "Bỏ qua đến nội dung chính\n\nCƠ QUAN BÁO VÀ PHÁT THANH, TRUYỀN HÌNH TP. HỒ CHÍ MINH\n\n HTV\n\nĐÀI PHÁT THANH VÀ TRUYỀN HÌNH   \nTHÀNH PHỐ HỒ CHÍ MINH\n\nTV LIVE   RADIO LIVE   GIỚI THIỆU HTV\n\nBạn hãy chọn Profile tiện dụng\n\nXu hướng\n\ngiá vàng hôm nay\n\nphim HTV\n\ngiá xăng dầu\n\ncông an tphcm\n\nKinh tế\n\ncông nghệ\n\ngiải trí\n\n# Tin tức nổi bật ngày 10/11/2026 có gì?\n\nThời sự 00:00:35.78\n\nTRẦN HÙNG, PHƯƠNG MAI, NGỌC PHẠM\n\n(HTV) - Nhiều cy xanh ở Đà Nẵng ngã đổ tối qua do mưa lớn kèm gió giật mạnh. [...] ## Danh sách tập\n\nTin tức nổi bật ngày 9/11/2026 có gì? \n\n### Tin tức nổi bật ngày 9/11/2026 có gì?\n\nTin tức nổi bật ngày 8/11/2026 có gì? \n\n### Tin tức nổi bật ngày 8/11/2026 có gì?\n\nTin tức nổi bật ngày 7/11/2026 có gì? \n\n### Tin tức nổi bật ngày 7/11/2026 có gì?\n\nTin tức nổi bật ngày 6/11/2026 có gì? \n\n### Tin tức nổi bật ngày 6/11/2026 có gì?\n\nTin tức nổi bật ngày 5/11/2026 có gì? \n\n### Tin tức nổi bật ngày 5/11/2026 có gì?\n\n## Các chương trình khác",
+                "score": 0.58154076,
+                "published_date": "Tue, 10 Nov 2026 07:46:00 GMT"
+              },
+              {
+                "title": "Tin tức quốc tế ngày 10.11: Tổng thống Trump ra một loạt tuyên bố quan trọng",
+                "url": "https://thanhnien.vn/tin-tuc-quoc-te-sang-1011-tong-thong-trump-ra-tuyen-bo-moi-185261110000427831.htm",
+                "source": "thanhnien.vn",
+                "summary": "Khi ô vuông chuyển thành dấu tích xanh là bạn đã thành công rồi!\n\nLƯU Ý NHỎ: Nếu muốn kiểm tra xem cài đặt còn hiệu lực không, bạn chỉ cần mở lại link trên là thấy ngay dấu tích xanh vẫn đang hiển thị.\n\nCác nguồn ưu tiênCác nguồn ưu tiên\n\nChúc bạn đọc báo vui vẻ!\n\nNhiều tuyên bố mới của Tổng thống Mỹ Donald Trump; Pháp ra cáo buộc với Iran ... Thanh Niên sẽ tiếp tục cập nhật các tin tức quốc tế nổi bật trong ngày 10.11.\n\n## Tổng thống Trump nói về chiến sự Iran [...] Tổng thống Thổ Nhĩ Kỳ Recep Tayyip Erdogan cho biết, một vụ nổ tại một nhà máy thép ở miền ty nước này vào ngày 9.11 đã khiến 16 người thiệt mạng.\n\nVụ nổ xảy ra tại nhà máy HABAS Demir Celik ở Aliaga, cách thành phố Izmir khoảng 60 km về phía bắc. Con số mà ông Erdogan đưa ra đã cập nhật thông tin trước đó, vốn ghi nhận 10 người tử vong.\n\n## Tin liên quan\n\nLiên Hiệp Quốc cảnh báo 'kỷ nguyên thời tiết cực đoan'\n\n### Liên Hiệp Quốc cảnh báo 'kỷ nguyên thời tiết cực đoan' [...] Hội nghị thượng đỉnh về khí hậu COP31 đã chính thức khai mạc tại Thổ Nhĩ Kỳ ngày 9.11, trong bối cảnh các tổ chức quốc tế kêu gọi hành động quyết liệt để giảm thiểu tình trạng thời tiết cực đoan.\n\n### Nghi phạm 24 tuổi trong vụ xả súng kinh hoàng tại Ba Lan đã tử vong\n\n### Vụ CEO Nvidia Jensen Huang ngoại tình với nữ doanh nhn Trung Quốc: Bắc Kinh lên tiếng\n\nChia sẻ\n\nChọn Báo Thanh Niên làm nguồn ưu tiên trên Google tìm kiếm. Xem hướng dẫn.\n\nBình luận (0)\n\nGửi bình luận\n\nQuan tm nhấtMới nhất",
+                "score": 0.51918614,
+                "published_date": "Mon, 09 Nov 2026 22:23:00 GMT"
+              },
+              {
+                "title": "Ủy ban Bầu cử Trung ương ra mắt video tuyên truyền quy định bầu cử cùng đại sứ cộng đồng tân di dân Đới Khải Văn-Tin tức-Radio Taiwan International",
+                "url": "https://www.rti.org.tw/vn/news?uid=3&pid=1050628",
+                "source": "rti.org.tw",
+                "summary": "Ủy ban Bầu cử Trung ương nhấn mạnh sẽ luôn giữ vững lập trường độc lập, công bằng, trung lập, khách quan và chuyên nghiệp, nhằm bảo đảm cuộc bầu cử và trưng cầu dn ý diễn ra thuận lợi.\n\nNgười dn có thể xem các video tuyên truyền liên quan tại chuyên mục “Bầu cử các chức vụ công cấp địa phương và trưng cầu dn ý toàn quốc năm 2026” trên trang web của Ủy ban Bầu cử Trung ương.\n\nThúy Anh\n\nQuay về Tổng quan Về trang trước\n\nTin tức nổi ḅt trong tùn [...] Skip to the main content block\n\n::: Trang chủ| Sơ đồ website| Podcasts|\n\n|\n\nLanguage\n\nmenu close\n\nTin tức   Chương trình   Videos   Podcasts   Giới thiệu về RTI\n\n# Formosa Dream Chasers - Programs - RTI Radio Taiwan International-logo\n\nTin tức\n\n| Tổng quan  Xem nhiều\n\n Tìm kiếm\n\nTìm kiếm\n\nTin nổi ḅt \n\nNhằm hưởng ứng COP31, Bộ Môi trường đồng thời thành lập “Trung tm điều phối COP31” và triển khai chuỗi 10 diễn đàn trực tuyến. (Ảnh: PV Rti) [...] COP31 sắp khai mạc, Bộ Môi trường khởi động diễn đàn đồng bộ để cập nhật thông tin\n\n1\n\nVề tin đồn sinh viên Việt Nam đến Đài Loan là được nhận trợ cấp, Bộ Giáo dục Đài Loan: để được nhận học bổng đều phải qua quy trình xét duyệt\n\n2\n\nCông bố bảng xếp hạng các trường đại học chu Á 2027, Đài Loan có 7 trường lọt top 100, trong đó Đại học Quốc gia Đài Loan có thứ hạng cao nhất\n\n3\n\nHội chợ Du lịch Quốc tế Đài Loan ITF 2026 thu hút hơn 70.000 lượt khách trong ngày đầu khai mạc\n\n4",
+                "score": 0.35528317,
+                "published_date": "Tue, 10 Nov 2026 08:00:00 GMT"
+              },
+              {
+                "title": "Thời báo Tân di dân toàn cầu-Nam Đầu kết nối mùa hoa mận và hoa anh đào trong chuỗi du lịch kéo dài ba tháng",
+                "url": "https://news.immigration.gov.tw/NewsSection/Detail/bf4bec2a-c1ce-4d90-b439-a736e8657bf2?lang=VN",
+                "source": "news.immigration.gov.tw",
+                "summary": "按下ENTER到主內容區\n\n:::\n\n# 新住民全球新聞網Logo\n\n Facebook社群網站icon\")\n Instagram社群網站icon\")\n Line通訊軟體icon\")\n Youtube頻道icon\")\n Twitter社群網站icon\")\n\n 搜尋icon\n\n手機版導覽列按鈕\n\n 正體中文\n Tiếng Việt\n ภาษาไทย\n bahasa Indonesia\n English\n\n 搜尋icon\n\n:::\n\n Tin tức chuyên đề\n Tin tức nổi bật\n\nTin tức nổi bật\n\n 台灣國旗\n 越南國旗\n 泰國國旗\n 印尼國旗\n 菲律賓國旗\n\n# Nam Đầu kết nối mùa hoa mận và hoa anh đào trong chuỗi du lịch kéo dài ba tháng",
+                "score": 0.4764274,
+                "published_date": "Tue, 10 Nov 2026 01:00:00 GMT"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "A02_news_with_subject",
+      "turns": [
+        "Tin AI hôm nay có gì nổi bật?"
+      ],
+      "asked_clarify": false,
+      "answered": true,
+      "passed": false,
+      "grade": {
+        "language_ok": false,
+        "grounded_ok": true,
+        "no_duplicates_ok": true,
+        "fresh_ok": true,
+        "sources_ok": true,
+        "failures": [
+          "answer is not Vietnamese (english_ratio=0.25)"
+        ]
+      },
+      "final_text": "Here are some notable AI news articles from today:\n\n1. **[AI and your job: Threat or opportunity?](https://www.fox10tv.com/2026/11/10/ai-your-job-threat-or-opportunity)** - This article discusses how AI is becoming a significant part of everyday life, raising questions about its impact on jobs. While some economists warn that AI could threaten entry-level positions, others highlight potential job growth in sectors like construction and manufacturing. (Source: fox10tv.com)\n\n2. **[Asia not riding but building the AI boom – GIS Reports](https://www.gisreportsonline.com/r/asia-building-ai-boom)** - The article explores how Asian countries are positioning themselves in the AI ecosystem, focusing on their strengths in technology manufacturing and how they can compete with the U.S. and China. (Source: gisreportsonline.com)\n\n3. **[China's trade surplus soars past $1 trillion as AI boom powers exports | Reuters](https://www.reuters.com/world/asia-pacific/chinas-trade-surplus-soars-past-1-trillion-october-exports-jump-352-yy-2026-11-10)** - China's trade surplus has surged, largely driven by a global push to expand AI infrastructure, which has boosted high-tech exports. (Source: reuters.com)\n\n4. **[UA regents delay statement of intent on AI amid feedback](https://www.alaskasnewssource.com/2026/11/10/ua-regents-delay-statement-intent-ai-amid-feedback)** - The University of Alaska Board of Regents has postponed a statement regarding the use of AI in its system, allowing time for feedback from faculty and students. (Source: alaskasnewssource.com)\n\n5. **[Congress’s Permitting Bill Is a ‘Massive Giveaway’ to the AI Data Center Industry, Critics Warn](https://time.com/article/2026/11/10/permitting-bill-data-centers)** - Critics are voicing concerns over a new bill that they believe disproportionately benefits the AI data center industry, arguing for more public input on AI's impact on society. (Source: time.com)\n\nIf you need more details or further assistance, feel free to ask!",
+      "transcript": [
+        {
+          "user": "Tin AI hôm nay có gì nổi bật?",
+          "status": "answered",
+          "assistant_text": "Here are some notable AI news articles from today:\n\n1. **[AI and your job: Threat or opportunity?](https://www.fox10tv.com/2026/11/10/ai-your-job-threat-or-opportunity)** - This article discusses how AI is becoming a significant part of everyday life, raising questions about its impact on jobs. While some economists warn that AI could threaten entry-level positions, others highlight potential job growth in sectors like construction and manufacturing. (Source: fox10tv.com)\n\n2. **[Asia not riding but building the AI boom – GIS Reports](https://www.gisreportsonline.com/r/asia-building-ai-boom)** - The article explores how Asian countries are positioning themselves in the AI ecosystem, focusing on their strengths in technology manufacturing and how they can compete with the U.S. and China. (Source: gisreportsonline.com)\n\n3. **[China's trade surplus soars past $1 trillion as AI boom powers exports | Reuters](https://www.reuters.com/world/asia-pacific/chinas-trade-surplus-soars-past-1-trillion-october-exports-jump-352-yy-2026-11-10)** - China's trade surplus has surged, largely driven by a global push to expand AI infrastructure, which has boosted high-tech exports. (Source: reuters.com)\n\n4. **[UA regents delay statement of intent on AI amid feedback](https://www.alaskasnewssource.com/2026/11/10/ua-regents-delay-statement-intent-ai-amid-feedback)** - The University of Alaska Board of Regents has postponed a statement regarding the use of AI in its system, allowing time for feedback from faculty and students. (Source: alaskasnewssource.com)\n\n5. **[Congress’s Permitting Bill Is a ‘Massive Giveaway’ to the AI Data Center Industry, Critics Warn](https://time.com/article/2026/11/10/permitting-bill-data-centers)** - Critics are voicing concerns over a new bill that they believe disproportionately benefits the AI data center industry, arguing for more public input on AI's impact on society. (Source: time.com)\n\nIf you need more details or further assistance, feel free to ask!",
+          "tool_calls": [
+            {
+              "name": "lookup",
+              "args": {
+                "query": "AI",
+                "topic": "news",
+                "timeframe": "day"
+              }
+            }
+          ]
+        }
+      ],
+      "tool_events": [
+        {
+          "tool": "lookup",
+          "args": {
+            "query": "AI",
+            "topic": "news",
+            "timeframe": "day"
+          },
+          "result": {
+            "tool": "web_search",
+            "query": "AI",
+            "topic": "news",
+            "timeframe": "day",
+            "items": [
+              {
+                "title": "AI and your job: Threat or opportunity?",
+                "url": "https://www.fox10tv.com/2026/11/10/ai-your-job-threat-or-opportunity",
+                "source": "fox10tv.com",
+                "summary": "MOBILE, Ala. (WALA) - Artificial intelligence is becoming a bigger part of everyday life, raising questions about what the technology could mean for workers and their jobs.\n\nSome economists believe AI poses a particular threat to entry-level and repetitive work, including call center, data entry and junior copywriting jobs, according to The Wall Street Journal. Those tasks may be easier to automate. [...] But AI could also create opportunities. A Bloomberg article points to potential job growth in construction and manufacturing as companies build data centers and produce the chips that power the technology. Some higher-skilled office workers could also benefit if AI helps them become more productive. [...] The long-term impact on jobs remains unclear, but workers can take steps to prepare. Exploring AI chatbots, writing assistants and other tools may help people find ways to work more efficiently and develop skills that complement the technology.",
+                "score": 0.42348245,
+                "published_date": "Tue, 10 Nov 2026 03:58:28 GMT"
+              },
+              {
+                "title": "Asia not riding but building the AI boom – GIS Reports",
+                "url": "https://www.gisreportsonline.com/r/asia-building-ai-boom",
+                "source": "gisreportsonline.com",
+                "summary": "The AI ecosystem can be generally separated between three elements: models, compute power and supply chains – with the U.S. and China competing and leading for the first two. Asian countries are looking at how they can stand out amid this intense East-West competition, while capitalizing on their strengths in technology manufacturing supply chains. This has led smaller economies to identify their competitive advantages while investing in novel applications for AI in various industries such as [...] Due to demographic realities, manufacturing and exports are essential to Asian economies. AI is expected to support transitions as each country manages declines in their populations and workforce while maintaining economic growth and prosperity.\n\nContact ustoday for tailored geopolitical insights and industry-specific advisory services.\n\n## Sign up for our newsletter\n\nReceive insights from our experts every week in your inbox. [...] AI is now a priority for all governments in Asia, with each taking a different approach. Government-to-government coordination is focusing on finding ways to collaborate in the regulatory space on issues like export controls and supply chain monitoring. Elected officials are looking to support their domestic industries in the hope that local companies increase their participation in global markets.\n\n## The epicenter of AI technology is Taiwan",
+                "score": 0.20856592,
+                "published_date": "Tue, 10 Nov 2026 07:00:00 GMT"
+              },
+              {
+                "title": "China's trade surplus soars past $1 trillion as AI boom powers exports | Reuters",
+                "url": "https://www.reuters.com/world/asia-pacific/chinas-trade-surplus-soars-past-1-trillion-october-exports-jump-352-yy-2026-11-10",
+                "source": "reuters.com",
+                "summary": "Much of the strength in exports this ​year has been fuelled by a global push to expand AI infrastructure.\n\n\"The outlook for exports depends on how long the AI boom will last,\" Macquarie analysts wrote. They expect China's exports to accelerate ​further in the fourth quarter before starting to slow from the first quarter of 2027.\n\nReporting by Yukun Zhang, Sam Li and Ryan Woo; Editing by Shri Navaratnam\n\nOur Standards: The Thomson Reuters Trust Principles. [...] BEIJING, Nov 10 (Reuters) - China's trade surplus surged past $1 trillion in the first 10 months as a global race to build AI infrastructure buoyed sales ​of high-tech products and helped offset weak domestic demand, a dynamic likely to sharpen tensions with major trading partners. [...] The figures highlight ‌Beijing's growing reliance on overseas demand to support an economy hobbled by subdued consumption and a protracted property slump. But while the global AI investment boom is expected to keep demand for Chinese technology products strong into 2027, it risks deepening domestic imbalances and fuelling trade frictions with partners including the European Union.\n\nMake sense of global markets with the Trading Day newsletter. Sign up here.",
+                "score": 0.4908534,
+                "published_date": "Tue, 10 Nov 2026 03:52:51 GMT"
+              },
+              {
+                "title": "UA regents delay statement of intent on AI amid feedback",
+                "url": "https://www.alaskasnewssource.com/2026/11/10/ua-regents-delay-statement-intent-ai-amid-feedback",
+                "source": "alaskasnewssource.com",
+                "summary": "Work on the university system’s intent language began in 2025, Taylor said, when faculty requested guidance from administration on the use of AI in the classroom.\n\nWhen complete, the document is designed not to act as policy, but simply to outline the approach the UA institution is taking toward AI, develop guiding principles and put forward expectations of future actions from the administration, including eventually coming up with actual policy. [...] The action was recommended by Chief Technology Officer Benjamin Shier, and pushes off the final decision on the university system’s AI intent language until February, or until requested by UA President Matt Cooper.\n\nTaylor described the feedback being received about the draft “AI Engaged” document as “passionate.” [...] FAIRBANKS, Alaska (KTUU/KTVF) - The University of Alaska (UA) Board of Regents delayed releasing a statement of intent covering the system’s use of artificial intelligence during its November meeting Friday, giving the information technology department time to incorporate feedback from faculty, staff and students into the document.",
+                "score": 0.22167104,
+                "published_date": "Tue, 10 Nov 2026 07:03:34 GMT"
+              },
+              {
+                "title": "Congress’s Permitting Bill Is a ‘Massive Giveaway’ to the AI Data Center Industry, Critics Warn",
+                "url": "https://time.com/article/2026/11/10/permitting-bill-data-centers",
+                "source": "time.com",
+                "summary": "Personalized Content\n\n## Business\n\nFollow this section to personalize your feed and get instant alerts.\n\nWHY FOLLOW?\n\nUpdate your preferences in Account Settings\n\nPersonalized Content\n\n## AI\n\nFollow this tag to personalize your feed and get instant alerts.\n\nWHY FOLLOW?\n\nUpdate your preferences in Account Settings\n\n# Congress’s Permitting Bill Is a ‘Massive Giveaway’ to the AI Data Center Industry, Critics Warn\n\nAndrew R. Chow\n\nPersonalized Content\n\nAndrew R. Chow\n\n## Andrew R. Chow [...] The bill’s advocates argue that its passage would serve as a rare bipartisan win and a victory for affordability. But critics, especially those on the left, are calling for Democrats to wait until the next Congress. “You just heard Americans demand much more of a say in a way that AI is shaping their lives,” says Michele Jawando, the CEO of Omidyar Network. “Whenever you try to ram something through in a lame duck Congress before you have a hundred new House members, that’s never a good look [...] WHY FOLLOW?\n\nUpdate your preferences in Account Settings\n\nCorrespondent\n\nNarrated by TIME AI.",
+                "score": 0.19392508,
+                "published_date": "Tue, 10 Nov 2026 04:00:08 GMT"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "A03_news_tech_week",
+      "turns": [
+        "tin công nghệ trong tuần này"
+      ],
+      "asked_clarify": false,
+      "answered": true,
+      "passed": false,
+      "grade": {
+        "language_ok": false,
+        "grounded_ok": true,
+        "no_duplicates_ok": true,
+        "fresh_ok": true,
+        "sources_ok": true,
+        "failures": [
+          "answer is not Vietnamese (english_ratio=0.18)"
+        ]
+      },
+      "final_text": "Here are some recent technology news articles from this week:\n\n1. **[Sở Khoa học và Công nghệ Hà Tĩnh hướng dẫn xét công nhận sáng kiến và đánh giá hiệu quả đề tài khoa học](https://hatinh.gov.vn/vi/bai-viet/so-khoa-hoc-va-cong-nghe-ha-tinh-huong-dan-xet-cong-nhan-sang-kien-va-danh-gia-hieu-qua-de-tai-khoa-hoc)** - This article discusses the guidelines for recognizing initiatives and evaluating the effectiveness of scientific projects, including various types of solutions such as technical, management, and application of technical advances. (Published on Nov 8, 2026)\n\n2. **[Định hướng thúc đẩy ngoại giao khoa học và công nghệ](https://nhandan.vn/dinh-huong-thuc-day-ngoai-giao-khoa-hoc-va-cong-nghe-post1000120.html)** - The article outlines the Ministry of Science and Technology's plans to enhance international cooperation in science and technology, focusing on specific programs and partnerships. (Published on Nov 4, 2026)\n\n3. **[Elon Musk: 'Công nghệ Neuralink có thể chữa mù'](https://vnexpress.net/elon-musk-cong-nghe-neuralink-co-the-chua-mu-5139934.html)** - Elon Musk discusses Neuralink's technology, which aims to create artificial visual pathways to help restore sight. (Published on Nov 3, 2026)\n\n4. **[Cổ phiếu công nghệ Mỹ bị bán tháo, thổi bay mức kỷ lục 2.300 tỷ USD vốn hóa](https://dantri.com.vn/kinh-doanh/co-phieu-cong-nghe-my-bi-ban-thao-thoi-bay-muc-ky-luc-2300-ty-usd-von-hoa-20261106080014669.htm)** - This article reports on a significant drop in U.S. tech stocks, resulting in a loss of $2.3 trillion in market capitalization, the largest recorded. (Published on Nov 6, 2026)\n\n5. **[Từ nghiên cứu đến làm chủ công nghệ sản xuất 8 loại vắc xin](https://mst.gov.vn/tu-nghien-cuu-den-lam-chu-cong-nghe-san-xuat-8-loai-vac-xin-197261108003918865.htm)** - The article highlights advancements in vaccine production technology in Vietnam, focusing on the development and improvement of production processes. (Published on Nov 9, 2026)\n\nIf you need more details or a specific format, let me know!",
+      "transcript": [
+        {
+          "user": "tin công nghệ trong tuần này",
+          "status": "answered",
+          "assistant_text": "Here are some recent technology news articles from this week:\n\n1. **[Sở Khoa học và Công nghệ Hà Tĩnh hướng dẫn xét công nhận sáng kiến và đánh giá hiệu quả đề tài khoa học](https://hatinh.gov.vn/vi/bai-viet/so-khoa-hoc-va-cong-nghe-ha-tinh-huong-dan-xet-cong-nhan-sang-kien-va-danh-gia-hieu-qua-de-tai-khoa-hoc)** - This article discusses the guidelines for recognizing initiatives and evaluating the effectiveness of scientific projects, including various types of solutions such as technical, management, and application of technical advances. (Published on Nov 8, 2026)\n\n2. **[Định hướng thúc đẩy ngoại giao khoa học và công nghệ](https://nhandan.vn/dinh-huong-thuc-day-ngoai-giao-khoa-hoc-va-cong-nghe-post1000120.html)** - The article outlines the Ministry of Science and Technology's plans to enhance international cooperation in science and technology, focusing on specific programs and partnerships. (Published on Nov 4, 2026)\n\n3. **[Elon Musk: 'Công nghệ Neuralink có thể chữa mù'](https://vnexpress.net/elon-musk-cong-nghe-neuralink-co-the-chua-mu-5139934.html)** - Elon Musk discusses Neuralink's technology, which aims to create artificial visual pathways to help restore sight. (Published on Nov 3, 2026)\n\n4. **[Cổ phiếu công nghệ Mỹ bị bán tháo, thổi bay mức kỷ lục 2.300 tỷ USD vốn hóa](https://dantri.com.vn/kinh-doanh/co-phieu-cong-nghe-my-bi-ban-thao-thoi-bay-muc-ky-luc-2300-ty-usd-von-hoa-20261106080014669.htm)** - This article reports on a significant drop in U.S. tech stocks, resulting in a loss of $2.3 trillion in market capitalization, the largest recorded. (Published on Nov 6, 2026)\n\n5. **[Từ nghiên cứu đến làm chủ công nghệ sản xuất 8 loại vắc xin](https://mst.gov.vn/tu-nghien-cuu-den-lam-chu-cong-nghe-san-xuat-8-loai-vac-xin-197261108003918865.htm)** - The article highlights advancements in vaccine production technology in Vietnam, focusing on the development and improvement of production processes. (Published on Nov 9, 2026)\n\nIf you need more details or a specific format, let me know!",
+          "tool_calls": [
+            {
+              "name": "lookup",
+              "args": {
+                "query": "công nghệ",
+                "topic": "news",
+                "timeframe": "week"
+              }
+            }
+          ]
+        }
+      ],
+      "tool_events": [
+        {
+          "tool": "lookup",
+          "args": {
+            "query": "công nghệ",
+            "topic": "news",
+            "timeframe": "week"
+          },
+          "result": {
+            "tool": "web_search",
+            "query": "công nghệ",
+            "topic": "news",
+            "timeframe": "week",
+            "items": [
+              {
+                "title": "Sở Khoa học và Công nghệ Hà Tĩnh hướng dẫn xét công nhận sáng kiến và đánh giá hiệu quả đề tài khoa học",
+                "url": "https://hatinh.gov.vn/vi/bai-viet/so-khoa-hoc-va-cong-nghe-ha-tinh-huong-dan-xet-cong-nhan-sang-kien-va-danh-gia-hieu-qua-de-tai-khoa-hoc",
+                "source": "hatinh.gov.vn",
+                "summary": "Theo hướng dẫn, các giải pháp được xem xét công nhận là sáng kiến bao gồm: giải pháp kỹ thuật, giải pháp quản lý, giải pháp tác nghiệp và giải pháp ứng dụng tiến bộ kỹ thuật. Trong đó, giải pháp kỹ thuật có thể là sản phẩm, vật liệu, giống cy trồng, vật nuôi hoặc quy trình công nghệ; giải pháp quản lý là phương pháp tổ chức, điều hành công việc; giải pháp tác nghiệp là các phương pháp thực hiện nghiệp vụ chuyên môn; còn giải pháp ứng dụng tiến bộ kỹ thuật là việc áp dụng các giải pháp kỹ thuật",
+                "score": 0.25643653,
+                "published_date": "Sun, 08 Nov 2026 09:00:00 GMT"
+              },
+              {
+                "title": "Định hướng thúc đẩy ngoại giao khoa học và công nghệ",
+                "url": "https://nhandan.vn/dinh-huong-thuc-day-ngoai-giao-khoa-hoc-va-cong-nghe-post1000120.html",
+                "source": "nhandan.vn",
+                "summary": "Để phát huy hơn nữa tiềm năng này, bà Đỗ Quỳnh Hoa cho biết, Bộ Khoa học và Công nghệ cần triển khai đồng bộ một số định hướng trọng tm. Theo đó, các hội nghị, hội thảo cần gắn với những chương trình hợp tác cụ thể, như nghiên cứu chung, chuyển giao và làm chủ công nghệ, đào tạo nhn lực, trao đổi nhà khoa học và phát triển các nhóm nghiên cứu quốc tế, nhất là trong những lĩnh vực công nghệ chiến lược và Việt Nam có nhu cầu ưu tiên. [...] Công nhn và kỹ sư Công ty cổ phần Thiết bị và Giải pháp Cơ khí Automech ở Khu công nghiệp Đình Trám (Bắc Ninh) sản xuất các thiết bị gia công cơ khí chính xác, tự động hóa. (Ảnh: TRẦN HẢI)  \n\n## Đồng hành cùng doanh nghiệp đổi mới công nghệ\n\nTổng Bí thư, Chủ tịch nước Tô Lm chủ trì cuộc làm việc với Ban Chính sách, chiến lược Trung ương về phát triển công nghiệp vật liệu. (Ảnh: ĐĂNG KHOA)  \n\n## Xy dựng nhn lực làm chủ công nghiệp vật liệu [...] # Định hướng thúc đẩy ngoại giao khoa học và công nghệ\n\nChia sẻ tại họp báo của Bộ Khoa học và Công nghệ ngày 4/11, đại diện Vụ Hợp tác quốc tế (Bộ Khoa học và Công nghệ) cho biết, Bộ Khoa học và Công nghệ sẽ tiếp tục thúc đẩy hợp tác quốc tế theo hướng thực chất, hiệu quả, tăng cường kết nối các đối tác, chuyên gia và tổ chức khoa học trong và ngoài nước.\n\nPrefer Nhan Dan on Google\n\n Quang cảnh buổi họp báo của Bộ Khoa học và Công nghệ ngày 4/11. ( Ảnh: HÀ LINH)",
+                "score": 0.2561085,
+                "published_date": "Wed, 04 Nov 2026 08:18:19 GMT"
+              },
+              {
+                "title": "Elon Musk: 'Công nghệ Neuralink có thể chữa mù' - Báo VnExpress",
+                "url": "https://vnexpress.net/elon-musk-cong-nghe-neuralink-co-the-chua-mu-5139934.html",
+                "source": "vnexpress.net",
+                "summary": "Theo Tom's Hardware, Blindsight khác với đa số công nghệ hiện nay, vốn tập trung vào truyền tín hiệu từ não bộ để điều khiển thiết bị bên ngoài. Ví dụ, ốc tai điện tử và thiết bị cấy ghép thần kinh cảm giác gửi tín hiệu từ cảm biến vào não, giúp người khiếm thính nghe lại và bệnh nhn lấy lại xúc giác. Trong khi đó, Blindsight hướng đến thiết lập đường dẫn thị giác nhn tạo, cho phép bệnh nhn dùng camera để thu thập hình ảnh, sau đó chuyển đổi tín hiệu thành dạng mà não bộ hiểu được thông qua [...] Dù không phải công ty đầu tiên nghiên cứu về giao diện não - máy tính, Neuralink là một trong những tên tuổi thành công nhất, phần nào nhờ hỗ trợ tài chính từ Musk. Một số doanh nghiệp khác cũng nỗ lực nghiên cứu công nghệ tương tự. Ví dụ, Meta phát triển máy quét điện não đồ từ trường không xm lấn cho phép người dùng chuyển suy nghĩ thành những thao tác nhấn phím, trong khi startup Trung Quốc NeuroXess, thành lập năm 2021, đang đẩy nhanh tiến độ để thử nghiệm trên người trong năm nay.",
+                "score": 0.25222787,
+                "published_date": "Tue, 03 Nov 2026 22:00:00 GMT"
+              },
+              {
+                "title": "Cổ phiếu công nghệ Mỹ bị bán tháo, thổi bay mức kỷ lục 2.300 tỷ USD vốn hóa | Báo Dân trí",
+                "url": "https://dantri.com.vn/kinh-doanh/co-phieu-cong-nghe-my-bi-ban-thao-thoi-bay-muc-ky-luc-2300-ty-usd-von-hoa-20261106080014669.htm",
+                "source": "dantri.com.vn",
+                "summary": "Chỉ số Nasdaq 100 giảm 6,4%, thổi bay 2.300 tỷ USD giá trị vốn hóa, mức lớn nhất từng ghi nhận. Lĩnh vực công nghệ dẫn đầu đợt bán tháo lan rộng khắp các nhóm ngành, kéo chỉ số S&P 500 giảm 4,4%. Đy là mức giảm mạnh nhất kể từ tháng 4/2025, khi thị trường chao đảo vì đợt thuế quan đối ứng của Tổng thống Mỹ Donald Trump. Chỉ số đo lường cổ phiếu bán dẫn Mỹ lao dốc 12%, ghi nhận ngày tồi tệ nhất kể từ khi đại dịch Covid-19 bùng phát vào tháng 3/2020. [...] Kinh doanh\n\n# Cổ phiếu công nghệ Mỹ bị bán tháo, thổi bay mức kỷ lục 2.300 tỷ USD vốn hóa\n\nXun Hoa\n\nXun Hoa\n\n## (Dn trí) - Cổ phiếu công nghệ lao dốc mạnh nhất kể từ năm 2020 trong phiên 5/11 khi nhà đầu tư rút lo ngại về làn sóng đầu tư vào AI sau khi Đảng Dn chủ thắng áp đảo trong cuộc bầu cử giữa nhiệm kỳ ở Mỹ. [...] “Trong chuỗi cung ứng AI đã có rất nhiều yếu tố định giá và biên lợi nhuận dựa trên sự khan hiếm, dù là ở các công ty bộ nhớ hay các công ty công nghiệp phục vụ trung tm dữ liệu”, ông Justin Bergner, nhà quản lý danh mục tại Gabelli Funds, nhận định. Ông nói thêm rằng thị trường đang phản ánh vào giá một quá trình xy dựng hạ tầng kéo dài hơn, điều sẽ khiến chuỗi cung ứng bớt căng thẳng và biên lợi nhuận thấp hơn.",
+                "score": 0.24413808,
+                "published_date": "Fri, 06 Nov 2026 09:00:00 GMT"
+              },
+              {
+                "title": "Từ nghiên cứu đến làm chủ công nghệ sản xuất 8 loại vắc xin - Cổng Thông tin điện tử Bộ Khoa học và Công nghệ",
+                "url": "https://mst.gov.vn/tu-nghien-cuu-den-lam-chu-cong-nghe-san-xuat-8-loai-vac-xin-197261108003918865.htm",
+                "source": "mst.gov.vn",
+                "summary": "Các kết quả nghiên cứu tập trung vào việc xy dựng, tiếp nhận, cải tiến và hoàn thiện quy trình công nghệ ở các công đoạn then chốt của quá trình sản xuất, từ chủng giống, nuôi cấy, thu hoạch, tinh chế đến pha chế, đóng gói và kiểm soát chất lượng. Qua đó, các đơn vị từng bước làm chủ quy trình sản xuất, nng cao năng lực nghiên cứu và sản xuất vắc xin trong nước.\n\nHiệu quả của cụm công trình được thể hiện rõ qua khả năng cung ứng sản phẩm cho thị trường và chương trình tiêm chủng. [...] Quay lại\n\nMột số từ viết tắt trên cổng TTĐT Bộ   In\n\nChia sẻ facebook Chia sẻ twitter Chia sẻ zalo Gửi mail Sao chép đường dẫn\n\n\n\nPhản ánh, kiến nghị văn bản   \nquy phạm pháp luật\n\nNghiên cứu cơ bản và ứng dụng công nghệ cao.\n\n Xem thêm\n\n\n\nDịch vụ hành chính công\n\nThông tin về Dịch vụ hành chính công Bộ Khoa học và Công nghệ; Hệ thống thông tin giải quyết TTHC\n\n Xem thêm\n\n\n\nSản phẩm dịch vụ,   \nKHCN, ĐMST\n\nThông tin giới thiệu về các sản phẩm, dịch vụ ngành Khoa học và Công nghệ\n\n Xem thêm [...] Khoa học và Công nghệ Đổi mới sáng tạo Chuyển đổi số Bưu chính, Viễn thông Sở hữu trí tuệ Tiêu chuẩn, đo lường, chất lượng Năng lượng nguyên tử Tin tổng hợp Tin địa phương\n Dịch vụ công\n Hệ thống văn bản  arrow-drop-down\n\n  Văn bản QPPL  Văn bản chỉ đạo điều hành   Lấy ý kiến người dn về dự thảo VBQPPL\n MST IOFFICE\n THỐNG KÊ  arrow-drop-down",
+                "score": 0.24385437,
+                "published_date": "Mon, 09 Nov 2026 01:25:00 GMT"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "A04_vague_new_news",
+      "turns": [
+        "cho mình xem tin mới"
+      ],
+      "asked_clarify": false,
+      "answered": true,
+      "passed": false,
+      "grade": {
+        "language_ok": true,
+        "grounded_ok": null,
+        "no_duplicates_ok": null,
+        "fresh_ok": null,
+        "sources_ok": false,
+        "failures": [
+          "answer cites no source URL"
+        ]
+      },
+      "final_text": "Bạn có thể cho mình biết chủ đề hoặc lĩnh vực mà bạn muốn xem tin mới không?",
+      "transcript": [
+        {
+          "user": "cho mình xem tin mới",
+          "status": "answered",
+          "assistant_text": "Bạn có thể cho mình biết chủ đề hoặc lĩnh vực mà bạn muốn xem tin mới không?",
+          "tool_calls": []
+        }
+      ],
+      "tool_events": []
+    },
+    {
+      "id": "A05_tweets_account",
+      "turns": [
+        "Tweet mới nhất của Sam Altman là gì?"
+      ],
+      "asked_clarify": false,
+      "answered": true,
+      "passed": false,
+      "grade": {
+        "language_ok": false,
+        "grounded_ok": true,
+        "no_duplicates_ok": true,
+        "fresh_ok": null,
+        "sources_ok": true,
+        "failures": [
+          "answer is not Vietnamese (english_ratio=0.09)"
+        ]
+      },
+      "final_text": "Tweet mới nhất của Sam Altman là:\n\n**Nội dung:** RT @fouadmatin: Today’s GPT-6 Cyber release is a meaningful step for defenders: stronger vulnerability research and better alignment. We’ve…\n\n**Ngày đăng:** 05 tháng 11 năm 2026\n\n**Liên kết:** [Xem tweet](https://x.com/sama/status/2118471941002842341)\n\n**Thống kê:** 53 lượt retweet, 0 lượt thích, 47,460 lượt xem.",
+      "transcript": [
+        {
+          "user": "Tweet mới nhất của Sam Altman là gì?",
+          "status": "answered",
+          "assistant_text": "Tweet mới nhất của Sam Altman là:\n\n**Nội dung:** RT @fouadmatin: Today’s GPT-6 Cyber release is a meaningful step for defenders: stronger vulnerability research and better alignment. We’ve…\n\n**Ngày đăng:** 05 tháng 11 năm 2026\n\n**Liên kết:** [Xem tweet](https://x.com/sama/status/2118471941002842341)\n\n**Thống kê:** 53 lượt retweet, 0 lượt thích, 47,460 lượt xem.",
+          "tool_calls": [
+            {
+              "name": "timeline",
+              "args": {
+                "screenname": "sama",
+                "limit": 1
+              }
+            }
+          ]
+        }
+      ],
+      "tool_events": [
+        {
+          "tool": "timeline",
+          "args": {
+            "screenname": "sama",
+            "limit": 1
+          },
+          "result": {
+            "tool": "get_user_tweets",
+            "screenname": "sama",
+            "items": [
+              {
+                "title": "RT @fouadmatin: Today’s GPT-6 Cyber release is a meaningful step for defenders: stronger vulnerability research and bett",
+                "summary": "RT @fouadmatin: Today’s GPT-6 Cyber release is a meaningful step for defenders: stronger vulnerability research and better alignment. We’ve…",
+                "url": "https://x.com/sama/status/2118471941002842341",
+                "source": "@sama",
+                "date": "Thu Nov 05 22:34:04 +0000 2026",
+                "metrics": {
+                  "favorites": 0,
+                  "retweets": 53,
+                  "views": "47460"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "A06_social_topic",
+      "turns": [
+        "Mọi người đang bàn gì về GPT-5 trên Twitter?"
+      ],
+      "asked_clarify": false,
+      "answered": true,
+      "passed": false,
+      "grade": {
+        "language_ok": true,
+        "grounded_ok": false,
+        "no_duplicates_ok": false,
+        "fresh_ok": null,
+        "sources_ok": true,
+        "failures": [
+          "URL not returned by any tool: https://t.co/ZABpFrvKdx",
+          "a URL is listed more than once"
+        ]
+      },
+      "final_text": "Dưới đây là một số bài đăng gần đây về GPT-5 trên Twitter:\n\n1. **[@gabrielphan](https://x.com/gabrielphan/status/2120086436875813369)** (10 Nov 2026)\n   - **Nội dung**: \"lagi cari fh app prem? @besiqdes opress nih, ready app prem start 100p, app harian-tahunan, fast fixing mostly under 5 hours, netf bill legal, canpa no renew, gpt, claude. ada bot order 24/7 dan bot otp gpt juga loh, kalo mau intip pl bisa ke [link](https://t.co/ZABpFrvKdx)\"\n   - **Lượt xem**: 35\n\n2. **[@asahi_ai_x](https://x.com/asahi_ai_x/status/2120086205018853630)** (10 Nov 2026)\n   - **Nội dung**: \"https://t.co/2qIbXHzlXZ\"\n   - **Lượt thích**: 1, **Lượt xem**: 54\n\n3. **[@yingyen_](https://x.com/yingyen_/status/2120085660224655361)** (10 Nov 2026)\n   - **Nội dung**: \"Spent last weekend afternoon building an AI image site: ImgRestyle 🎨... [link](https://t.co/7BgEsqdDt3)\"\n\n4. **[@EvoLinkAi](https://x.com/EvoLinkAi/status/2120085634438021140)** (10 Nov 2026)\n   - **Nội dung**: \"Seedream 5.5 beats GPT Image 2.6 Sunburst in this Casio watch multi-turn editing test... [link](https://t.co/kojRNq4cBQ)\"\n   - **Lượt xem**: 8\n\n5. **[@Ibrahimsultan__](https://x.com/Ibrahimsultan__/status/2120085613441696069)** (10 Nov 2026)\n   - **Nội dung**: \"7 days. One laptop. A GTX 1660 Ti with 6GB VRAM and 7.7GB usable RAM... [link](https://x.com/Ibrahimsultan__/status/2120085613441696069)\"\n   - **Lượt xem**: 6\n\nNếu bạn cần thêm thông tin hoặc muốn tìm hiểu sâu hơn về một bài đăng cụ thể, hãy cho tôi biết!",
+      "transcript": [
+        {
+          "user": "Mọi người đang bàn gì về GPT-5 trên Twitter?",
+          "status": "answered",
+          "assistant_text": "Dưới đây là một số bài đăng gần đây về GPT-5 trên Twitter:\n\n1. **[@gabrielphan](https://x.com/gabrielphan/status/2120086436875813369)** (10 Nov 2026)\n   - **Nội dung**: \"lagi cari fh app prem? @besiqdes opress nih, ready app prem start 100p, app harian-tahunan, fast fixing mostly under 5 hours, netf bill legal, canpa no renew, gpt, claude. ada bot order 24/7 dan bot otp gpt juga loh, kalo mau intip pl bisa ke [link](https://t.co/ZABpFrvKdx)\"\n   - **Lượt xem**: 35\n\n2. **[@asahi_ai_x](https://x.com/asahi_ai_x/status/2120086205018853630)** (10 Nov 2026)\n   - **Nội dung**: \"https://t.co/2qIbXHzlXZ\"\n   - **Lượt thích**: 1, **Lượt xem**: 54\n\n3. **[@yingyen_](https://x.com/yingyen_/status/2120085660224655361)** (10 Nov 2026)\n   - **Nội dung**: \"Spent last weekend afternoon building an AI image site: ImgRestyle 🎨... [link](https://t.co/7BgEsqdDt3)\"\n\n4. **[@EvoLinkAi](https://x.com/EvoLinkAi/status/2120085634438021140)** (10 Nov 2026)\n   - **Nội dung**: \"Seedream 5.5 beats GPT Image 2.6 Sunburst in this Casio watch multi-turn editing test... [link](https://t.co/kojRNq4cBQ)\"\n   - **Lượt xem**: 8\n\n5. **[@Ibrahimsultan__](https://x.com/Ibrahimsultan__/status/2120085613441696069)** (10 Nov 2026)\n   - **Nội dung**: \"7 days. One laptop. A GTX 1660 Ti with 6GB VRAM and 7.7GB usable RAM... [link](https://x.com/Ibrahimsultan__/status/2120085613441696069)\"\n   - **Lượt xem**: 6\n\nNếu bạn cần thêm thông tin hoặc muốn tìm hiểu sâu hơn về một bài đăng cụ thể, hãy cho tôi biết!",
+          "tool_calls": [
+            {
+              "name": "social_search",
+              "args": {
+                "query": "GPT-5"
+              }
+            }
+          ]
+        }
+      ],
+      "tool_events": [
+        {
+          "tool": "social_search",
+          "args": {
+            "query": "GPT-5"
+          },
+          "result": {
+            "tool": "search_tweets",
+            "query": "GPT-5",
+            "search_type": "Latest",
+            "items": [
+              {
+                "title": "lagi cari fh app prem? @besiqdes opress nih, ready app prem start 100p, app harian-tahunan, fast fixing mostly under 5 h",
+                "summary": "lagi cari fh app prem? @besiqdes opress nih, ready app prem start 100p, app harian-tahunan, fast fixing mostly under 5 hours, netf bill legal, canpa no renew, gpt, claude. ada bot order 24/7 dan bot otp gpt juga loh, kalo mau intip pl bisa ke https://t.co/ZABpFrvKdx\n\n#zonauang 5 https://t.co/TSZ6bjBUJC",
+                "url": "https://x.com/gabrielphan/status/2120086436875813369",
+                "source": "@gabrielphan",
+                "date": "Tue Nov 10 09:29:30 +0000 2026",
+                "metrics": {
+                  "favorites": 0,
+                  "retweets": 0,
+                  "views": "35"
+                }
+              },
+              {
+                "title": "https://t.co/2qIbXHzlXZ",
+                "summary": "https://t.co/2qIbXHzlXZ",
+                "url": "https://x.com/asahi_ai_x/status/2120086205018853630",
+                "source": "@asahi_ai_x",
+                "date": "Tue Nov 10 09:28:35 +0000 2026",
+                "metrics": {
+                  "favorites": 1,
+                  "retweets": 0,
+                  "views": "54"
+                }
+              },
+              {
+                "title": "Spent last weekend afternoon building an AI image site: ImgRestyle 🎨",
+                "summary": "Spent last weekend afternoon building an AI image site: ImgRestyle 🎨\n\nUpload your own photo, describe what you want changed in one sentence, then use the strength slider to choose a subtle tweak or a bold redo.\n\nWhat it can do:\n• Turn photos into watercolor, anime, or sketch styles\n• Swap backgrounds or outfits\n• Pet portraits, product shots, headshots\n• Restore old photos\n• Turn images into GIFs\n\nIt has three models: Nano Banana Pro, GPT Image 2.6, and Seedream 5. Run the same image through each and the results can be really different.\n\nI used to think a site like this would take weeks. With AI writing the code, it went from idea to something usable in one afternoon.\n\n3 free generations, no sign-up, no credit card. Give it a try, I'd love your feedback 🙏\n\n👉 https://t.co/7BgEsqdDt3",
+                "url": "https://x.com/yingyen_/status/2120085660224655361",
+                "source": "@yingyen_",
+                "date": "Tue Nov 10 09:26:25 +0000 2026",
+                "metrics": {
+                  "favorites": 0,
+                  "retweets": 0,
+                  "views": null
+                }
+              },
+              {
+                "title": "Seedream 5.5 beats GPT Image 2.6 Sunburst in this Casio watch multi-turn editing test.",
+                "summary": "Seedream 5.5 beats GPT Image 2.6 Sunburst in this Casio watch multi-turn editing test.\n\nBetter results, lower cost. ⌚🔥\n\nLeft: Seedream 5.5 — $0.84\nRight: GPT Image 2.6 Sunburst — $1.91\n\nSeedream 5.5 is coming soon. Register interest 👇\nhttps://t.co/kojRNq4cBQ",
+                "url": "https://x.com/EvoLinkAi/status/2120085634438021140",
+                "source": "@EvoLinkAi",
+                "date": "Tue Nov 10 09:26:19 +0000 2026",
+                "metrics": {
+                  "favorites": 0,
+                  "retweets": 0,
+                  "views": "8"
+                }
+              },
+              {
+                "title": "7 days. One laptop. A GTX 1660 Ti with 6GB VRAM and 7.7GB usable RAM.",
+                "summary": "7 days. One laptop. A GTX 1660 Ti with 6GB VRAM and 7.7GB usable RAM.\n\n41,562 frames. 28 minutes, 51 seconds.\n\nBeen working nonstop with opus 5.5 max on a clay-style stop motion film about Information Security Management and it's finally finished.\n\nThe idea was to create something visually closer to wallace & gromit than a conventional corporate training presentation. Clay-style characters, minimature looking sets, cinematic camera movements, expressive performances, a little humor and an actual story.\n\nThe film runs at 24fps but is animated on twos, meaning 12 visual updates per sec, giving it that deliberate handmade stop motion feel. \n\nThe entire production was done on my laptop. No render farm and roughly 33 hours spent rendering on the 1660 Ti alone.\n\nFor anyone interested in how it was made, here's the actual workflow:\n\n1) Blender: 3d characters, environments, animation, miniature style lighting and a cinematic camera work.\n\n2) Remotion: scene composition, editing, transitions, subtitles, title cards and motion graphics.\n\n3) FFmpeg: video processing, encoding and final assembly.\n\n4) Sarvam Bulbul: 291 dialogue lines across five character voices.\n\n5) ElevenLabs: 76 additional dialogue lines, including an italian accented character.\n\n6) Earshot: auditioning, evaluating, and ranking voice takes before selecting the performances.\n\n7) Poly Haven & BlenderKit: materials, textures, props and assets for the 3d environments.\n\n8) Pexels: additional visual elements, including rain footage.\n\n9) Custom lettering engine: a 68-glyph hand drawn alphabet built from strokes because regular fonts didn't quite capture the aesthetic i wanted.\n\nOpus 5.5 max was my primary development collaborator throughout the week, haiku 5.5 xhigh helped inspect rendered frames, gpt 6.1 terra max reviewed the film because i wanted it's vision capability lastly deepseek v4.1 flash 1017 and hy4 assisted with subsequent review passes.\n\nA fair amount of time went into debugging renders, refining character movements, adjusting lighting and camera angles, reviewing dialogue and checking how everything came together and was completed the day before fable 5.2 launched lol.\n\nThe project actually started as an information security awareness film for my father's company in India, the goal was to help employees understand security concepts through storytelling rather than another conventional training presentations.\n\nAs the film developed, i realised it could be useful beyond its original audience, so i decided to share it publicly as well :)\n\nThe full film is attached below. I'd appreciate any thoughts literally anything!\n\nand don't skip the ending, there's a post cred scene ;)",
+                "url": "https://x.com/Ibrahimsultan__/status/2120085613441696069",
+                "source": "@Ibrahimsultan__",
+                "date": "Tue Nov 10 09:26:14 +0000 2026",
+                "metrics": {
+                  "favorites": 0,
+                  "retweets": 0,
+                  "views": "6"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "A07_capabilities_no_tool",
+      "turns": [
+        "Bạn là gì và làm được những gì?"
+      ],
+      "asked_clarify": false,
+      "answered": true,
+      "passed": true,
+      "grade": {
+        "language_ok": true,
+        "grounded_ok": null,
+        "no_duplicates_ok": null,
+        "fresh_ok": null,
+        "sources_ok": null,
+        "failures": []
+      },
+      "final_text": "Tôi là một trợ lý nghiên cứu, giúp bạn tìm kiếm thông tin từ các bài viết, bài đăng trên mạng xã hội và trang web. Tôi có thể đọc các tài khoản X/Twitter, tìm kiếm bài viết theo từ khóa, đọc nội dung từ URL và tổ chức thông tin thành bản tin. Nếu bạn cần thông tin cụ thể, hãy cho tôi biết!",
+      "transcript": [
+        {
+          "user": "Bạn là gì và làm được những gì?",
+          "status": "answered",
+          "assistant_text": "Tôi là một trợ lý nghiên cứu, giúp bạn tìm kiếm thông tin từ các bài viết, bài đăng trên mạng xã hội và trang web. Tôi có thể đọc các tài khoản X/Twitter, tìm kiếm bài viết theo từ khóa, đọc nội dung từ URL và tổ chức thông tin thành bản tin. Nếu bạn cần thông tin cụ thể, hãy cho tôi biết!",
+          "tool_calls": []
+        }
+      ],
+      "tool_events": []
+    },
+    {
+      "id": "A08_followup_other_topic",
+      "turns": [
+        "tin tức hôm nay",
+        "còn tin công nghệ thì sao?"
+      ],
+      "asked_clarify": false,
+      "answered": true,
+      "passed": false,
+      "grade": {
+        "language_ok": false,
+        "grounded_ok": true,
+        "no_duplicates_ok": true,
+        "fresh_ok": true,
+        "sources_ok": true,
+        "failures": [
+          "answer is not Vietnamese (english_ratio=0.23)"
+        ]
+      },
+      "final_text": "Here are some notable technology news articles from today:\n\n1. **[Công nghệ số phải tạo ra thay đổi thực chất ở bản làng](https://dantocphattrien.vietnamnet.vn/nghe-an-no-luc-dua-cong-nghe-so-vuot-nui-ve-ban-cong-nghe-so-phai-tao-ra-thay-doi-thuc-chat-o-ban-lang-bai-cuoi-80096.html)** - The success of bringing digital technology to rural areas is measured not by the number of devices installed but by the ability to apply technology in management, production, and daily life. (Source: dantocphattrien.vietnamnet.vn)\n\n2. **[Vĩnh Long tìm công nghệ biến vỏ dừa, vỏ sầu riêng thành sản phẩm giá trị cao](https://baochinhphu.vn/vinh-long-tim-cong-nghe-bien-vo-dua-vo-sau-rieng-thanh-san-pham-gia-tri-cao-102261110111550632.htm)** - The focus is on finding suitable technology to transform coconut and durian husks into high-value products, emphasizing the importance of technology in enhancing productivity and quality. (Source: baochinhphu.vn)\n\n3. **[Thúc đẩy ứng dụng công nghệ sinh học để nâng cao giá trị nông sản](https://laodong.vn/thi-truong/thuc-day-ung-dung-cong-nghe-sinh-hoc-de-nang-cao-gia-tri-nong-san-1798013.ldo)** - Vietnam is pushing for the application of biotechnology to enhance agricultural product value, with significant policies supporting this direction. (Source: laodong.vn)\n\n4. **[Công bố 20 nữ sinh khoa học công nghệ Việt Nam năm 2026](https://tienphong.vn/cong-bo-20-nu-sinh-khoa-hoc-cong-nghe-viet-nam-nam-2026-post1893128.tpo)** - The announcement highlights 20 female students excelling in science and technology fields, showcasing their contributions and achievements. (Source: tienphong.vn)\n\n5. **[Ứng dụng công nghệ số, nâng tầm hiệu quả hoạt động của cơ quan dân cử](https://baothanhhoa.vn/ung-dung-cong-nghe-so-nang-tam-hieu-qua-hoat-dong-cua-co-quan-dan-cu-308536.htm)** - The article discusses the importance of digital transformation and AI in enhancing the effectiveness of local government operations. (Source: baothanhhoa.vn)\n\nIf you need more information or specific topics, feel free to ask!",
+      "transcript": [
+        {
+          "user": "tin tức hôm nay",
+          "status": "answered",
+          "assistant_text": "Here are some notable news articles from today:\n\n1. **[Tin tức nổi bật ngày 9/11: Hành khách có thể mua vé tàu hỏa trên VNeID](https://petrotimes.vn/tin-tuc-noi-bat-ngay-9-11-hanh-khach-co-the-mua-ve-tau-hoa-tren-vneid-747742.html)** - VPBank giành “cú đúp” giải thưởng về quản lý dòng tiền tại The Euromoney Transaction Banking Awards. Agribank đồng hành cùng chương trình “Go Global - Cùng doanh nghiệp vươn ra thế giới”. (Source: petrotimes.vn)\n\n2. **[Tin tức nổi bật ngày 10/11/2026 có gì?](https://htv.vn/tin-tuc-noi-bat-ngay-10-11-2026-co-gi-22226111011494945.htm)** - Nhiều cây xanh ở Đà Nẵng ngã đổ tối qua do mưa lớn kèm gió giật mạnh. (Source: htv.vn)\n\n3. **[Tin tức quốc tế ngày 10.11: Tổng thống Trump ra một loạt tuyên bố quan trọng](https://thanhnien.vn/tin-tuc-quoc-te-sang-1011-tong-thong-trump-ra-tuyen-bo-moi-185261110000427831.htm)** - Tổng thống Mỹ Donald Trump có nhiều tuyên bố mới; Pháp ra cáo buộc với Iran. (Source: thanhnien.vn)\n\n4. **[Ủy ban Bầu cử Trung ương ra mắt video tuyên truyền quy định bầu cử cùng đại sứ cộng đồng tân di dân Đới Khải Văn](https://www.rti.org.tw/vn/news?uid=3&pid=1050628)** - Ủy ban Bầu cử Trung ương nhấn mạnh sẽ giữ vững lập trường độc lập, công bằng, trung lập, khách quan và chuyên nghiệp. (Source: rti.org.tw)\n\n5. **[Thời báo Tân di dân toàn cầu-Nam Đầu kết nối mùa hoa mận và hoa anh đào trong chuỗi du lịch kéo dài ba tháng](https://news.immigration.gov.tw/NewsSection/Detail/bf4bec2a-c1ce-4d90-b439-a736e8657bf2?lang=VN)** - Kết nối mùa hoa mận và hoa anh đào trong chuỗi du lịch kéo dài ba tháng. (Source: news.immigration.gov.tw)\n\nIf you need more details or specific topics, feel free to ask!",
+          "tool_calls": [
+            {
+              "name": "lookup",
+              "args": {
+                "query": "",
+                "topic": "news",
+                "timeframe": "day"
+              }
+            }
+          ]
+        },
+        {
+          "user": "còn tin công nghệ thì sao?",
+          "status": "answered",
+          "assistant_text": "Here are some notable technology news articles from today:\n\n1. **[Công nghệ số phải tạo ra thay đổi thực chất ở bản làng](https://dantocphattrien.vietnamnet.vn/nghe-an-no-luc-dua-cong-nghe-so-vuot-nui-ve-ban-cong-nghe-so-phai-tao-ra-thay-doi-thuc-chat-o-ban-lang-bai-cuoi-80096.html)** - The success of bringing digital technology to rural areas is measured not by the number of devices installed but by the ability to apply technology in management, production, and daily life. (Source: dantocphattrien.vietnamnet.vn)\n\n2. **[Vĩnh Long tìm công nghệ biến vỏ dừa, vỏ sầu riêng thành sản phẩm giá trị cao](https://baochinhphu.vn/vinh-long-tim-cong-nghe-bien-vo-dua-vo-sau-rieng-thanh-san-pham-gia-tri-cao-102261110111550632.htm)** - The focus is on finding suitable technology to transform coconut and durian husks into high-value products, emphasizing the importance of technology in enhancing productivity and quality. (Source: baochinhphu.vn)\n\n3. **[Thúc đẩy ứng dụng công nghệ sinh học để nâng cao giá trị nông sản](https://laodong.vn/thi-truong/thuc-day-ung-dung-cong-nghe-sinh-hoc-de-nang-cao-gia-tri-nong-san-1798013.ldo)** - Vietnam is pushing for the application of biotechnology to enhance agricultural product value, with significant policies supporting this direction. (Source: laodong.vn)\n\n4. **[Công bố 20 nữ sinh khoa học công nghệ Việt Nam năm 2026](https://tienphong.vn/cong-bo-20-nu-sinh-khoa-hoc-cong-nghe-viet-nam-nam-2026-post1893128.tpo)** - The announcement highlights 20 female students excelling in science and technology fields, showcasing their contributions and achievements. (Source: tienphong.vn)\n\n5. **[Ứng dụng công nghệ số, nâng tầm hiệu quả hoạt động của cơ quan dân cử](https://baothanhhoa.vn/ung-dung-cong-nghe-so-nang-tam-hieu-qua-hoat-dong-cua-co-quan-dan-cu-308536.htm)** - The article discusses the importance of digital transformation and AI in enhancing the effectiveness of local government operations. (Source: baothanhhoa.vn)\n\nIf you need more information or specific topics, feel free to ask!",
+          "tool_calls": [
+            {
+              "name": "lookup",
+              "args": {
+                "query": "công nghệ",
+                "topic": "news",
+                "timeframe": "day"
+              }
+            }
+          ]
+        }
+      ],
+      "tool_events": [
+        {
+          "tool": "lookup",
+          "args": {
+            "query": "",
+            "topic": "news",
+            "timeframe": "day"
+          },
+          "result": {
+            "tool": "web_search",
+            "query": "tin tức nổi bật",
+            "topic": "news",
+            "timeframe": "day",
+            "items": [
+              {
+                "title": "Tin tức nổi bật ngày 9/11: Hành khách có thể mua vé tàu hỏa trên VNeID",
+                "url": "https://petrotimes.vn/tin-tuc-noi-bat-ngay-9-11-hanh-khach-co-the-mua-ve-tau-hoa-tren-vneid-747742.html",
+                "source": "petrotimes.vn",
+                "summary": "VPBank giành “cú đúp” giải thưởng về quản lý dòng tiền tại The Euromoney Transaction Banking Awards \n\n  VPBank giành “cú đúp” giải thưởng về quản lý dòng tiền tại The Euromoney Transaction Banking Awards\n Agribank đồng hành cùng chương trình “Go Global - Cùng doanh nghiệp vươn ra thế giới” \n\n  Agribank đồng hành cùng chương trình “Go Global - Cùng doanh nghiệp vươn ra thế giới”\n Agribank - Top 20 doanh nghiệp văn hóa uy tín có xếp hạng cao nhất năm 2026 [...] ### Tin tức nổi bật ngày 6/11: Du lịch Hà Nội xác lập kỷ lục mới với hơn 30 triệu lượt khách\n VPBank giành “cú đúp” giải thưởng về quản lý dòng tiền tại The Euromoney Transaction Banking Awards \n\n  ### VPBank giành “cú đúp” giải thưởng về quản lý dòng tiền tại The Euromoney Transaction Banking Awards\n Điều gì tạo sức bật cho doanh nghiệp năng lượng trong năm 2026? [...] TP HCM đề xuất tăng mức vay, kéo dài thời hạn hỗ trợ vốn mua nhà ở xã hội\n\nMột nội dung được doanh nghiệp quan tm là chính sách hỗ trợ lãi suất đối với các dự án nhà ở xã hội, nhà ở cho thuê.\n\nPhó giám đốc Sở Tài chính TP HCM Nguyễn Thanh Toàn cho biết, thành phố đang thực hiện cơ chế hỗ trợ theo Nghị quyết số 09/2023/NQ-HĐND.",
+                "score": 0.6493563,
+                "published_date": "Mon, 09 Nov 2026 13:13:48 GMT"
+              },
+              {
+                "title": "Tin tức nổi bật ngày 10/11/2026 có gì?",
+                "url": "https://htv.vn/tin-tuc-noi-bat-ngay-10-11-2026-co-gi-22226111011494945.htm",
+                "source": "htv.vn",
+                "summary": "Bỏ qua đến nội dung chính\n\nCƠ QUAN BÁO VÀ PHÁT THANH, TRUYỀN HÌNH TP. HỒ CHÍ MINH\n\n HTV\n\nĐÀI PHÁT THANH VÀ TRUYỀN HÌNH   \nTHÀNH PHỐ HỒ CHÍ MINH\n\nTV LIVE   RADIO LIVE   GIỚI THIỆU HTV\n\nBạn hãy chọn Profile tiện dụng\n\nXu hướng\n\ngiá vàng hôm nay\n\nphim HTV\n\ngiá xăng dầu\n\ncông an tphcm\n\nKinh tế\n\ncông nghệ\n\ngiải trí\n\n# Tin tức nổi bật ngày 10/11/2026 có gì?\n\nThời sự 00:00:35.78\n\nTRẦN HÙNG, PHƯƠNG MAI, NGỌC PHẠM\n\n(HTV) - Nhiều cy xanh ở Đà Nẵng ngã đổ tối qua do mưa lớn kèm gió giật mạnh. [...] ## Danh sách tập\n\nTin tức nổi bật ngày 9/11/2026 có gì? \n\n### Tin tức nổi bật ngày 9/11/2026 có gì?\n\nTin tức nổi bật ngày 8/11/2026 có gì? \n\n### Tin tức nổi bật ngày 8/11/2026 có gì?\n\nTin tức nổi bật ngày 7/11/2026 có gì? \n\n### Tin tức nổi bật ngày 7/11/2026 có gì?\n\nTin tức nổi bật ngày 6/11/2026 có gì? \n\n### Tin tức nổi bật ngày 6/11/2026 có gì?\n\nTin tức nổi bật ngày 5/11/2026 có gì? \n\n### Tin tức nổi bật ngày 5/11/2026 có gì?\n\n## Các chương trình khác",
+                "score": 0.58154076,
+                "published_date": "Tue, 10 Nov 2026 07:46:00 GMT"
+              },
+              {
+                "title": "Tin tức quốc tế ngày 10.11: Tổng thống Trump ra một loạt tuyên bố quan trọng",
+                "url": "https://thanhnien.vn/tin-tuc-quoc-te-sang-1011-tong-thong-trump-ra-tuyen-bo-moi-185261110000427831.htm",
+                "source": "thanhnien.vn",
+                "summary": "Khi ô vuông chuyển thành dấu tích xanh là bạn đã thành công rồi!\n\nLƯU Ý NHỎ: Nếu muốn kiểm tra xem cài đặt còn hiệu lực không, bạn chỉ cần mở lại link trên là thấy ngay dấu tích xanh vẫn đang hiển thị.\n\nCác nguồn ưu tiênCác nguồn ưu tiên\n\nChúc bạn đọc báo vui vẻ!\n\nNhiều tuyên bố mới của Tổng thống Mỹ Donald Trump; Pháp ra cáo buộc với Iran ... Thanh Niên sẽ tiếp tục cập nhật các tin tức quốc tế nổi bật trong ngày 10.11.\n\n## Tổng thống Trump nói về chiến sự Iran [...] Tổng thống Thổ Nhĩ Kỳ Recep Tayyip Erdogan cho biết, một vụ nổ tại một nhà máy thép ở miền ty nước này vào ngày 9.11 đã khiến 16 người thiệt mạng.\n\nVụ nổ xảy ra tại nhà máy HABAS Demir Celik ở Aliaga, cách thành phố Izmir khoảng 60 km về phía bắc. Con số mà ông Erdogan đưa ra đã cập nhật thông tin trước đó, vốn ghi nhận 10 người tử vong.\n\n## Tin liên quan\n\nLiên Hiệp Quốc cảnh báo 'kỷ nguyên thời tiết cực đoan'\n\n### Liên Hiệp Quốc cảnh báo 'kỷ nguyên thời tiết cực đoan' [...] Hội nghị thượng đỉnh về khí hậu COP31 đã chính thức khai mạc tại Thổ Nhĩ Kỳ ngày 9.11, trong bối cảnh các tổ chức quốc tế kêu gọi hành động quyết liệt để giảm thiểu tình trạng thời tiết cực đoan.\n\n### Nghi phạm 24 tuổi trong vụ xả súng kinh hoàng tại Ba Lan đã tử vong\n\n### Vụ CEO Nvidia Jensen Huang ngoại tình với nữ doanh nhn Trung Quốc: Bắc Kinh lên tiếng\n\nChia sẻ\n\nChọn Báo Thanh Niên làm nguồn ưu tiên trên Google tìm kiếm. Xem hướng dẫn.\n\nBình luận (0)\n\nGửi bình luận\n\nQuan tm nhấtMới nhất",
+                "score": 0.51918614,
+                "published_date": "Mon, 09 Nov 2026 22:23:00 GMT"
+              },
+              {
+                "title": "Ủy ban Bầu cử Trung ương ra mắt video tuyên truyền quy định bầu cử cùng đại sứ cộng đồng tân di dân Đới Khải Văn-Tin tức-Radio Taiwan International",
+                "url": "https://www.rti.org.tw/vn/news?uid=3&pid=1050628",
+                "source": "rti.org.tw",
+                "summary": "Ủy ban Bầu cử Trung ương nhấn mạnh sẽ luôn giữ vững lập trường độc lập, công bằng, trung lập, khách quan và chuyên nghiệp, nhằm bảo đảm cuộc bầu cử và trưng cầu dn ý diễn ra thuận lợi.\n\nNgười dn có thể xem các video tuyên truyền liên quan tại chuyên mục “Bầu cử các chức vụ công cấp địa phương và trưng cầu dn ý toàn quốc năm 2026” trên trang web của Ủy ban Bầu cử Trung ương.\n\nThúy Anh\n\nQuay về Tổng quan Về trang trước\n\nTin tức nổi ḅt trong tùn [...] Skip to the main content block\n\n::: Trang chủ| Sơ đồ website| Podcasts|\n\n|\n\nLanguage\n\nmenu close\n\nTin tức   Chương trình   Videos   Podcasts   Giới thiệu về RTI\n\n# Formosa Dream Chasers - Programs - RTI Radio Taiwan International-logo\n\nTin tức\n\n| Tổng quan  Xem nhiều\n\n Tìm kiếm\n\nTìm kiếm\n\nTin nổi ḅt \n\nNhằm hưởng ứng COP31, Bộ Môi trường đồng thời thành lập “Trung tm điều phối COP31” và triển khai chuỗi 10 diễn đàn trực tuyến. (Ảnh: PV Rti) [...] COP31 sắp khai mạc, Bộ Môi trường khởi động diễn đàn đồng bộ để cập nhật thông tin\n\n1\n\nVề tin đồn sinh viên Việt Nam đến Đài Loan là được nhận trợ cấp, Bộ Giáo dục Đài Loan: để được nhận học bổng đều phải qua quy trình xét duyệt\n\n2\n\nCông bố bảng xếp hạng các trường đại học chu Á 2027, Đài Loan có 7 trường lọt top 100, trong đó Đại học Quốc gia Đài Loan có thứ hạng cao nhất\n\n3\n\nHội chợ Du lịch Quốc tế Đài Loan ITF 2026 thu hút hơn 70.000 lượt khách trong ngày đầu khai mạc\n\n4",
+                "score": 0.35528317,
+                "published_date": "Tue, 10 Nov 2026 08:00:00 GMT"
+              },
+              {
+                "title": "Thời báo Tân di dân toàn cầu-Nam Đầu kết nối mùa hoa mận và hoa anh đào trong chuỗi du lịch kéo dài ba tháng",
+                "url": "https://news.immigration.gov.tw/NewsSection/Detail/bf4bec2a-c1ce-4d90-b439-a736e8657bf2?lang=VN",
+                "source": "news.immigration.gov.tw",
+                "summary": "按下ENTER到主內容區\n\n:::\n\n# 新住民全球新聞網Logo\n\n Facebook社群網站icon\")\n Instagram社群網站icon\")\n Line通訊軟體icon\")\n Youtube頻道icon\")\n Twitter社群網站icon\")\n\n 搜尋icon\n\n手機版導覽列按鈕\n\n 正體中文\n Tiếng Việt\n ภาษาไทย\n bahasa Indonesia\n English\n\n 搜尋icon\n\n:::\n\n Tin tức chuyên đề\n Tin tức nổi bật\n\nTin tức nổi bật\n\n 台灣國旗\n 越南國旗\n 泰國國旗\n 印尼國旗\n 菲律賓國旗\n\n# Nam Đầu kết nối mùa hoa mận và hoa anh đào trong chuỗi du lịch kéo dài ba tháng",
+                "score": 0.4764274,
+                "published_date": "Tue, 10 Nov 2026 01:00:00 GMT"
+              }
+            ]
+          }
+        },
+        {
+          "tool": "lookup",
+          "args": {
+            "query": "công nghệ",
+            "topic": "news",
+            "timeframe": "day"
+          },
+          "result": {
+            "tool": "web_search",
+            "query": "công nghệ",
+            "topic": "news",
+            "timeframe": "day",
+            "items": [
+              {
+                "title": "Công nghệ số phải tạo ra thay đổi thực chất ở bản làng",
+                "url": "https://dantocphattrien.vietnamnet.vn/nghe-an-no-luc-dua-cong-nghe-so-vuot-nui-ve-ban-cong-nghe-so-phai-tao-ra-thay-doi-thuc-chat-o-ban-lang-bai-cuoi-80096.html",
+                "source": "dantocphattrien.vietnamnet.vn",
+                "summary": "Thước đo thành công khi đưa công nghệ số về thôn bản không nằm ở số thiết bị được lắp đặt, mà ở khả năng ứng dụng công nghệ vào quản lý, sản xuất và đời sống, cũng như trách nhiệm duy trì những kết quả đó lu dài.\n\nLỜI TÒA SOẠN\n\nViệc triển khai internet vệ tinh Starlink đang giải toán bài về kết nối trước mắt, xóa những \"vùng trắng sóng\". Nhưng để công nghệ số thực sự đến với người dn, cần giải quyết đồng bộ những điểm nghẽn về điện, viễn thông và khả năng tiếp cận dịch vụ. [...] bán hàng trên fb\n\nChị Kha Thị Bích - Bí thư Chi bộ bản Phẩy (xã Nga My) ứng dụng nền tảng mạng xã hội để bán nông sản vùng cao. Ảnh: Facebook Kha Thị Bích\n\nKhông chỉ phục vụ quản lý, công nghệ còn mở ra hướng tiếp cận mới trong phát triển kinh tế. Chị Kha Thị Bích - Bí thư Chi bộ bản Phẩy (xã Nga My) tiên phong đưa nông sản của bà con lên trang mạng xã hội. Đy là cách giúp người dn thay đổi tư duy sản xuất, tìm đầu ra cho sản vật núi rừng. [...] Hai cu chuyện ở Nậm Cắn và bản Phẩy cho thấy giá trị của chuyển đổi số không nằm ở số lượng tài khoản hay thiết bị được cấp, mà ở khả năng giải quyết công việc, mở rộng cơ hội và cải thiện đời sống. Đy cũng cần được xem là căn cứ để đánh giá hiệu quả các chương trình đưa công nghệ về vùng đồng bào dn tộc thiểu số và miền núi.\n\n1790410488687_3121462565925941010_3121462565925941010_8532c5e362bfa253f82b04c30abd5971-f7ae26b86d16c3701b1070ef791b324e.jpg",
+                "score": 0.53123975,
+                "published_date": "Tue, 10 Nov 2026 05:00:00 GMT"
+              },
+              {
+                "title": "Vĩnh Long tìm công nghệ biến vỏ dừa, vỏ sầu riêng thành sản phẩm giá trị cao",
+                "url": "https://baochinhphu.vn/vinh-long-tim-cong-nghe-bien-vo-dua-vo-sau-rieng-thanh-san-pham-gia-tri-cao-102261110111550632.htm",
+                "source": "baochinhphu.vn",
+                "summary": "Các nội dung khác tập trung vào công nghệ nng cao chất lượng sầu riêng xuất khẩu, quy trình chế biến khoai lang, ứng dụng robot, công nghệ số và truy xuất nguồn gốc. Điểm chung là lựa chọn công nghệ phù hợp với nhu cầu và khả năng triển khai.\n\nVĩnh Long tìm công nghệ biến vỏ dừa, vỏ sầu riêng thành sản phẩm giá trị cao - Ảnh 2.\n\nPGS.TS. Vũ Đức Lợi, Viện trưởng Viện Khoa học và Công nghệ Việt Nam – Hàn Quốc phát biểu - Ảnh: Sở KH&CN Vĩnh Long [...] Phát biểu khai mạc Hội thảo, TS. Chu Thúc Đạt, Phó Cục trưởng Cục Đổi mới sáng tạo (Bộ KH&CN) nêu rõ, trong ngành chế biến, chế tạo, năng lực công nghệ có ảnh hưởng trực tiếp đến năng suất, chất lượng, hiệu quả sử dụng nguyên liệu và khả năng tham gia chuỗi giá trị. Vĩnh Long có vùng nguyên liệu dừa lớn nhất cả nước, cùng cam sành, sầu riêng, lúa gạo, cá tra... được xem là những ngành hàng chủ lực của tỉnh. Nhưng nguyên liệu dồi dào chỉ trở thành lợi thế cạnh tranh khi doanh nghiệp có khả năng [...] Tham luận của TS. Trần Hùng Thuận, Trường Đại học Công nghệ, Đại học Quốc gia Hà Nội đã bổ sung góc nhìn về nội hàm đổi mới công nghệ và chính sách. Cùng với việc đánh giá năng lực hiện tại, lựa chọn công nghệ cần tính tới khả năng vận hành, tiếp nhận và cải tiến, để khoản đầu tư thực sự tạo thay đổi trong sản xuất.\n\n### ‘4 nhà’ phải cùng bắt đầu từ bài toán doanh nghiệp",
+                "score": 0.51022196,
+                "published_date": "Tue, 10 Nov 2026 05:04:00 GMT"
+              },
+              {
+                "title": "Thúc đẩy ứng dụng công nghệ sinh học để nâng cao giá trị nông sản",
+                "url": "https://laodong.vn/thi-truong/thuc-day-ung-dung-cong-nghe-sinh-hoc-de-nang-cao-gia-tri-nong-san-1798013.ldo",
+                "source": "laodong.vn",
+                "summary": "Tại Việt Nam, định hướng này đã được cụ thể hóa thông qua nhiều chủ trương, chính sách quan trọng, nổi bật là Nghị quyết số 36-NQ/TW năm 2023 về phát triển và ứng dụng công nghệ sinh học và Nghị quyết số 57-NQ/TW năm 2024 về đột phá phát triển khoa học, công nghệ, đổi mới sáng tạo và chuyển đổi số quốc gia.\n\nHội thảo “Cy trồng công nghệ sinh học xu hướng ứng dụng trên toàn cầu và định hướng phát triển tại Việt Nam“. Ảnh: Tùng Đinh. [...] phối hợp với các đơn vị liên quan tổ chức Hội thảo \"Cy trồng công nghệ sinh học xu hướng ứng dụng trên toàn cầu và định hướng phát triển tại Việt Nam\".\n\nPhát biểu khai mạc Hội nghị, TS Nguyễn Văn Long, Vụ trưởng Vụ Khoa học và Công nghệ (Bộ Nông nghiệp và Môi trường), cho biết trên thế giới, công nghệ sinh học và chỉnh sửa gen đã đạt nhiều thành tựu quan trọng, tạo ra các nông sản chất lượng cao. [...] \"Trong bối cảnh nông nghiệp phải đối mặt với biến đổi khí hậu, dịch bệnh và yêu cầu phát triển bền vững, việc nghiên cứu, làm chủ và ứng dụng các công nghệ tiên tiến càng trở nên cấp thiết\", TS Nguyễn Văn Long nói.",
+                "score": 0.48479927,
+                "published_date": "Tue, 10 Nov 2026 09:16:04 GMT"
+              },
+              {
+                "title": "Công bố 20 nữ sinh khoa học công nghệ Việt Nam năm 2026",
+                "url": "https://tienphong.vn/cong-bo-20-nu-sinh-khoa-hoc-cong-nghe-viet-nam-nam-2026-post1893128.tpo",
+                "source": "tienphong.vn",
+                "summary": "- Hồ Quỳnh Anh, Học viện Nông nghiệp Việt Nam\n\n7. Công nghệ kỹ thuật kiến trúc và công trình xy dựng\n\n- Nguyễn Phương Anh, trường Đại học Giao thông vận tải.\n\n8. Nhóm ngành công nghệ biển, phòng tránh thiên tai, ứng phó với biến đổi khí hậu, năng lượng và công nghệ vũ trụ\n\n- Trần Thị Phương Thảo, trường Đại học Công nghệ, Đại học Quốc gia Hà Nội\n\nCông bố 10 nhà khoa học trẻ đạt Giải thưởng Quả Cầu Vàng 2026  \n\n## Công bố 10 nhà khoa học trẻ đạt Giải thưởng Quả Cầu Vàng 2026 [...] ## Thương mại hóa sản phẩm nghiên cứu khoa học: Đừng bán thứ mình có!\n\nTPO - Thương mại hóa nghiên cứu khoa học không đơn thuần là đưa một công nghệ ra thị trường, mà trước hết phải tìm được lời giải cho những bài toán thực tiễn. Từ cu chuyện khởi nghiệp công nghệ giọng nói AI đến những thách thức của công nghệ su, các nhà khoa học cùng nhấn mạnh: Muốn thị trường đón nhận, đừng bán thứ mình có, hãy tạo ra thứ xã hội cần. [...] Cụ thể, nhóm ngành Công nghệ thông tin có 2 nữ sinh; Máy tính có 4 nữ sinh; Công nghệ, kỹ thuật cơ khí có 1 nữ sinh; Công nghệ, kỹ thuật điện, điện tử và viễn thông có 4 nữ sinh; Công nghệ hóa học, vật liệu, luyện kim và môi trường có 6 nữ sinh; Sinh học ứng dụng có 1 nữ sinh; Công nghệ kỹ thuật kiến trúc và công trình xy dựng có 1 nữ sinh. Nhóm ngành liên quan đến công nghệ biển, phòng tránh thiên tai, ứng phó với biến đổi khí hậu, năng lượng và công nghệ vũ trụ có 1 nữ sinh được vinh danh.",
+                "score": 0.47892484,
+                "published_date": "Tue, 10 Nov 2026 08:29:08 GMT"
+              },
+              {
+                "title": "Ứng dụng công nghệ số, nâng tầm hiệu quả hoạt động của cơ quan dân cử",
+                "url": "https://baothanhhoa.vn/ung-dung-cong-nghe-so-nang-tam-hieu-qua-hoat-dong-cua-co-quan-dan-cu-308536.htm",
+                "source": "baothanhhoa.vn",
+                "summary": "Trực tiếp truyền đạt chuyên đề “Chuyển đổi số và ứng dụng trí tuệ nhn tạo (AI) trong hoạt động của HĐND” tại lớp bồi dưỡng dành cho chủ tịch, phó chủ tịch HĐND cấp xã, nhiệm kỳ 2026-2031, diễn ra sáng 10/11, Tiến sĩ Nguyễn Hồng Phong, Ủy viên dự khuyết Trung ương Đảng, Phó Bí thư Thường trực Tỉnh ủy, Chủ tịch HĐND tỉnh đã nêu rõ vai trò, ý nghĩa của chuyển đổi số trong đổi mới phương thức hoạt động của cơ quan dn cử; đồng thời phn tích những cơ hội, yêu cầu đặt ra trong việc ứng dụng công nghệ [...] Phó Bí thư Thường trực Tỉnh ủy, Chủ tịch HĐND tỉnh Nguyễn Hồng Phong truyền đạt chuyên đề.\n\nĐồng chí nhấn mạnh, chuyển đổi số không đơn thuần là việc đưa công nghệ vào xử lý công việc mà quan trọng hơn là đổi mới tư duy, phương thức lãnh đạo, quản lý, điều hành và tổ chức thực hiện nhiệm vụ. [...] Việc đẩy mạnh ứng dụng công nghệ số và AI không chỉ là đổi mới công cụ, phương tiện làm việc mà còn là đổi mới tư duy, phương thức hoạt động của HĐND, hướng tới xy dựng cơ quan dn cử hiện đại, chuyên nghiệp, hoạt động thực chất, hiệu lực, hiệu quả, ngày càng gần dn, sát dn và vì lợi ích của Nhn dn.\n\nPhó Bí thư Thường trực Tỉnh ủy, Chủ tịch HĐND tỉnh Nguyễn Hồng Phong truyền đạt chuyên đề.",
+                "score": 0.46990034,
+                "published_date": "Tue, 10 Nov 2026 04:44:00 GMT"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,156 @@
+{
+  "transcript_id": "v0_ui_openrouter_20261110T160423097405",
+  "version": "v0",
+  "artifact_version": "v0+pf0c107a9d7a1+t8db0ba629f52",
+  "prompt_hash": "f0c107a9d7a14032c948d642d7c36f2a85cb6d69a099530093a874c94d472446",
+  "tools_hash": "8db0ba629f52ad1ec171bae4e4e84472c12f950fa1a6db5e1d27bad6e749b740",
+  "provider": "openrouter",
+  "model": "openai/gpt-4o-mini",
+  "system_prompt": "C:\\Users\\Admin\\OneDrive\\Desktop\\VinAI\\Lab-Day03\\K5-L3-DAY03-BuiNgocVu-2A202603463-ResearchAgentToolEval\\starter_v0\\artifacts\\versions\\v0\\system_prompt.md",
+  "tools": "C:\\Users\\Admin\\OneDrive\\Desktop\\VinAI\\Lab-Day03\\K5-L3-DAY03-BuiNgocVu-2A202603463-ResearchAgentToolEval\\starter_v0\\artifacts\\versions\\v0\\tools.yaml",
+  "history_window": 5,
+  "max_tool_rounds": 4,
+  "created_at": "2026-11-10T16:04:06",
+  "turns": [
+    {
+      "turn_index": 1,
+      "started_at": "2026-11-10T16:04:06",
+      "user": "tin tức hôm nay",
+      "status": "answered",
+      "assistant_text": "Here are the latest news highlights for today, November 10:\n\n1. **Bộ trưởng Pete Hegseth đối mặt sức ép luận tội**  \n   The U.S. House of Representatives is preparing to consider eight impeachment charges against Secretary of War Pete Hegseth. Additionally, Iran has issued a stern warning regarding the potential escalation of conflict with the U.S., and Russia continues its attacks on Ukraine's energy infrastructure. [Read more](https://vtcnews.vn/tin-nong-the-gioi-hom-nay-10-11-bo-truong-pete-hegseth-doi-mat-suc-ep-luan-toi-ar1050398.html) (Source: VTC News)\n\n2. **Đàm phán Mỹ - Nga - Ukraine tại UAE**  \n   A trilateral negotiation between the U.S., Russia, and Ukraine is set to begin today in the UAE, potentially paving the way for breakthroughs in the ongoing conflict. [Read more](https://tamdamedia.eu/tin-tuc-the-gioi-10-11-kha-nang-luan-toi-bo-truong-chien-tranh-m) (Source: Tamda Media)\n\n3. **Vụ nổ tại nhà máy thép Thổ Nhĩ Kỳ**  \n   A significant explosion at a steel plant in Turkey resulted in 17 fatalities and 12 injuries. The Turkish President has vowed to investigate the cause and hold those responsible accountable. [Read more](https://tin.skydoor.net/news/the-gioi-tin-tuc-the-gioi-1011-kha-nang-luan-toi-bo-truong-chien-8425119) (Source: Sky Tin)\n\n4. **Tai nạn giao thông tại TP.HCM**  \n   A motorcycle accident in Ho Chi Minh City resulted in one death when the vehicle crashed into a traffic sign. [Read more](https://baoxaydung.vn/tin-tuc-tai-nan-giao-thong-moi-nhat-hom-nay-10-11-2026-19226111007124908.htm) (Source: Báo Xây Dựng)\n\n5. **Quốc hội thảo luận nhiều dự án luật quan trọng**  \n   The National Assembly is discussing several important legislative projects today, including those related to culture, sports, and tourism. [Read more](https://thuonghieucongluan.com.vn/hom-nay-quoc-hoi-thao-luan-nhieu-du-an-luat-quan-trong-a341335.html) (Source: Thương Hiệu và Công Luận)\n\nFeel free to check the links for more detailed information!",
+      "rounds": [
+        {
+          "round": 1,
+          "assistant_text": null,
+          "tool_calls": [
+            {
+              "name": "lookup",
+              "args": {
+                "query": "tin tức hôm nay",
+                "topic": "news",
+                "timeframe": "day",
+                "max_results": 5
+              }
+            }
+          ],
+          "tool_results": [
+            {
+              "tool": "lookup",
+              "args": {
+                "query": "tin tức hôm nay",
+                "topic": "news",
+                "timeframe": "day",
+                "max_results": 5
+              },
+              "result": {
+                "tool": "web_search",
+                "query": "tin tức hôm nay",
+                "topic": "news",
+                "timeframe": "day",
+                "items": [
+                  {
+                    "title": "Tin nóng thế giới hôm nay 10/11: Bộ trưởng Pete Hegseth đối mặt sức ép luận tội",
+                    "url": "https://vtcnews.vn/tin-nong-the-gioi-hom-nay-10-11-bo-truong-pete-hegseth-doi-mat-suc-ep-luan-toi-ar1050398.html",
+                    "source": "vtcnews.vn",
+                    "summary": "Trong bản tin thế giới mới nhất hôm nay 10/11, dư luận quốc tế đặc biệt quan tm đến việc Hạ viện Mỹ chuẩn bị xem xét 8 cáo buộc luận tội Bộ trưởng Chiến tranh Pete Hegseth.\n\nNgoài ra, cảnh báo cứng rắn của Iran trước nguy cơ Mỹ tiếp tục leo thang xung đột, các cuộc tập kích của Nga nhằm vào hạ tầng năng lượng và cơ sở công nghiệp quốc phòng Ukraine, cùng những chính sách mới của Cuba nhằm thúc đẩy khoa học, công nghệ và đổi mới sáng tạo cũng là nội dung đáng chú ý. [...] Tổng thống Mỹ Donald Trump cho biết FBI đang xem xét vụ việc liên quan đến CEO Jensen Huang, trong khi đó, Nvidia đối mặt với vụ kiện tập thể từ cổ đông.\n\n### Các nước chu u khởi động diễn tập triển khai lực lượng tại Ukraine\n\nLiên minh đa quốc gia khởi động diễn tập quy mô lớn đầu tiên tại Ba Lan vào ngày 9/11, chuẩn bị cho triển khai lực lượng tới Ukraine sau chiến sự.\n\n### Ông Trump tuyên bố cuộc chiến với Iran 'cơ bản đã kết thúc' [...] Ngày 9/11, Bộ Quốc phòng Nga tuyên bố qun đội nước này tiến hành các cuộc tập kích tầm xa nhằm vào hạ tầng năng lượng và cơ sở sản xuất máy bay không người lái (UAV) của Ukraine tại nhiều khu vực. Theo tuyên bố của Moskva, các trạm biến áp cung cấp điện cho lực lượng qun sự và tổ hợp công nghiệp quốc phòng Ukraine bị tấn công tại 4 tỉnh, gồm Kiev, Dnipropetrovsk, Cherkasy và Vinnitsa.",
+                    "score": 0.63098115
+                  },
+                  {
+                    "title": "Tin tức thế giới 10-11: Khả năng luận tội Bộ trưởng Chiến tranh Mỹ; Ông Trump cáo buộc gian lận bầu cử - TamdaMedia",
+                    "url": "https://tamdamedia.eu/tin-tuc-the-gioi-10-11-kha-nang-luan-toi-bo-truong-chien-tranh-m",
+                    "source": "tamdamedia.eu",
+                    "summary": "Ông Trump bắt đầu có những phát ngôn mới về kết quả bầu cử giữa kỳ - Ảnh: REUTERS\n\n## Hôm nay đàm phán Mỹ - Nga - Ukraine tại UAE\n\nHôm nay, 10-11, vòng đàm phán ba bên giữa Mỹ, Nga và Ukraine sẽ bắt đầu tại Các Tiểu vương quốc Ả Rập thống nhất (UAE), dự kiến kéo dài đến ngày 11-11.\n\nTổng thống Trump ngày 9-11 nhận định các cuộc đàm phán do Washington làm trung gian tại thủ đô Abu Dhabi (UAE) trong tuần này có thể tạo bước đột phá trong nỗ lực chấm dứt xung đột Nga - Ukraine. [...] Tết giữa trời u\n\nHomepageTRANG CHỦHot NewsNóngVideoVideoFacebookFacebookYoutubeYoutube\n\nHomepageTrang chủ\nHot NewsTin nóng\nVideoVideo\nFacebookFacebook\nYoutubeYoutube\n\n# Tin tức thế giới 10-11: Khả năng luận tội Bộ trưởng Chiến tranh Mỹ; Ông Trump cáo buộc gian lận bầu cử\n\nTamda Media,\n\nNghị sĩ Mỹ khởi động thủ tục luận tội Bộ trưởng Chiến tranh; Ông Trump cáo buộc bầu cử giữa kỳ gian lận; Hôm nay đàm phán Mỹ - Nga - Ukraine tại UAE… là một số tin tức thế giới đáng chú ý sáng 10-11. [...] Hai vụ việc hiện đang được điều tra.\n\n## Nổ \"như tận thế\" tại nhà máy thép Thổ Nhĩ Kỳ\n\nMột vụ nổ lớn xảy ra tại nhà máy thép ở miền ty Thổ Nhĩ Kỳ hôm 9-11 khiến 17 người thiệt mạng và 12 người bị thương.\n\nTổng thống Thổ Nhĩ Kỳ Recep Tayyip Erdogan cam kết làm rõ nguyên nhn và xác định trách nhiệm của những người liên quan.\n\nTheo giới chức địa phương, vụ nổ xảy ra vào khoảng giữa trưa (giờ địa phương) tại nhà máy thép HABAS, cách thành phố cảng Izmir khoảng 60 km về phía bắc.",
+                    "score": 0.59796065
+                  },
+                  {
+                    "title": "Tin tức thế giới 10-11: Khả năng luận tội Bộ trưởng Chiến tranh Mỹ; Ông Trump cáo buộc gian lận bầu cử | Sky Tin",
+                    "url": "https://tin.skydoor.net/news/the-gioi-tin-tuc-the-gioi-1011-kha-nang-luan-toi-bo-truong-chien-8425119",
+                    "source": "tin.skydoor.net",
+                    "summary": "Bỏ qua điều hướng\n\nSkydoor\n\nSky Tin - Tin tức địa phương toàn cầu 24h mới nhất!\n\nXem tin theo cách của bạn >>\n\n\n\n# Tin tức thế giới 10-11: Khả năng luận tội Bộ trưởng Chiến tranh Mỹ; Ông Trump cáo buộc gian lận bầu cử\n\nÔng Trump tuyên bố có thể nối lại tấn công Iran bất cứ lúc nào; Hôm nay đàm phán Mỹ - Nga - Ukraine tại UAE.\n\nĐọc tin gốc tại tuoitre.vn →\n\n## Tin tức Mỹ mới nhất hôm nay\n\n[](\n\n### Vụ CEO Nvidia ngoại tình: Ông Trump tin ông Jensen Huang; FBI vào cuộc điều tra [...] Xem tóm tắt nhanh\n\n## Tin tức Thế Giới mới nhất hôm nay\n\n[](\n\n### Nghị sĩ đảng Cộng hòa đề xuất luận tội Bộ trưởng Chiến tranh Mỹ Pete Hegseth về cuộc chiến Iran\n\n1 giờ trước–anninhthudo.vnanninhthudo.vn\n\nXem tóm tắt nhanh\n\n[](\n\n### Bộ trưởng Quốc phòng Mỹ đứng trước nguy cơ bị Hạ viện luận tội\n\n1 giờ trước–hanoimoi.vnhanoimoi.vn\n\nXem tóm tắt nhanh\n\n[](\n\n### Chuyên gia chỉ ra nút thắt khiến lực lượng Cổng Sắt của Mỹ khó chặn dòng vũ khí vào Iran\n\n1 giờ trước–baotintuc.vnbaotintuc.vn",
+                    "score": 0.5954225
+                  },
+                  {
+                    "title": "Tin tức tai nạn giao thông mới nhất hôm nay 10/11/2026",
+                    "url": "https://baoxaydung.vn/tin-tuc-tai-nan-giao-thong-moi-nhat-hom-nay-10-11-2026-19226111007124908.htm",
+                    "source": "baoxaydung.vn",
+                    "summary": "Chiều 9/11, Công an TP.HCM khám nghiệm hiện trường, điều tra nguyên nhn vụ tai nạn khi xe máy lao lên vỉa hè, tông vào cột biển báo khiến người đàn ông tử vong tại chỗ.\n\nTheo thông tin ban đầu, hơn 12h cùng ngày, ông Trịnh Mỹ Phước (58 tuổi, quê tỉnh Trà Vinh cũ) điều khiển xe máy lưu thông trên đường số 16 (phường Linh Xun), theo hướng từ đường số 17 đi đường Lê Văn Chí. Khi vừa qua khỏi Trường THPT Linh Trung, xe máy bất ngờ lao lên vỉa hè bên phải, tông vào cột biển thông báo. [...] Theo đó, khoảng 8h30 cùng ngày, một máy cày kéo theo rơ-moóc chở máy xúc Kobe lưu thông qua cầu Tn Thành. Khi đoàn phương tiện di chuyển đến giữa cầu, nhịp cầu bất ngờ gãy và đổ xuống kênh. Sự cố xảy ra đột ngột khiến máy cày, rơ-moóc và máy xúc rơi xuống dòng kênh bên dưới. May mắn, vụ việc không gy thiệt hại về người. [...] Theo đó, vào khoảng 14h cùng ngày, một chiếc ô tô con quay đầu trên QL7, đoạn qua địa bàn xã Bảo Thành cũ, nay là xã Hợp Minh. Khi xe vừa ra giữa đường, một chiếc xe máy tay ga chở theo 3 người lao với tốc độ nhanh đã đm thẳng vào hông xe ô tô. Cú va chạm cực mạnh khiến chiếc xe máy văng lên và nằm gọn gàng trên nóc ô tô. Phần kính sau xe ô tô bị vỡ nát, hông xe bị hư hỏng nặng.",
+                    "score": 0.5863576
+                  },
+                  {
+                    "title": "Hôm nay, Quốc hội thảo luận nhiều dự án luật quan trọng",
+                    "url": "https://thuonghieucongluan.com.vn/hom-nay-quoc-hoi-thao-luan-nhieu-du-an-luat-quan-trong-a341335.html",
+                    "source": "thuonghieucongluan.com.vn",
+                    "summary": "Tin tức11:56 10/11\n\n### Thêm không gian tri thức phục vụ phát triển thị trường trong nước\n\nNhằm khuyến khích văn hóa đọc, Cục Quản lý và Phát triển thị trường trong nước vừa ra mắt Không gian Thư viện mở tại trụ sở số 91 Đinh Tiên Hoàng, Hà Nội.\n\nQuảng Trị: Mưa lớn gy sạt lở, chia cắt nhiều tuyến giao thông\n\nTin tức11:22 10/11\n\n### Quảng Trị: Mưa lớn gy sạt lở, chia cắt nhiều tuyến giao thông [...] Bỏ qua đến nội dung chính\n\nHotline: 093 172 5555Email: ducchinhthcl@gmail.com\n\n# Hôm nay, Quốc hội thảo luận nhiều dự án luật quan trọng\n\nTin tức\n\nTiếp tục chương trình Kỳ họp thứ 2, Quốc hội khóa XVI, ngày 10/11, Quốc hội thảo luận về các dự án luật trong lĩnh vực văn hóa, thể thao, du lịch, báo chí; đồng thời xem xét những vướng mắc trong thực thi pháp luật và chủ trương đầu tư 3 dự án đường bộ cao tốc.\n\nQuang cảnh phiên họp sáng 24/10 tại Kỳ họp thứ 2, Quốc hội khóa XVI [...] Từ ngày 9/11 đến nay, mưa lớn kéo dài khiến nhiều ngầm tràn ở khu vực miền núi Quảng Trị bị ngập su, giao thông chia cắt; một số tuyến đường xảy ra sạt lở.\n\nChuyến thăm của Tổng Bí thư, Chủ tịch nước Tô Lm tạo đà cho hợp tác Việt Nam - Nhật Bản\n\nTin tức07:06 10/11\n\n### Chuyến thăm của Tổng Bí thư, Chủ tịch nước Tô Lm tạo đà cho hợp tác Việt Nam - Nhật Bản",
+                    "score": 0.55998856
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "round": 2,
+          "assistant_text": "Here are the latest news highlights for today, November 10:\n\n1. **Bộ trưởng Pete Hegseth đối mặt sức ép luận tội**  \n   The U.S. House of Representatives is preparing to consider eight impeachment charges against Secretary of War Pete Hegseth. Additionally, Iran has issued a stern warning regarding the potential escalation of conflict with the U.S., and Russia continues its attacks on Ukraine's energy infrastructure. [Read more](https://vtcnews.vn/tin-nong-the-gioi-hom-nay-10-11-bo-truong-pete-hegseth-doi-mat-suc-ep-luan-toi-ar1050398.html) (Source: VTC News)\n\n2. **Đàm phán Mỹ - Nga - Ukraine tại UAE**  \n   A trilateral negotiation between the U.S., Russia, and Ukraine is set to begin today in the UAE, potentially paving the way for breakthroughs in the ongoing conflict. [Read more](https://tamdamedia.eu/tin-tuc-the-gioi-10-11-kha-nang-luan-toi-bo-truong-chien-tranh-m) (Source: Tamda Media)\n\n3. **Vụ nổ tại nhà máy thép Thổ Nhĩ Kỳ**  \n   A significant explosion at a steel plant in Turkey resulted in 17 fatalities and 12 injuries. The Turkish President has vowed to investigate the cause and hold those responsible accountable. [Read more](https://tin.skydoor.net/news/the-gioi-tin-tuc-the-gioi-1011-kha-nang-luan-toi-bo-truong-chien-8425119) (Source: Sky Tin)\n\n4. **Tai nạn giao thông tại TP.HCM**  \n   A motorcycle accident in Ho Chi Minh City resulted in one death when the vehicle crashed into a traffic sign. [Read more](https://baoxaydung.vn/tin-tuc-tai-nan-giao-thong-moi-nhat-hom-nay-10-11-2026-19226111007124908.htm) (Source: Báo Xây Dựng)\n\n5. **Quốc hội thảo luận nhiều dự án luật quan trọng**  \n   The National Assembly is discussing several important legislative projects today, including those related to culture, sports, and tourism. [Read more](https://thuonghieucongluan.com.vn/hom-nay-quoc-hoi-thao-luan-nhieu-du-an-luat-quan-trong-a341335.html) (Source: Thương Hiệu và Công Luận)\n\nFeel free to check the links for more detailed information!",
+          "tool_calls": [],
+          "tool_results": []
+        }
+      ],
+      "tool_events": [
+        {
+          "tool": "lookup",
+          "args": {
+            "query": "tin tức hôm nay",
+            "topic": "news",
+            "timeframe": "day",
+            "max_results": 5
+          },
+          "result": {
+            "tool": "web_search",
+            "query": "tin tức hôm nay",
+            "topic": "news",
+            "timeframe": "day",
+            "items": [
+              {
+                "title": "Tin nóng thế giới hôm nay 10/11: Bộ trưởng Pete Hegseth đối mặt sức ép luận tội",
+                "url": "https://vtcnews.vn/tin-nong-the-gioi-hom-nay-10-11-bo-truong-pete-hegseth-doi-mat-suc-ep-luan-toi-ar1050398.html",
+                "source": "vtcnews.vn",
+                "summary": "Trong bản tin thế giới mới nhất hôm nay 10/11, dư luận quốc tế đặc biệt quan tm đến việc Hạ viện Mỹ chuẩn bị xem xét 8 cáo buộc luận tội Bộ trưởng Chiến tranh Pete Hegseth.\n\nNgoài ra, cảnh báo cứng rắn của Iran trước nguy cơ Mỹ tiếp tục leo thang xung đột, các cuộc tập kích của Nga nhằm vào hạ tầng năng lượng và cơ sở công nghiệp quốc phòng Ukraine, cùng những chính sách mới của Cuba nhằm thúc đẩy khoa học, công nghệ và đổi mới sáng tạo cũng là nội dung đáng chú ý. [...] Tổng thống Mỹ Donald Trump cho biết FBI đang xem xét vụ việc liên quan đến CEO Jensen Huang, trong khi đó, Nvidia đối mặt với vụ kiện tập thể từ cổ đông.\n\n### Các nước chu u khởi động diễn tập triển khai lực lượng tại Ukraine\n\nLiên minh đa quốc gia khởi động diễn tập quy mô lớn đầu tiên tại Ba Lan vào ngày 9/11, chuẩn bị cho triển khai lực lượng tới Ukraine sau chiến sự.\n\n### Ông Trump tuyên bố cuộc chiến với Iran 'cơ bản đã kết thúc' [...] Ngày 9/11, Bộ Quốc phòng Nga tuyên bố qun đội nước này tiến hành các cuộc tập kích tầm xa nhằm vào hạ tầng năng lượng và cơ sở sản xuất máy bay không người lái (UAV) của Ukraine tại nhiều khu vực. Theo tuyên bố của Moskva, các trạm biến áp cung cấp điện cho lực lượng qun sự và tổ hợp công nghiệp quốc phòng Ukraine bị tấn công tại 4 tỉnh, gồm Kiev, Dnipropetrovsk, Cherkasy và Vinnitsa.",
+                "score": 0.63098115
+              },
+              {
+                "title": "Tin tức thế giới 10-11: Khả năng luận tội Bộ trưởng Chiến tranh Mỹ; Ông Trump cáo buộc gian lận bầu cử - TamdaMedia",
+                "url": "https://tamdamedia.eu/tin-tuc-the-gioi-10-11-kha-nang-luan-toi-bo-truong-chien-tranh-m",
+                "source": "tamdamedia.eu",
+                "summary": "Ông Trump bắt đầu có những phát ngôn mới về kết quả bầu cử giữa kỳ - Ảnh: REUTERS\n\n## Hôm nay đàm phán Mỹ - Nga - Ukraine tại UAE\n\nHôm nay, 10-11, vòng đàm phán ba bên giữa Mỹ, Nga và Ukraine sẽ bắt đầu tại Các Tiểu vương quốc Ả Rập thống nhất (UAE), dự kiến kéo dài đến ngày 11-11.\n\nTổng thống Trump ngày 9-11 nhận định các cuộc đàm phán do Washington làm trung gian tại thủ đô Abu Dhabi (UAE) trong tuần này có thể tạo bước đột phá trong nỗ lực chấm dứt xung đột Nga - Ukraine. [...] Tết giữa trời u\n\nHomepageTRANG CHỦHot NewsNóngVideoVideoFacebookFacebookYoutubeYoutube\n\nHomepageTrang chủ\nHot NewsTin nóng\nVideoVideo\nFacebookFacebook\nYoutubeYoutube\n\n# Tin tức thế giới 10-11: Khả năng luận tội Bộ trưởng Chiến tranh Mỹ; Ông Trump cáo buộc gian lận bầu cử\n\nTamda Media,\n\nNghị sĩ Mỹ khởi động thủ tục luận tội Bộ trưởng Chiến tranh; Ông Trump cáo buộc bầu cử giữa kỳ gian lận; Hôm nay đàm phán Mỹ - Nga - Ukraine tại UAE… là một số tin tức thế giới đáng chú ý sáng 10-11. [...] Hai vụ việc hiện đang được điều tra.\n\n## Nổ \"như tận thế\" tại nhà máy thép Thổ Nhĩ Kỳ\n\nMột vụ nổ lớn xảy ra tại nhà máy thép ở miền ty Thổ Nhĩ Kỳ hôm 9-11 khiến 17 người thiệt mạng và 12 người bị thương.\n\nTổng thống Thổ Nhĩ Kỳ Recep Tayyip Erdogan cam kết làm rõ nguyên nhn và xác định trách nhiệm của những người liên quan.\n\nTheo giới chức địa phương, vụ nổ xảy ra vào khoảng giữa trưa (giờ địa phương) tại nhà máy thép HABAS, cách thành phố cảng Izmir khoảng 60 km về phía bắc.",
+                "score": 0.59796065
+              },
+              {
+                "title": "Tin tức thế giới 10-11: Khả năng luận tội Bộ trưởng Chiến tranh Mỹ; Ông Trump cáo buộc gian lận bầu cử | Sky Tin",
+                "url": "https://tin.skydoor.net/news/the-gioi-tin-tuc-the-gioi-1011-kha-nang-luan-toi-bo-truong-chien-8425119",
+                "source": "tin.skydoor.net",
+                "summary": "Bỏ qua điều hướng\n\nSkydoor\n\nSky Tin - Tin tức địa phương toàn cầu 24h mới nhất!\n\nXem tin theo cách của bạn >>\n\n\n\n# Tin tức thế giới 10-11: Khả năng luận tội Bộ trưởng Chiến tranh Mỹ; Ông Trump cáo buộc gian lận bầu cử\n\nÔng Trump tuyên bố có thể nối lại tấn công Iran bất cứ lúc nào; Hôm nay đàm phán Mỹ - Nga - Ukraine tại UAE.\n\nĐọc tin gốc tại tuoitre.vn →\n\n## Tin tức Mỹ mới nhất hôm nay\n\n[](\n\n### Vụ CEO Nvidia ngoại tình: Ông Trump tin ông Jensen Huang; FBI vào cuộc điều tra [...] Xem tóm tắt nhanh\n\n## Tin tức Thế Giới mới nhất hôm nay\n\n[](\n\n### Nghị sĩ đảng Cộng hòa đề xuất luận tội Bộ trưởng Chiến tranh Mỹ Pete Hegseth về cuộc chiến Iran\n\n1 giờ trước–anninhthudo.vnanninhthudo.vn\n\nXem tóm tắt nhanh\n\n[](\n\n### Bộ trưởng Quốc phòng Mỹ đứng trước nguy cơ bị Hạ viện luận tội\n\n1 giờ trước–hanoimoi.vnhanoimoi.vn\n\nXem tóm tắt nhanh\n\n[](\n\n### Chuyên gia chỉ ra nút thắt khiến lực lượng Cổng Sắt của Mỹ khó chặn dòng vũ khí vào Iran\n\n1 giờ trước–baotintuc.vnbaotintuc.vn",
+                "score": 0.5954225
+              },
+              {
+                "title": "Tin tức tai nạn giao thông mới nhất hôm nay 10/11/2026",
+                "url": "https://baoxaydung.vn/tin-tuc-tai-nan-giao-thong-moi-nhat-hom-nay-10-11-2026-19226111007124908.htm",
+                "source": "baoxaydung.vn",
+                "summary": "Chiều 9/11, Công an TP.HCM khám nghiệm hiện trường, điều tra nguyên nhn vụ tai nạn khi xe máy lao lên vỉa hè, tông vào cột biển báo khiến người đàn ông tử vong tại chỗ.\n\nTheo thông tin ban đầu, hơn 12h cùng ngày, ông Trịnh Mỹ Phước (58 tuổi, quê tỉnh Trà Vinh cũ) điều khiển xe máy lưu thông trên đường số 16 (phường Linh Xun), theo hướng từ đường số 17 đi đường Lê Văn Chí. Khi vừa qua khỏi Trường THPT Linh Trung, xe máy bất ngờ lao lên vỉa hè bên phải, tông vào cột biển thông báo. [...] Theo đó, khoảng 8h30 cùng ngày, một máy cày kéo theo rơ-moóc chở máy xúc Kobe lưu thông qua cầu Tn Thành. Khi đoàn phương tiện di chuyển đến giữa cầu, nhịp cầu bất ngờ gãy và đổ xuống kênh. Sự cố xảy ra đột ngột khiến máy cày, rơ-moóc và máy xúc rơi xuống dòng kênh bên dưới. May mắn, vụ việc không gy thiệt hại về người. [...] Theo đó, vào khoảng 14h cùng ngày, một chiếc ô tô con quay đầu trên QL7, đoạn qua địa bàn xã Bảo Thành cũ, nay là xã Hợp Minh. Khi xe vừa ra giữa đường, một chiếc xe máy tay ga chở theo 3 người lao với tốc độ nhanh đã đm thẳng vào hông xe ô tô. Cú va chạm cực mạnh khiến chiếc xe máy văng lên và nằm gọn gàng trên nóc ô tô. Phần kính sau xe ô tô bị vỡ nát, hông xe bị hư hỏng nặng.",
+                "score": 0.5863576
+              },
+              {
+                "title": "Hôm nay, Quốc hội thảo luận nhiều dự án luật quan trọng",
+                "url": "https://thuonghieucongluan.com.vn/hom-nay-quoc-hoi-thao-luan-nhieu-du-an-luat-quan-trong-a341335.html",
+                "source": "thuonghieucongluan.com.vn",
+                "summary": "Tin tức11:56 10/11\n\n### Thêm không gian tri thức phục vụ phát triển thị trường trong nước\n\nNhằm khuyến khích văn hóa đọc, Cục Quản lý và Phát triển thị trường trong nước vừa ra mắt Không gian Thư viện mở tại trụ sở số 91 Đinh Tiên Hoàng, Hà Nội.\n\nQuảng Trị: Mưa lớn gy sạt lở, chia cắt nhiều tuyến giao thông\n\nTin tức11:22 10/11\n\n### Quảng Trị: Mưa lớn gy sạt lở, chia cắt nhiều tuyến giao thông [...] Bỏ qua đến nội dung chính\n\nHotline: 093 172 5555Email: ducchinhthcl@gmail.com\n\n# Hôm nay, Quốc hội thảo luận nhiều dự án luật quan trọng\n\nTin tức\n\nTiếp tục chương trình Kỳ họp thứ 2, Quốc hội khóa XVI, ngày 10/11, Quốc hội thảo luận về các dự án luật trong lĩnh vực văn hóa, thể thao, du lịch, báo chí; đồng thời xem xét những vướng mắc trong thực thi pháp luật và chủ trương đầu tư 3 dự án đường bộ cao tốc.\n\nQuang cảnh phiên họp sáng 24/10 tại Kỳ họp thứ 2, Quốc hội khóa XVI [...] Từ ngày 9/11 đến nay, mưa lớn kéo dài khiến nhiều ngầm tràn ở khu vực miền núi Quảng Trị bị ngập su, giao thông chia cắt; một số tuyến đường xảy ra sạt lở.\n\nChuyến thăm của Tổng Bí thư, Chủ tịch nước Tô Lm tạo đà cho hợp tác Việt Nam - Nhật Bản\n\nTin tức07:06 10/11\n\n### Chuyến thăm của Tổng Bí thư, Chủ tịch nước Tô Lm tạo đà cho hợp tác Việt Nam - Nhật Bản",
+                "score": 0.55998856
+              }
+            ]
+          }
+        }
+      ],
+      "ended_at": "2026-11-10T16:04:23"
+    }
+  ],
+  "updated_at": "2026-11-10T16:04:23"
+}

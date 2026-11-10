@@ -65,7 +65,8 @@ def test_format_thread_numbers_items() -> None:
         if line.startswith(("1/", "2/"))
     ]
 
-    assert numbered_lines == ["1/ First - ", "2/ Second - "]
+    # Items without url/source must not leave a dangling " - " (fixed after v3, see test_regressions.py).
+    assert numbered_lines == ["1/ First", "2/ Second"]
 
 
 def test_format_empty_items_does_not_crash() -> None:

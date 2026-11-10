@@ -1,0 +1,28 @@
+{
+  "transcript_id": "v1_ui_openrouter_20261110T164145297194",
+  "version": "v1",
+  "artifact_version": "v1+p119c0a767e34+t8db0ba629f52",
+  "prompt_hash": "119c0a767e34dcf28d080657566c8f1f171850fa0af83a99904888635a2da42d",
+  "tools_hash": "8db0ba629f52ad1ec171bae4e4e84472c12f950fa1a6db5e1d27bad6e749b740",
+  "provider": "openrouter",
+  "model": "openai/gpt-4o-mini",
+  "system_prompt": "C:\\Users\\Admin\\OneDrive\\Desktop\\VinAI\\Lab-Day03\\K5-L3-DAY03-BuiNgocVu-2A202603463-ResearchAgentToolEval\\starter_v0\\artifacts\\versions\\v1\\system_prompt.md",
+  "tools": "C:\\Users\\Admin\\OneDrive\\Desktop\\VinAI\\Lab-Day03\\K5-L3-DAY03-BuiNgocVu-2A202603463-ResearchAgentToolEval\\starter_v0\\artifacts\\versions\\v1\\tools.yaml",
+  "history_window": 5,
+  "max_tool_rounds": 4,
+  "created_at": "2026-11-10T16:41:43",
+  "turns": [
+    {
+      "turn_index": 1,
+      "started_at": "2026-11-10T16:41:43",
+      "user": "tin tức hôm nay",
+      "status": "provider_error",
+      "assistant_text": null,
+      "rounds": [],
+      "tool_events": [],
+      "error": "APIStatusError: Error code: 402 - This request requires more credits, or fewer max_tokens. You requested up to 16384 tokens, but can only afford 16205. To increase, visit https://openrouter.ai/workspaces/default/keys/25b966043ae84383a269f934ed89f4f99710f1e6b2109c3e839b838b0e85b596 and adjust the key's total limit",
+      "ended_at": "2026-11-10T16:41:45"
+    }
+  ],
+  "updated_at": "2026-11-10T16:41:45"
+}

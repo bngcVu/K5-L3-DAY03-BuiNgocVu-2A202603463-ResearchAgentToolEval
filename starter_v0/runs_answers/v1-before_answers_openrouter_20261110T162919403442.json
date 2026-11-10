@@ -1,0 +1,787 @@
+{
+  "run_id": "v1-before_answers_openrouter_20261110T162919403442",
+  "version": "v1-before",
+  "artifact_version": "v1-before+pc3e508553a00+t8db0ba629f52",
+  "prompt_hash": "c3e508553a00f02d61ba4921bae6982164bb61752fd7d98c3b8f1a45eab9ec0d",
+  "tools_hash": "8db0ba629f52ad1ec171bae4e4e84472c12f950fa1a6db5e1d27bad6e749b740",
+  "suite": "answers",
+  "provider": "openrouter",
+  "model": "openai/gpt-4o-mini",
+  "system_prompt": "artifacts\\versions\\v1\\system_prompt.md",
+  "tools": "artifacts\\versions\\v1\\tools.yaml",
+  "eval_cases": "data\\eval_answers.json",
+  "generated_at": "2026-11-10T16:29:19",
+  "summary": {
+    "total_cases": 8,
+    "passed_cases": 1,
+    "answer_pass_rate": 0.125,
+    "language_rate": 0.375,
+    "grounded_rate": 0.8333,
+    "fresh_rate": 1.0,
+    "no_duplicates_rate": 1.0,
+    "sources_rate": 0.8571,
+    "clarify_rate": 0.0
+  },
+  "results": [
+    {
+      "id": "A01_news_no_subject",
+      "turns": [
+        "tin tức hôm nay"
+      ],
+      "asked_clarify": false,
+      "answered": true,
+      "passed": false,
+      "grade": {
+        "language_ok": false,
+        "grounded_ok": true,
+        "no_duplicates_ok": true,
+        "fresh_ok": true,
+        "sources_ok": true,
+        "failures": [
+          "answer is not Vietnamese (english_ratio=0.07)"
+        ]
+      },
+      "final_text": "Here are some news highlights from today:\n\n1. **[Tin tức quốc tế ngày 10.11: Tổng thống Trump ra một loạt tuyên bố quan trọng](https://thanhnien.vn/tin-tuc-quoc-te-sang-1011-tong-thong-trump-ra-tuyen-bo-moi-185261110000427831.htm)** - Thủ tướng Israel Benjamin Netanyahu kêu gọi thành lập một chính phủ đoàn kết, trong khi Ngoại trưởng Pháp cáo buộc Iran đứng sau một cuộc tấn công mạng nhắm vào hệ thống tủ đông tại các siêu thị ở Pháp. (Published on 09 Nov 2026)\n\n2. **[Tin tức Hà Nội 24h: Xử phạt bãi trông giữ xe vượt diện tích được cấp phép](https://laodong.vn/ban-doc/tin-tuc-ha-noi-24h-xu-phat-bai-trong-giu-xe-vuot-dien-tich-duoc-cap-phep-1797722.ldo)** - Công an TP Hà Nội đã xử phạt một bãi trông giữ xe vì vi phạm diện tích được cấp phép. (Published on 10 Nov 2026)\n\n3. **[Tin tức thế giới 10-11: Khả năng luận tội Bộ trưởng Chiến tranh Mỹ; Ông Trump cáo buộc gian lận bầu cử](https://tin.skydoor.net/news/the-gioi-tin-tuc-the-gioi-1011-kha-nang-luan-toi-bo-truong-chien-8425119)** - Ông Trump tuyên bố có thể nối lại tấn công Iran bất cứ lúc nào và có khả năng luận tội Bộ trưởng Chiến tranh Mỹ. (Published on 10 Nov 2026)\n\n4. **[Tin tức tai nạn giao thông mới nhất hôm nay 10/11/2026](https://baoxaydung.vn/tin-tuc-tai-nan-giao-thong-moi-nhat-hom-nay-10-11-2026-19226111007124908.htm)** - Một vụ tai nạn giao thông nghiêm trọng xảy ra tại TP.HCM khiến một người đàn ông tử vong. (Published on 10 Nov 2026)\n\n5. **[Tin tức nổi bật ngày 10/11/2026 có gì?](https://htv.vn/tin-tuc-noi-bat-ngay-10-11-2026-co-gi-22226111011494945.htm)** - Nhiều cây xanh ở Đà Nẵng ngã đổ do mưa lớn kèm gió giật mạnh. (Published on 10 Nov 2026)\n\nIf you need more details or specific topics, feel free to ask!",
+      "transcript": [
+        {
+          "user": "tin tức hôm nay",
+          "status": "answered",
+          "assistant_text": "Here are some news highlights from today:\n\n1. **[Tin tức quốc tế ngày 10.11: Tổng thống Trump ra một loạt tuyên bố quan trọng](https://thanhnien.vn/tin-tuc-quoc-te-sang-1011-tong-thong-trump-ra-tuyen-bo-moi-185261110000427831.htm)** - Thủ tướng Israel Benjamin Netanyahu kêu gọi thành lập một chính phủ đoàn kết, trong khi Ngoại trưởng Pháp cáo buộc Iran đứng sau một cuộc tấn công mạng nhắm vào hệ thống tủ đông tại các siêu thị ở Pháp. (Published on 09 Nov 2026)\n\n2. **[Tin tức Hà Nội 24h: Xử phạt bãi trông giữ xe vượt diện tích được cấp phép](https://laodong.vn/ban-doc/tin-tuc-ha-noi-24h-xu-phat-bai-trong-giu-xe-vuot-dien-tich-duoc-cap-phep-1797722.ldo)** - Công an TP Hà Nội đã xử phạt một bãi trông giữ xe vì vi phạm diện tích được cấp phép. (Published on 10 Nov 2026)\n\n3. **[Tin tức thế giới 10-11: Khả năng luận tội Bộ trưởng Chiến tranh Mỹ; Ông Trump cáo buộc gian lận bầu cử](https://tin.skydoor.net/news/the-gioi-tin-tuc-the-gioi-1011-kha-nang-luan-toi-bo-truong-chien-8425119)** - Ông Trump tuyên bố có thể nối lại tấn công Iran bất cứ lúc nào và có khả năng luận tội Bộ trưởng Chiến tranh Mỹ. (Published on 10 Nov 2026)\n\n4. **[Tin tức tai nạn giao thông mới nhất hôm nay 10/11/2026](https://baoxaydung.vn/tin-tuc-tai-nan-giao-thong-moi-nhat-hom-nay-10-11-2026-19226111007124908.htm)** - Một vụ tai nạn giao thông nghiêm trọng xảy ra tại TP.HCM khiến một người đàn ông tử vong. (Published on 10 Nov 2026)\n\n5. **[Tin tức nổi bật ngày 10/11/2026 có gì?](https://htv.vn/tin-tuc-noi-bat-ngay-10-11-2026-co-gi-22226111011494945.htm)** - Nhiều cây xanh ở Đà Nẵng ngã đổ do mưa lớn kèm gió giật mạnh. (Published on 10 Nov 2026)\n\nIf you need more details or specific topics, feel free to ask!",
+          "tool_calls": [
+            {
+              "name": "lookup",
+              "args": {
+                "query": "tin tức",
+                "topic": "news",
+                "timeframe": "day"
+              }
+            }
+          ]
+        }
+      ],
+      "tool_events": [
+        {
+          "tool": "lookup",
+          "args": {
+            "query": "tin tức",
+            "topic": "news",
+            "timeframe": "day"
+          },
+          "result": {
+            "tool": "web_search",
+            "query": "tin tức",
+            "topic": "news",
+            "timeframe": "day",
+            "items": [
+              {
+                "title": "Tin tức quốc tế ngày 10.11: Tổng thống Trump ra một loạt tuyên bố quan trọng",
+                "url": "https://thanhnien.vn/tin-tuc-quoc-te-sang-1011-tong-thong-trump-ra-tuyen-bo-moi-185261110000427831.htm",
+                "source": "thanhnien.vn",
+                "summary": "Thủ tướng Israel Benjamin Netanyahu ngày 9.11 tiếp tục kêu gọi thành lập một chính phủ đoàn kết, chỉ một ngày sau khi đối thủ của ông là cựu Tổng tham mưu trưởng qun đội Israel Gadi Eisenkot, được trao quyền lập chính phủ.\n\n\"Một chính phủ đoàn kết, đơn giản mà nói, là điều cần thiết\", ông Netanyahu phát biểu trong một video đăng tải trên mạng xã hội. Trong video này, ông không đề cập việc Tổng thống Isaac Herzog đã chính thức trao cho ông Eisenkot cơ hội đầu tiên để thành lập chính phủ. [...] ## Pháp cáo buộc Iran đứng sau đợt tấn công tủ lạnh siêu thị\n\nNgoại trưởng Pháp Jean-Noël Barrot ngày 9.11 cáo buộc Lực lượng Vệ binh Cách mạng Hồi giáo Iran (IRGC) đứng sau một cuộc tấn công mạng gần đy nhắm vào hệ thống tủ đông tại các siêu thị ở Pháp, đồng thời tuyên bố rằng Iran sẽ phải đối mặt với những hậu quả từ hành động này.\n\nAFP khuya 9.11 đưa tin Ngoại trưởng Pháp cam kết áp đặt các biện pháp trừng phạt Iran ở cấp độ chu u liên quan cáo buộc tấn công mạng nhắm vào tủ lạnh. [...] Trong video của mình, ông Netanyahu cảnh báo người dn Israel về cái mà ông gọi là \"mối đe dọa\" nếu đưa người Ả Rập-Israel vào chính phủ tương lai. \"Bạn không thể thành lập một chính phủ với những người ủng hộ Hamas, một chính phủ phụ thuộc vào những người ủng hộ Hamas\", ông Netanyahu tuyên bố, theo AFP.\n\nTin tức quốc tế sáng 10.11: Tổng thống Trump ra một loạt tuyên bố mới - Ảnh 4.\n\nThủ tướng Israel Benjamin Netanyahu hôm 28.10\n\nẢnh: Reuters\n\n## Nổ nhà máy thép ở Thổ Nhĩ Kỳ, 16 người chết",
+                "score": 0.44565076,
+                "published_date": "Mon, 09 Nov 2026 22:23:00 GMT"
+              },
+              {
+                "title": "Tin tức Hà Nội 24h: Xử phạt bãi trông giữ xe vượt diện tích được cấp phép",
+                "url": "https://laodong.vn/ban-doc/tin-tuc-ha-noi-24h-xu-phat-bai-trong-giu-xe-vuot-dien-tich-duoc-cap-phep-1797722.ldo",
+                "source": "laodong.vn",
+                "summary": "Image 12\n\nXử phạt bãi trông giữ xe vượt diện tích được cấp phép; sắp mở bán 66 căn nhà ở xã hội NHS Trung Văn... là những tin tức đáng chú ý tại Hà Nội 24h qua.\n\n Công an TP Hà Nội cho hay, lực lượng chức năng đã lập biên bản vi phạm hành chính đối với Hợp tác xã Thành Công do sử dụng lòng đường vượt quá diện tích được cấp phép để trông giữ phương tiện trên đường Hoàng Đạo Thúy, phường Thanh Xuân. [...] Những tuyến phố chuẩn bị được xén hè, mở rộng lòng đường; tạm giữ 571 kg giò chả chứa hàn the... là những tin tức đáng chú ý tại Hà...\n\nImage 18: Tin tức Hà Nội 24h: Vụ thịt nhũn, bở vào trường học, đơn vị cung cấp nói do lợn bị stress\n\n## Tin tức Hà Nội 24h: Vụ thịt nhũn, bở vào trường học, đơn vị cung cấp nói do lợn bị stress\n\nĐơn vị cung cấp nói thịt nhũn do lợn bị stress; phát hiện hơn 400 cây thuốc lá nung nóng, thảo mộc nghi cần sa... là những tin tức đáng... [...] TPHCM yêu cầu các sở, ngành và địa phương phối hợp hoàn thiện hồ sơ đề án thành lập phường đối với 29 xã, trong đó 7 xã đã đạt...\n\nImage 38: Đưa quan hệ Đối tác chiến lược toàn diện Việt Nam - Nhật Bản lên tầm cao mới\n\n## Đưa quan hệ Đối tác chiến lược toàn diện Việt Nam - Nhật Bản lên tầm cao mới\n\nTheo TTXVN, chiều 9.11 (giờ địa phương), tại thủ đô Tokyo, Tổng Bí thư, Chủ tịch nước Tô Lâm đã có cuộc hội đàm với Thủ tướng Nhật Bản Takaichi...",
+                "score": 0.4129331,
+                "published_date": "Tue, 10 Nov 2026 02:12:51 GMT"
+              },
+              {
+                "title": "Tin tức thế giới 10-11: Khả năng luận tội Bộ trưởng Chiến tranh Mỹ; Ông Trump cáo buộc gian lận bầu cử | Sky Tin",
+                "url": "https://tin.skydoor.net/news/the-gioi-tin-tuc-the-gioi-1011-kha-nang-luan-toi-bo-truong-chien-8425119",
+                "source": "tin.skydoor.net",
+                "summary": "Bỏ qua điều hướng\n\nSkydoor\n\nSky Tin - Tin tức địa phương toàn cầu 24h mới nhất!\n\nXem tin theo cách của bạn >>\n\n\n\n# Tin tức thế giới 10-11: Khả năng luận tội Bộ trưởng Chiến tranh Mỹ; Ông Trump cáo buộc gian lận bầu cử\n\nÔng Trump tuyên bố có thể nối lại tấn công Iran bất cứ lúc nào; Hôm nay đàm phán Mỹ - Nga - Ukraine tại UAE.\n\nĐọc tin gốc tại tuoitre.vn →\n\n## Tin tức Mỹ mới nhất hôm nay\n\n[](\n\n### Vụ CEO Nvidia ngoại tình: Ông Trump tin ông Jensen Huang; FBI vào cuộc điều tra [...] Xem tóm tắt nhanh\n\n## Tin tức Thế Giới mới nhất hôm nay\n\n[](\n\n### Nghị sĩ đảng Cộng hòa đề xuất luận tội Bộ trưởng Chiến tranh Mỹ Pete Hegseth về cuộc chiến Iran\n\n1 giờ trước–anninhthudo.vnanninhthudo.vn\n\nXem tóm tắt nhanh\n\n[](\n\n### Bộ trưởng Quốc phòng Mỹ đứng trước nguy cơ bị Hạ viện luận tội\n\n1 giờ trước–hanoimoi.vnhanoimoi.vn\n\nXem tóm tắt nhanh\n\n[](\n\n### Chuyên gia chỉ ra nút thắt khiến lực lượng Cổng Sắt của Mỹ khó chặn dòng vũ khí vào Iran\n\n1 giờ trước–baotintuc.vnbaotintuc.vn [...] 1 giờ trước–tuoitre.vntuoitre.vn\n\nXem tóm tắt nhanh\n\n[](\n\n### Ông Trump tin CEO Nvidia không biết người tình bị nghi là điệp viên Trung Quốc\n\n2 giờ trước–baogialai.com.vnbaogialai.com.vn\n\nXem tóm tắt nhanh\n\n[](\n\n### Vốn hoá 5 công ty công nghệ Mỹ chiếm khoảng 16% GDP toàn cầu\n\n2 giờ trước–doanhnhantrevietnam.vndoanhnhantrevietnam.vn\n\nXem tóm tắt nhanh\n\n[](\n\n### CEO Nvidia Jensen Huang nói gì khi ông Trump hỏi thẳng: “Ông có biết cô ta là gián điệp?”\n\n3 giờ trước–viettimes.vnviettimes.vn",
+                "score": 0.38984904,
+                "published_date": "Tue, 10 Nov 2026 03:00:00 GMT"
+              },
+              {
+                "title": "Tin tức tai nạn giao thông mới nhất hôm nay 10/11/2026",
+                "url": "https://baoxaydung.vn/tin-tuc-tai-nan-giao-thong-moi-nhat-hom-nay-10-11-2026-19226111007124908.htm",
+                "source": "baoxaydung.vn",
+                "summary": "Chiều 9/11, Công an TP.HCM khám nghiệm hiện trường, điều tra nguyên nhn vụ tai nạn khi xe máy lao lên vỉa hè, tông vào cột biển báo khiến người đàn ông tử vong tại chỗ.\n\nTheo thông tin ban đầu, hơn 12h cùng ngày, ông Trịnh Mỹ Phước (58 tuổi, quê tỉnh Trà Vinh cũ) điều khiển xe máy lưu thông trên đường số 16 (phường Linh Xun), theo hướng từ đường số 17 đi đường Lê Văn Chí. Khi vừa qua khỏi Trường THPT Linh Trung, xe máy bất ngờ lao lên vỉa hè bên phải, tông vào cột biển thông báo. [...] Theo đó, vào khoảng 14h cùng ngày, một chiếc ô tô con quay đầu trên QL7, đoạn qua địa bàn xã Bảo Thành cũ, nay là xã Hợp Minh. Khi xe vừa ra giữa đường, một chiếc xe máy tay ga chở theo 3 người lao với tốc độ nhanh đã đm thẳng vào hông xe ô tô. Cú va chạm cực mạnh khiến chiếc xe máy văng lên và nằm gọn gàng trên nóc ô tô. Phần kính sau xe ô tô bị vỡ nát, hông xe bị hư hỏng nặng. [...] Theo đó, khoảng 8h30 cùng ngày, một máy cày kéo theo rơ-moóc chở máy xúc Kobe lưu thông qua cầu Tn Thành. Khi đoàn phương tiện di chuyển đến giữa cầu, nhịp cầu bất ngờ gãy và đổ xuống kênh. Sự cố xảy ra đột ngột khiến máy cày, rơ-moóc và máy xúc rơi xuống dòng kênh bên dưới. May mắn, vụ việc không gy thiệt hại về người.",
+                "score": 0.3460776,
+                "published_date": "Tue, 10 Nov 2026 00:23:00 GMT"
+              },
+              {
+                "title": "Tin tức nổi bật ngày 10/11/2026 có gì?",
+                "url": "https://htv.vn/tin-tuc-noi-bat-ngay-10-11-2026-co-gi-22226111011494945.htm",
+                "source": "htv.vn",
+                "summary": "Bỏ qua đến nội dung chính\n\nCƠ QUAN BÁO VÀ PHÁT THANH, TRUYỀN HÌNH TP. HỒ CHÍ MINH\n\n HTV\n\nĐÀI PHÁT THANH VÀ TRUYỀN HÌNH   \nTHÀNH PHỐ HỒ CHÍ MINH\n\nTV LIVE   RADIO LIVE   GIỚI THIỆU HTV\n\nBạn hãy chọn Profile tiện dụng\n\nXu hướng\n\ngiá vàng hôm nay\n\nphim HTV\n\ngiá xăng dầu\n\ncông an tphcm\n\nKinh tế\n\ncông nghệ\n\ngiải trí\n\n# Tin tức nổi bật ngày 10/11/2026 có gì?\n\nThời sự 00:00:35.78\n\nTRẦN HÙNG, PHƯƠNG MAI, NGỌC PHẠM\n\n(HTV) - Nhiều cy xanh ở Đà Nẵng ngã đổ tối qua do mưa lớn kèm gió giật mạnh. [...] ## Danh sách tập\n\nTin tức nổi bật ngày 9/11/2026 có gì? \n\n### Tin tức nổi bật ngày 9/11/2026 có gì?\n\nTin tức nổi bật ngày 8/11/2026 có gì? \n\n### Tin tức nổi bật ngày 8/11/2026 có gì?\n\nTin tức nổi bật ngày 7/11/2026 có gì? \n\n### Tin tức nổi bật ngày 7/11/2026 có gì?\n\nTin tức nổi bật ngày 6/11/2026 có gì? \n\n### Tin tức nổi bật ngày 6/11/2026 có gì?\n\nTin tức nổi bật ngày 5/11/2026 có gì? \n\n### Tin tức nổi bật ngày 5/11/2026 có gì?\n\n## Các chương trình khác",
+                "score": 0.32350883,
+                "published_date": "Tue, 10 Nov 2026 07:46:00 GMT"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "A02_news_with_subject",
+      "turns": [
+        "Tin AI hôm nay có gì nổi bật?"
+      ],
+      "asked_clarify": false,
+      "answered": true,
+      "passed": false,
+      "grade": {
+        "language_ok": false,
+        "grounded_ok": true,
+        "no_duplicates_ok": true,
+        "fresh_ok": true,
+        "sources_ok": true,
+        "failures": [
+          "answer is not Vietnamese (english_ratio=0.20)"
+        ]
+      },
+      "final_text": "Here are some notable AI news and social media posts from today:\n\n### News Highlights\n1. **[AI and your job: Threat or opportunity?](https://www.fox10tv.com/2026/11/10/ai-your-job-threat-or-opportunity)** - This article discusses the impact of AI on jobs, highlighting both threats to entry-level positions and potential opportunities for growth in sectors like construction and manufacturing. (Published: Nov 10, 2026)\n\n2. **[Asia not riding but building the AI boom – GIS Reports](https://www.gisreportsonline.com/r/asia-building-ai-boom)** - Asian countries are focusing on their strengths in technology manufacturing to capitalize on the AI boom, with governments prioritizing AI development. (Published: Nov 10, 2026)\n\n3. **[China's trade surplus soars past $1 trillion as AI boom powers exports | Reuters](https://www.reuters.com/world/asia-pacific/chinas-trade-surplus-soars-past-1-trillion-october-exports-jump-352-yy-2026-11-10)** - China's trade surplus has surged, driven by a global push for AI infrastructure, which is expected to continue influencing exports into 2027. (Published: Nov 10, 2026)\n\n4. **[UA regents delay statement of intent on AI amid feedback](https://www.alaskasnewssource.com/2026/11/10/ua-regents-delay-statement-intent-ai-amid-feedback)** - The University of Alaska Board of Regents has postponed a decision on AI guidelines to incorporate feedback from the community. (Published: Nov 10, 2026)\n\n5. **[Congress’s Permitting Bill Is a ‘Massive Giveaway’ to the AI Data Center Industry, Critics Warn](https://time.com/article/2026/11/10/permitting-bill-data-centers)** - Critics argue that a new bill could disproportionately benefit the AI data center industry, raising concerns about its implications for public input on AI's role in society. (Published: Nov 10, 2026)\n\n### Latest Social Media Posts\n1. **[Post by @BORG1A_3](https://x.com/BORG1A_3/status/2120086067512795264)** - Discusses the struggles of AI tech investors and concerns about OpenAI's financial stability. (Date: Nov 10, 2026)\n\n2. **[Post by @BQamarauli](https://x.com/BQamarauli/status/2120086028270673969)** - OpenAI claims it can halt its AI jobs within 35 seconds, raising questions about safety measures in AI operations. (Date: Nov 10, 2026)\n\n3. **[Post by @hiroai7878](https://x.com/hiroai7878/status/2120086058075664465)** - A creative post featuring AI-generated illustrations. (Date: Nov 10, 2026)\n\n4. **[Post by @ankeshdev](https://x.com/ankeshdev/status/2120086028426076352)** - Questions whether enough context is provided to AI agents for effective business operations. (Date: Nov 10, 2026)\n\n5. **[Post by @seirdotmk](https://x.com/seirdotmk/status/2120086058461429939)** - Reviews a new image model from Hailuo_AI, showcasing its capabilities with various prompts. (Date: Nov 10, 2026)\n\nIf you need more details or a specific format for this information, let me know!",
+      "transcript": [
+        {
+          "user": "Tin AI hôm nay có gì nổi bật?",
+          "status": "answered",
+          "assistant_text": "Here are some notable AI news and social media posts from today:\n\n### News Highlights\n1. **[AI and your job: Threat or opportunity?](https://www.fox10tv.com/2026/11/10/ai-your-job-threat-or-opportunity)** - This article discusses the impact of AI on jobs, highlighting both threats to entry-level positions and potential opportunities for growth in sectors like construction and manufacturing. (Published: Nov 10, 2026)\n\n2. **[Asia not riding but building the AI boom – GIS Reports](https://www.gisreportsonline.com/r/asia-building-ai-boom)** - Asian countries are focusing on their strengths in technology manufacturing to capitalize on the AI boom, with governments prioritizing AI development. (Published: Nov 10, 2026)\n\n3. **[China's trade surplus soars past $1 trillion as AI boom powers exports | Reuters](https://www.reuters.com/world/asia-pacific/chinas-trade-surplus-soars-past-1-trillion-october-exports-jump-352-yy-2026-11-10)** - China's trade surplus has surged, driven by a global push for AI infrastructure, which is expected to continue influencing exports into 2027. (Published: Nov 10, 2026)\n\n4. **[UA regents delay statement of intent on AI amid feedback](https://www.alaskasnewssource.com/2026/11/10/ua-regents-delay-statement-intent-ai-amid-feedback)** - The University of Alaska Board of Regents has postponed a decision on AI guidelines to incorporate feedback from the community. (Published: Nov 10, 2026)\n\n5. **[Congress’s Permitting Bill Is a ‘Massive Giveaway’ to the AI Data Center Industry, Critics Warn](https://time.com/article/2026/11/10/permitting-bill-data-centers)** - Critics argue that a new bill could disproportionately benefit the AI data center industry, raising concerns about its implications for public input on AI's role in society. (Published: Nov 10, 2026)\n\n### Latest Social Media Posts\n1. **[Post by @BORG1A_3](https://x.com/BORG1A_3/status/2120086067512795264)** - Discusses the struggles of AI tech investors and concerns about OpenAI's financial stability. (Date: Nov 10, 2026)\n\n2. **[Post by @BQamarauli](https://x.com/BQamarauli/status/2120086028270673969)** - OpenAI claims it can halt its AI jobs within 35 seconds, raising questions about safety measures in AI operations. (Date: Nov 10, 2026)\n\n3. **[Post by @hiroai7878](https://x.com/hiroai7878/status/2120086058075664465)** - A creative post featuring AI-generated illustrations. (Date: Nov 10, 2026)\n\n4. **[Post by @ankeshdev](https://x.com/ankeshdev/status/2120086028426076352)** - Questions whether enough context is provided to AI agents for effective business operations. (Date: Nov 10, 2026)\n\n5. **[Post by @seirdotmk](https://x.com/seirdotmk/status/2120086058461429939)** - Reviews a new image model from Hailuo_AI, showcasing its capabilities with various prompts. (Date: Nov 10, 2026)\n\nIf you need more details or a specific format for this information, let me know!",
+          "tool_calls": [
+            {
+              "name": "lookup",
+              "args": {
+                "query": "AI",
+                "topic": "news",
+                "timeframe": "day"
+              }
+            },
+            {
+              "name": "social_search",
+              "args": {
+                "query": "AI",
+                "search_type": "Latest",
+                "limit": 5
+              }
+            }
+          ]
+        }
+      ],
+      "tool_events": [
+        {
+          "tool": "lookup",
+          "args": {
+            "query": "AI",
+            "topic": "news",
+            "timeframe": "day"
+          },
+          "result": {
+            "tool": "web_search",
+            "query": "AI",
+            "topic": "news",
+            "timeframe": "day",
+            "items": [
+              {
+                "title": "AI and your job: Threat or opportunity?",
+                "url": "https://www.fox10tv.com/2026/11/10/ai-your-job-threat-or-opportunity",
+                "source": "fox10tv.com",
+                "summary": "MOBILE, Ala. (WALA) - Artificial intelligence is becoming a bigger part of everyday life, raising questions about what the technology could mean for workers and their jobs.\n\nSome economists believe AI poses a particular threat to entry-level and repetitive work, including call center, data entry and junior copywriting jobs, according to The Wall Street Journal. Those tasks may be easier to automate. [...] But AI could also create opportunities. A Bloomberg article points to potential job growth in construction and manufacturing as companies build data centers and produce the chips that power the technology. Some higher-skilled office workers could also benefit if AI helps them become more productive. [...] The long-term impact on jobs remains unclear, but workers can take steps to prepare. Exploring AI chatbots, writing assistants and other tools may help people find ways to work more efficiently and develop skills that complement the technology.",
+                "score": 0.42348245,
+                "published_date": "Tue, 10 Nov 2026 03:58:28 GMT"
+              },
+              {
+                "title": "Asia not riding but building the AI boom – GIS Reports",
+                "url": "https://www.gisreportsonline.com/r/asia-building-ai-boom",
+                "source": "gisreportsonline.com",
+                "summary": "The AI ecosystem can be generally separated between three elements: models, compute power and supply chains – with the U.S. and China competing and leading for the first two. Asian countries are looking at how they can stand out amid this intense East-West competition, while capitalizing on their strengths in technology manufacturing supply chains. This has led smaller economies to identify their competitive advantages while investing in novel applications for AI in various industries such as [...] Due to demographic realities, manufacturing and exports are essential to Asian economies. AI is expected to support transitions as each country manages declines in their populations and workforce while maintaining economic growth and prosperity.\n\nContact ustoday for tailored geopolitical insights and industry-specific advisory services.\n\n## Sign up for our newsletter\n\nReceive insights from our experts every week in your inbox. [...] AI is now a priority for all governments in Asia, with each taking a different approach. Government-to-government coordination is focusing on finding ways to collaborate in the regulatory space on issues like export controls and supply chain monitoring. Elected officials are looking to support their domestic industries in the hope that local companies increase their participation in global markets.\n\n## The epicenter of AI technology is Taiwan",
+                "score": 0.20856592,
+                "published_date": "Tue, 10 Nov 2026 07:00:00 GMT"
+              },
+              {
+                "title": "China's trade surplus soars past $1 trillion as AI boom powers exports | Reuters",
+                "url": "https://www.reuters.com/world/asia-pacific/chinas-trade-surplus-soars-past-1-trillion-october-exports-jump-352-yy-2026-11-10",
+                "source": "reuters.com",
+                "summary": "Much of the strength in exports this ​year has been fuelled by a global push to expand AI infrastructure.\n\n\"The outlook for exports depends on how long the AI boom will last,\" Macquarie analysts wrote. They expect China's exports to accelerate ​further in the fourth quarter before starting to slow from the first quarter of 2027.\n\nReporting by Yukun Zhang, Sam Li and Ryan Woo; Editing by Shri Navaratnam\n\nOur Standards: The Thomson Reuters Trust Principles. [...] BEIJING, Nov 10 (Reuters) - China's trade surplus surged past $1 trillion in the first 10 months as a global race to build AI infrastructure buoyed sales ​of high-tech products and helped offset weak domestic demand, a dynamic likely to sharpen tensions with major trading partners. [...] The figures highlight ‌Beijing's growing reliance on overseas demand to support an economy hobbled by subdued consumption and a protracted property slump. But while the global AI investment boom is expected to keep demand for Chinese technology products strong into 2027, it risks deepening domestic imbalances and fuelling trade frictions with partners including the European Union.\n\nMake sense of global markets with the Trading Day newsletter. Sign up here.",
+                "score": 0.4908534,
+                "published_date": "Tue, 10 Nov 2026 03:52:51 GMT"
+              },
+              {
+                "title": "UA regents delay statement of intent on AI amid feedback",
+                "url": "https://www.alaskasnewssource.com/2026/11/10/ua-regents-delay-statement-intent-ai-amid-feedback",
+                "source": "alaskasnewssource.com",
+                "summary": "Work on the university system’s intent language began in 2025, Taylor said, when faculty requested guidance from administration on the use of AI in the classroom.\n\nWhen complete, the document is designed not to act as policy, but simply to outline the approach the UA institution is taking toward AI, develop guiding principles and put forward expectations of future actions from the administration, including eventually coming up with actual policy. [...] The action was recommended by Chief Technology Officer Benjamin Shier, and pushes off the final decision on the university system’s AI intent language until February, or until requested by UA President Matt Cooper.\n\nTaylor described the feedback being received about the draft “AI Engaged” document as “passionate.” [...] FAIRBANKS, Alaska (KTUU/KTVF) - The University of Alaska (UA) Board of Regents delayed releasing a statement of intent covering the system’s use of artificial intelligence during its November meeting Friday, giving the information technology department time to incorporate feedback from faculty, staff and students into the document.",
+                "score": 0.22167104,
+                "published_date": "Tue, 10 Nov 2026 07:03:34 GMT"
+              },
+              {
+                "title": "Congress’s Permitting Bill Is a ‘Massive Giveaway’ to the AI Data Center Industry, Critics Warn",
+                "url": "https://time.com/article/2026/11/10/permitting-bill-data-centers",
+                "source": "time.com",
+                "summary": "Personalized Content\n\n## Business\n\nFollow this section to personalize your feed and get instant alerts.\n\nWHY FOLLOW?\n\nUpdate your preferences in Account Settings\n\nPersonalized Content\n\n## AI\n\nFollow this tag to personalize your feed and get instant alerts.\n\nWHY FOLLOW?\n\nUpdate your preferences in Account Settings\n\n# Congress’s Permitting Bill Is a ‘Massive Giveaway’ to the AI Data Center Industry, Critics Warn\n\nAndrew R. Chow\n\nPersonalized Content\n\nAndrew R. Chow\n\n## Andrew R. Chow [...] The bill’s advocates argue that its passage would serve as a rare bipartisan win and a victory for affordability. But critics, especially those on the left, are calling for Democrats to wait until the next Congress. “You just heard Americans demand much more of a say in a way that AI is shaping their lives,” says Michele Jawando, the CEO of Omidyar Network. “Whenever you try to ram something through in a lame duck Congress before you have a hundred new House members, that’s never a good look [...] WHY FOLLOW?\n\nUpdate your preferences in Account Settings\n\nCorrespondent\n\nNarrated by TIME AI.",
+                "score": 0.19392508,
+                "published_date": "Tue, 10 Nov 2026 04:00:08 GMT"
+              }
+            ]
+          }
+        },
+        {
+          "tool": "social_search",
+          "args": {
+            "query": "AI",
+            "search_type": "Latest",
+            "limit": 5
+          },
+          "result": {
+            "tool": "search_tweets",
+            "query": "AI",
+            "search_type": "Latest",
+            "items": [
+              {
+                "title": "今回、おにや君をはじめ多くのAIテックフルレバ投資家の苦境を見てきたがSBGがやってるのも”モメチン”みたく見えてしまう...",
+                "summary": "今回、おにや君をはじめ多くのAIテックフルレバ投資家の苦境を見てきたがSBGがやってるのも”モメチン”みたく見えてしまう...\n\nデータセンター/OPENAIというAI半導体一本足打法とリスク分散が甘い中で、高額な借り入れを行いリターンを得ようとしてる\n\n更なる投資もOPENAIは必要なのに赤字なのが不安",
+                "url": "https://x.com/BORG1A_3/status/2120086067512795264",
+                "source": "@BORG1A_3",
+                "date": "Tue Nov 10 09:28:02 +0000 2026",
+                "metrics": {
+                  "favorites": 0,
+                  "retweets": 0,
+                  "views": null
+                }
+              },
+              {
+                "title": "OpenAI says it can now stop any of its research AI jobs within 35 seconds of deciding to, and if the stop system itself ",
+                "summary": "OpenAI says it can now stop any of its research AI jobs within 35 seconds of deciding to, and if the stop system itself fails, the models stop too. \n\nA fair question for any company running AI agents is how long it would take you, and what happens if your off switch breaks. \"Kill switch\"-is the first question I ask to my clients. If they have one or have considered it. \n\nhttps://t.co/Y7GJ1A3q7m",
+                "url": "https://x.com/BQamarauli/status/2120086028270673969",
+                "source": "@BQamarauli",
+                "date": "Tue Nov 10 09:27:53 +0000 2026",
+                "metrics": {
+                  "favorites": 0,
+                  "retweets": 0,
+                  "views": "1"
+                }
+              },
+              {
+                "title": "「リンゴ狩り」",
+                "summary": "「リンゴ狩り」\n\n#AIイラスト https://t.co/LbUdXLFYul",
+                "url": "https://x.com/hiroai7878/status/2120086058075664465",
+                "source": "@hiroai7878",
+                "date": "Tue Nov 10 09:28:00 +0000 2026",
+                "metrics": {
+                  "favorites": 0,
+                  "retweets": 0,
+                  "views": "4"
+                }
+              },
+              {
+                "title": "Do you provide enough context to your AI agents to work on your business...??",
+                "summary": "Do you provide enough context to your AI agents to work on your business...??",
+                "url": "https://x.com/ankeshdev/status/2120086028426076352",
+                "source": "@ankeshdev",
+                "date": "Tue Nov 10 09:27:53 +0000 2026",
+                "metrics": {
+                  "favorites": 0,
+                  "retweets": 0,
+                  "views": null
+                }
+              },
+              {
+                "title": "A new image model has arrived from @Hailuo_AI  so how does it fare?",
+                "summary": "A new image model has arrived from @Hailuo_AI  so how does it fare?\n\nI dug up my old prompts and gave them to a brand-new image model.\n\nFour prompts I wrote months ago for another tool, copied in unchanged. Testing MiniMax’s H3-Image in early access.\n\n→ Film noir portrait. A woman in a red silk slip, smoke curling at her feet, light through window blinds. The lace, the satin sheen, and the haze held up.\n\n→ Surreal poster. A POV from inside a cardboard box, two cows peering in. Every line of the poster text came out spelled correctly, headline to footer. That alone used to take me [several rerolls / an edit in Photoshop].\n\n→ Fashion shot. An extreme low angle, wide-leg grey suit, worn leather loafer filling the foreground, buildings towering over him. The fabric texture survived the distortion.\n\n→ Skydiver at 15,000 feet. Orange-and-black canopy, Alpine valleys below, the altitude text rendered clean.\n\nSame words, new model. \nWhat's your favorite?\n\nGot an old prompt you never got right? Drop it below.\nEarly access via @MiniMax_AI’s creator program.\n\n#H3Image #AIart",
+                "url": "https://x.com/seirdotmk/status/2120086058461429939",
+                "source": "@seirdotmk",
+                "date": "Tue Nov 10 09:28:00 +0000 2026",
+                "metrics": {
+                  "favorites": 0,
+                  "retweets": 0,
+                  "views": null
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "A03_news_tech_week",
+      "turns": [
+        "tin công nghệ trong tuần này"
+      ],
+      "asked_clarify": false,
+      "answered": true,
+      "passed": false,
+      "grade": {
+        "language_ok": false,
+        "grounded_ok": true,
+        "no_duplicates_ok": true,
+        "fresh_ok": true,
+        "sources_ok": true,
+        "failures": [
+          "answer is not Vietnamese (english_ratio=0.14)"
+        ]
+      },
+      "final_text": "Here are some recent technology news articles from this week:\n\n1. **[Cổ phiếu công nghệ Mỹ biến động trước lo ngại về quy định AI](https://www3.nhk.or.jp/nhkworld/vi/news/20261109_RS10)** - NHK WORLD-JAPAN\n   - Published on: Mon, 09 Nov 2026\n   - Summary: Experts suggest that emerging data center companies may face funding difficulties if stricter regulations slow down new project developments. This has led to volatility in U.S. tech stocks.\n\n2. **[Sở Khoa học và Công nghệ Hà Tĩnh hướng dẫn xét công nhận sáng kiến và đánh giá hiệu quả đề tài khoa học](https://hatinh.gov.vn/vi/bai-viet/so-khoa-hoc-va-cong-nghe-ha-tinh-huong-dan-xet-cong-nhan-sang-kien-va-danh-gia-hieu-qua-de-tai-khoa-hoc)** - hatinh.gov.vn\n   - Published on: Sun, 08 Nov 2026\n   - Summary: The guidance includes various solutions for recognition as initiatives, such as technical solutions, management solutions, and applications of technical advancements.\n\n3. **[Định hướng thúc đẩy ngoại giao khoa học và công nghệ](https://nhandan.vn/dinh-huong-thuc-day-ngoai-giao-khoa-hoc-va-cong-nghe-post1000120.html)** - Nhân Dân\n   - Published on: Wed, 04 Nov 2026\n   - Summary: The Ministry of Science and Technology aims to enhance international cooperation in science and technology, focusing on specific programs and partnerships.\n\n4. **[Elon Musk: 'Công nghệ Neuralink có thể chữa mù'](https://vnexpress.net/elon-musk-cong-nghe-neuralink-co-the-chua-mu-5139934.html)** - VnExpress\n   - Published on: Tue, 03 Nov 2026\n   - Summary: Neuralink's technology aims to create artificial visual pathways, allowing patients to use cameras to gather images and convert signals into a format understandable by the brain.\n\n5. **[Cổ phiếu công nghệ Mỹ bị bán tháo, thổi bay mức kỷ lục 2.300 tỷ USD vốn hóa](https://dantri.com.vn/kinh-doanh/co-phieu-cong-nghe-my-bi-ban-thao-thoi-bay-muc-ky-luc-2300-ty-usd-von-hoa-20261106080014669.htm)** - Dân trí\n   - Published on: Fri, 06 Nov 2026\n   - Summary: The Nasdaq 100 index dropped 6.4%, erasing $2.3 trillion in market value, marking the largest decline recorded, driven by concerns over AI investments following the Democratic Party's election victories.\n\nIf you need more information or a specific article, let me know!",
+      "transcript": [
+        {
+          "user": "tin công nghệ trong tuần này",
+          "status": "answered",
+          "assistant_text": "Here are some recent technology news articles from this week:\n\n1. **[Cổ phiếu công nghệ Mỹ biến động trước lo ngại về quy định AI](https://www3.nhk.or.jp/nhkworld/vi/news/20261109_RS10)** - NHK WORLD-JAPAN\n   - Published on: Mon, 09 Nov 2026\n   - Summary: Experts suggest that emerging data center companies may face funding difficulties if stricter regulations slow down new project developments. This has led to volatility in U.S. tech stocks.\n\n2. **[Sở Khoa học và Công nghệ Hà Tĩnh hướng dẫn xét công nhận sáng kiến và đánh giá hiệu quả đề tài khoa học](https://hatinh.gov.vn/vi/bai-viet/so-khoa-hoc-va-cong-nghe-ha-tinh-huong-dan-xet-cong-nhan-sang-kien-va-danh-gia-hieu-qua-de-tai-khoa-hoc)** - hatinh.gov.vn\n   - Published on: Sun, 08 Nov 2026\n   - Summary: The guidance includes various solutions for recognition as initiatives, such as technical solutions, management solutions, and applications of technical advancements.\n\n3. **[Định hướng thúc đẩy ngoại giao khoa học và công nghệ](https://nhandan.vn/dinh-huong-thuc-day-ngoai-giao-khoa-hoc-va-cong-nghe-post1000120.html)** - Nhân Dân\n   - Published on: Wed, 04 Nov 2026\n   - Summary: The Ministry of Science and Technology aims to enhance international cooperation in science and technology, focusing on specific programs and partnerships.\n\n4. **[Elon Musk: 'Công nghệ Neuralink có thể chữa mù'](https://vnexpress.net/elon-musk-cong-nghe-neuralink-co-the-chua-mu-5139934.html)** - VnExpress\n   - Published on: Tue, 03 Nov 2026\n   - Summary: Neuralink's technology aims to create artificial visual pathways, allowing patients to use cameras to gather images and convert signals into a format understandable by the brain.\n\n5. **[Cổ phiếu công nghệ Mỹ bị bán tháo, thổi bay mức kỷ lục 2.300 tỷ USD vốn hóa](https://dantri.com.vn/kinh-doanh/co-phieu-cong-nghe-my-bi-ban-thao-thoi-bay-muc-ky-luc-2300-ty-usd-von-hoa-20261106080014669.htm)** - Dân trí\n   - Published on: Fri, 06 Nov 2026\n   - Summary: The Nasdaq 100 index dropped 6.4%, erasing $2.3 trillion in market value, marking the largest decline recorded, driven by concerns over AI investments following the Democratic Party's election victories.\n\nIf you need more information or a specific article, let me know!",
+          "tool_calls": [
+            {
+              "name": "lookup",
+              "args": {
+                "query": "công nghệ",
+                "topic": "news",
+                "timeframe": "week"
+              }
+            }
+          ]
+        }
+      ],
+      "tool_events": [
+        {
+          "tool": "lookup",
+          "args": {
+            "query": "công nghệ",
+            "topic": "news",
+            "timeframe": "week"
+          },
+          "result": {
+            "tool": "web_search",
+            "query": "công nghệ",
+            "topic": "news",
+            "timeframe": "week",
+            "items": [
+              {
+                "title": "Cổ phiếu công nghệ Mỹ biến động trước lo ngại về quy định AI | NHK WORLD-JAPAN News",
+                "url": "https://www3.nhk.or.jp/nhkworld/vi/news/20261109_RS10",
+                "source": "www3.nhk.or.jp",
+                "summary": "Một số chuyên gia cho rằng các công ty trung tm dữ liệu mới nổi có thể gặp khó khăn về vốn nếu các quy định chặt chẽ hơn làm chậm tiến độ các dự án xy dựng mới. Các công ty này đã dựa vào khoản vay để mở rộng kinh doanh.  \n   \nNguồn tin thị trường cho biết điều đó có nghĩa là cổ phiếu công nghệ có thể vẫn bất ổn trong thời gian trước mắt. [...] Chiến thắng áp đảo của đảng Dn chủ trong cuộc bầu cử giữa kỳ của Mỹ đã làm dấy lên lo ngại về triển vọng của ngành trí tuệ nhn tạo và bán dẫn. Điều này khiến cổ phiếu công nghệ cao của Mỹ biến động.  \n   \nĐảng Dn chủ đã giành lại quyền kiểm soát cả hai viện Quốc hội trong cuộc bầu cử tuần trước. Các ứng viên đảng Dn chủ cũng chiến thắng trong các cuộc bầu cử thống đốc ở nhiều bang, trong đó có Texas, nơi có nhiều trung tm dữ liệu.",
+                "score": 0.27391827,
+                "published_date": "Mon, 09 Nov 2026 16:00:00 GMT"
+              },
+              {
+                "title": "Sở Khoa học và Công nghệ Hà Tĩnh hướng dẫn xét công nhận sáng kiến và đánh giá hiệu quả đề tài khoa học",
+                "url": "https://hatinh.gov.vn/vi/bai-viet/so-khoa-hoc-va-cong-nghe-ha-tinh-huong-dan-xet-cong-nhan-sang-kien-va-danh-gia-hieu-qua-de-tai-khoa-hoc",
+                "source": "hatinh.gov.vn",
+                "summary": "Theo hướng dẫn, các giải pháp được xem xét công nhận là sáng kiến bao gồm: giải pháp kỹ thuật, giải pháp quản lý, giải pháp tác nghiệp và giải pháp ứng dụng tiến bộ kỹ thuật. Trong đó, giải pháp kỹ thuật có thể là sản phẩm, vật liệu, giống cy trồng, vật nuôi hoặc quy trình công nghệ; giải pháp quản lý là phương pháp tổ chức, điều hành công việc; giải pháp tác nghiệp là các phương pháp thực hiện nghiệp vụ chuyên môn; còn giải pháp ứng dụng tiến bộ kỹ thuật là việc áp dụng các giải pháp kỹ thuật",
+                "score": 0.25643653,
+                "published_date": "Sun, 08 Nov 2026 08:00:00 GMT"
+              },
+              {
+                "title": "Định hướng thúc đẩy ngoại giao khoa học và công nghệ",
+                "url": "https://nhandan.vn/dinh-huong-thuc-day-ngoai-giao-khoa-hoc-va-cong-nghe-post1000120.html",
+                "source": "nhandan.vn",
+                "summary": "Để phát huy hơn nữa tiềm năng này, bà Đỗ Quỳnh Hoa cho biết, Bộ Khoa học và Công nghệ cần triển khai đồng bộ một số định hướng trọng tm. Theo đó, các hội nghị, hội thảo cần gắn với những chương trình hợp tác cụ thể, như nghiên cứu chung, chuyển giao và làm chủ công nghệ, đào tạo nhn lực, trao đổi nhà khoa học và phát triển các nhóm nghiên cứu quốc tế, nhất là trong những lĩnh vực công nghệ chiến lược và Việt Nam có nhu cầu ưu tiên. [...] Công nhn và kỹ sư Công ty cổ phần Thiết bị và Giải pháp Cơ khí Automech ở Khu công nghiệp Đình Trám (Bắc Ninh) sản xuất các thiết bị gia công cơ khí chính xác, tự động hóa. (Ảnh: TRẦN HẢI)  \n\n## Đồng hành cùng doanh nghiệp đổi mới công nghệ\n\nTổng Bí thư, Chủ tịch nước Tô Lm chủ trì cuộc làm việc với Ban Chính sách, chiến lược Trung ương về phát triển công nghiệp vật liệu. (Ảnh: ĐĂNG KHOA)  \n\n## Xy dựng nhn lực làm chủ công nghiệp vật liệu [...] # Định hướng thúc đẩy ngoại giao khoa học và công nghệ\n\nChia sẻ tại họp báo của Bộ Khoa học và Công nghệ ngày 4/11, đại diện Vụ Hợp tác quốc tế (Bộ Khoa học và Công nghệ) cho biết, Bộ Khoa học và Công nghệ sẽ tiếp tục thúc đẩy hợp tác quốc tế theo hướng thực chất, hiệu quả, tăng cường kết nối các đối tác, chuyên gia và tổ chức khoa học trong và ngoài nước.\n\nPrefer Nhan Dan on Google\n\n Quang cảnh buổi họp báo của Bộ Khoa học và Công nghệ ngày 4/11. ( Ảnh: HÀ LINH)",
+                "score": 0.2561085,
+                "published_date": "Wed, 04 Nov 2026 08:18:19 GMT"
+              },
+              {
+                "title": "Elon Musk: 'Công nghệ Neuralink có thể chữa mù' - Báo VnExpress",
+                "url": "https://vnexpress.net/elon-musk-cong-nghe-neuralink-co-the-chua-mu-5139934.html",
+                "source": "vnexpress.net",
+                "summary": "Theo Tom's Hardware, Blindsight khác với đa số công nghệ hiện nay, vốn tập trung vào truyền tín hiệu từ não bộ để điều khiển thiết bị bên ngoài. Ví dụ, ốc tai điện tử và thiết bị cấy ghép thần kinh cảm giác gửi tín hiệu từ cảm biến vào não, giúp người khiếm thính nghe lại và bệnh nhn lấy lại xúc giác. Trong khi đó, Blindsight hướng đến thiết lập đường dẫn thị giác nhn tạo, cho phép bệnh nhn dùng camera để thu thập hình ảnh, sau đó chuyển đổi tín hiệu thành dạng mà não bộ hiểu được thông qua [...] Dù không phải công ty đầu tiên nghiên cứu về giao diện não - máy tính, Neuralink là một trong những tên tuổi thành công nhất, phần nào nhờ hỗ trợ tài chính từ Musk. Một số doanh nghiệp khác cũng nỗ lực nghiên cứu công nghệ tương tự. Ví dụ, Meta phát triển máy quét điện não đồ từ trường không xm lấn cho phép người dùng chuyển suy nghĩ thành những thao tác nhấn phím, trong khi startup Trung Quốc NeuroXess, thành lập năm 2021, đang đẩy nhanh tiến độ để thử nghiệm trên người trong năm nay.",
+                "score": 0.25222787,
+                "published_date": "Tue, 03 Nov 2026 22:00:00 GMT"
+              },
+              {
+                "title": "Cổ phiếu công nghệ Mỹ bị bán tháo, thổi bay mức kỷ lục 2.300 tỷ USD vốn hóa | Báo Dân trí",
+                "url": "https://dantri.com.vn/kinh-doanh/co-phieu-cong-nghe-my-bi-ban-thao-thoi-bay-muc-ky-luc-2300-ty-usd-von-hoa-20261106080014669.htm",
+                "source": "dantri.com.vn",
+                "summary": "Chỉ số Nasdaq 100 giảm 6,4%, thổi bay 2.300 tỷ USD giá trị vốn hóa, mức lớn nhất từng ghi nhận. Lĩnh vực công nghệ dẫn đầu đợt bán tháo lan rộng khắp các nhóm ngành, kéo chỉ số S&P 500 giảm 4,4%. Đy là mức giảm mạnh nhất kể từ tháng 4/2025, khi thị trường chao đảo vì đợt thuế quan đối ứng của Tổng thống Mỹ Donald Trump. Chỉ số đo lường cổ phiếu bán dẫn Mỹ lao dốc 12%, ghi nhận ngày tồi tệ nhất kể từ khi đại dịch Covid-19 bùng phát vào tháng 3/2020. [...] Kinh doanh\n\n# Cổ phiếu công nghệ Mỹ bị bán tháo, thổi bay mức kỷ lục 2.300 tỷ USD vốn hóa\n\nXun Hoa\n\nXun Hoa\n\n## (Dn trí) - Cổ phiếu công nghệ lao dốc mạnh nhất kể từ năm 2020 trong phiên 5/11 khi nhà đầu tư rút lo ngại về làn sóng đầu tư vào AI sau khi Đảng Dn chủ thắng áp đảo trong cuộc bầu cử giữa nhiệm kỳ ở Mỹ. [...] “Trong chuỗi cung ứng AI đã có rất nhiều yếu tố định giá và biên lợi nhuận dựa trên sự khan hiếm, dù là ở các công ty bộ nhớ hay các công ty công nghiệp phục vụ trung tm dữ liệu”, ông Justin Bergner, nhà quản lý danh mục tại Gabelli Funds, nhận định. Ông nói thêm rằng thị trường đang phản ánh vào giá một quá trình xy dựng hạ tầng kéo dài hơn, điều sẽ khiến chuỗi cung ứng bớt căng thẳng và biên lợi nhuận thấp hơn.",
+                "score": 0.24413808,
+                "published_date": "Fri, 06 Nov 2026 08:00:00 GMT"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "A04_vague_new_news",
+      "turns": [
+        "cho mình xem tin mới"
+      ],
+      "asked_clarify": false,
+      "answered": true,
+      "passed": false,
+      "grade": {
+        "language_ok": true,
+        "grounded_ok": null,
+        "no_duplicates_ok": null,
+        "fresh_ok": null,
+        "sources_ok": false,
+        "failures": [
+          "answer cites no source URL"
+        ]
+      },
+      "final_text": "Bạn có thể cho mình biết chủ đề tin tức mà bạn muốn xem không?",
+      "transcript": [
+        {
+          "user": "cho mình xem tin mới",
+          "status": "answered",
+          "assistant_text": "Bạn có thể cho mình biết chủ đề tin tức mà bạn muốn xem không?",
+          "tool_calls": []
+        }
+      ],
+      "tool_events": []
+    },
+    {
+      "id": "A05_tweets_account",
+      "turns": [
+        "Tweet mới nhất của Sam Altman là gì?"
+      ],
+      "asked_clarify": false,
+      "answered": true,
+      "passed": false,
+      "grade": {
+        "language_ok": false,
+        "grounded_ok": true,
+        "no_duplicates_ok": true,
+        "fresh_ok": null,
+        "sources_ok": true,
+        "failures": [
+          "answer is not Vietnamese (english_ratio=0.06)"
+        ]
+      },
+      "final_text": "Tweet mới nhất của Sam Altman là một retweet từ @fouadmatin, nói về việc phát hành GPT-6 Cyber. Nội dung tweet như sau:\n\n\"Today’s GPT-6 Cyber release is a meaningful step for defenders: stronger vulnerability research and better alignment.\"\n\nBạn có thể xem tweet tại đây: [Tweet của Sam Altman](https://x.com/sama/status/2118471941002842341). \n\nTweet này được đăng vào ngày 5 tháng 11 năm 2026 và đã nhận được 53 lượt retweet và 0 lượt thích.",
+      "transcript": [
+        {
+          "user": "Tweet mới nhất của Sam Altman là gì?",
+          "status": "answered",
+          "assistant_text": "Tweet mới nhất của Sam Altman là một retweet từ @fouadmatin, nói về việc phát hành GPT-6 Cyber. Nội dung tweet như sau:\n\n\"Today’s GPT-6 Cyber release is a meaningful step for defenders: stronger vulnerability research and better alignment.\"\n\nBạn có thể xem tweet tại đây: [Tweet của Sam Altman](https://x.com/sama/status/2118471941002842341). \n\nTweet này được đăng vào ngày 5 tháng 11 năm 2026 và đã nhận được 53 lượt retweet và 0 lượt thích.",
+          "tool_calls": [
+            {
+              "name": "timeline",
+              "args": {
+                "screenname": "sama",
+                "limit": 1
+              }
+            }
+          ]
+        }
+      ],
+      "tool_events": [
+        {
+          "tool": "timeline",
+          "args": {
+            "screenname": "sama",
+            "limit": 1
+          },
+          "result": {
+            "tool": "get_user_tweets",
+            "screenname": "sama",
+            "items": [
+              {
+                "title": "RT @fouadmatin: Today’s GPT-6 Cyber release is a meaningful step for defenders: stronger vulnerability research and bett",
+                "summary": "RT @fouadmatin: Today’s GPT-6 Cyber release is a meaningful step for defenders: stronger vulnerability research and better alignment. We’ve…",
+                "url": "https://x.com/sama/status/2118471941002842341",
+                "source": "@sama",
+                "date": "Thu Nov 05 22:34:04 +0000 2026",
+                "metrics": {
+                  "favorites": 0,
+                  "retweets": 53,
+                  "views": "47460"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "A06_social_topic",
+      "turns": [
+        "Mọi người đang bàn gì về GPT-5 trên Twitter?"
+      ],
+      "asked_clarify": false,
+      "answered": true,
+      "passed": false,
+      "grade": {
+        "language_ok": true,
+        "grounded_ok": false,
+        "no_duplicates_ok": true,
+        "fresh_ok": null,
+        "sources_ok": true,
+        "failures": [
+          "URL not returned by any tool: https://t.co/2qIbXHzlXZ"
+        ]
+      },
+      "final_text": "Dưới đây là một số bài đăng gần đây về GPT-5 trên Twitter:\n\n1. **@asahi_ai_x**: [Link](https://x.com/asahi_ai_x/status/2120086205018853630) - \"https://t.co/2qIbXHzlXZ\" (Ngày: 10 tháng 11, 2026)\n\n2. **@yingyen_**: [Link](https://x.com/yingyen_/status/2120085660224655361) - \"Spent last weekend afternoon building an AI image site: ImgRestyle 🎨\" - Một trang web cho phép người dùng tải lên ảnh và mô tả những gì họ muốn thay đổi. (Ngày: 10 tháng 11, 2026)\n\n3. **@EvoLinkAi**: [Link](https://x.com/EvoLinkAi/status/2120085634438021140) - \"Seedream 5.5 beats GPT Image 2.6 Sunburst in this Casio watch multi-turn editing test.\" - So sánh giữa Seedream 5.5 và GPT Image 2.6. (Ngày: 10 tháng 11, 2026)\n\n4. **@Ibrahimsultan__**: [Link](https://x.com/Ibrahimsultan__/status/2120085613441696069) - Một bài viết dài về quá trình sản xuất một bộ phim stop motion liên quan đến quản lý an ninh thông tin, sử dụng nhiều công cụ AI. (Ngày: 10 tháng 11, 2026)\n\n5. **@vista8**: [Link](https://x.com/vista8/status/2120085580264714732) - \"https://t.co/YnkEY6NDrp\" (Ngày: 10 tháng 11, 2026)\n\nNếu bạn cần thêm thông tin hoặc muốn tìm hiểu sâu hơn về một bài đăng cụ thể, hãy cho tôi biết!",
+      "transcript": [
+        {
+          "user": "Mọi người đang bàn gì về GPT-5 trên Twitter?",
+          "status": "answered",
+          "assistant_text": "Dưới đây là một số bài đăng gần đây về GPT-5 trên Twitter:\n\n1. **@asahi_ai_x**: [Link](https://x.com/asahi_ai_x/status/2120086205018853630) - \"https://t.co/2qIbXHzlXZ\" (Ngày: 10 tháng 11, 2026)\n\n2. **@yingyen_**: [Link](https://x.com/yingyen_/status/2120085660224655361) - \"Spent last weekend afternoon building an AI image site: ImgRestyle 🎨\" - Một trang web cho phép người dùng tải lên ảnh và mô tả những gì họ muốn thay đổi. (Ngày: 10 tháng 11, 2026)\n\n3. **@EvoLinkAi**: [Link](https://x.com/EvoLinkAi/status/2120085634438021140) - \"Seedream 5.5 beats GPT Image 2.6 Sunburst in this Casio watch multi-turn editing test.\" - So sánh giữa Seedream 5.5 và GPT Image 2.6. (Ngày: 10 tháng 11, 2026)\n\n4. **@Ibrahimsultan__**: [Link](https://x.com/Ibrahimsultan__/status/2120085613441696069) - Một bài viết dài về quá trình sản xuất một bộ phim stop motion liên quan đến quản lý an ninh thông tin, sử dụng nhiều công cụ AI. (Ngày: 10 tháng 11, 2026)\n\n5. **@vista8**: [Link](https://x.com/vista8/status/2120085580264714732) - \"https://t.co/YnkEY6NDrp\" (Ngày: 10 tháng 11, 2026)\n\nNếu bạn cần thêm thông tin hoặc muốn tìm hiểu sâu hơn về một bài đăng cụ thể, hãy cho tôi biết!",
+          "tool_calls": [
+            {
+              "name": "social_search",
+              "args": {
+                "query": "GPT-5",
+                "search_type": "Latest",
+                "limit": 5
+              }
+            }
+          ]
+        }
+      ],
+      "tool_events": [
+        {
+          "tool": "social_search",
+          "args": {
+            "query": "GPT-5",
+            "search_type": "Latest",
+            "limit": 5
+          },
+          "result": {
+            "tool": "search_tweets",
+            "query": "GPT-5",
+            "search_type": "Latest",
+            "items": [
+              {
+                "title": "https://t.co/2qIbXHzlXZ",
+                "summary": "https://t.co/2qIbXHzlXZ",
+                "url": "https://x.com/asahi_ai_x/status/2120086205018853630",
+                "source": "@asahi_ai_x",
+                "date": "Tue Nov 10 09:28:35 +0000 2026",
+                "metrics": {
+                  "favorites": 1,
+                  "retweets": 0,
+                  "views": null
+                }
+              },
+              {
+                "title": "Spent last weekend afternoon building an AI image site: ImgRestyle 🎨",
+                "summary": "Spent last weekend afternoon building an AI image site: ImgRestyle 🎨\n\nUpload your own photo, describe what you want changed in one sentence, then use the strength slider to choose a subtle tweak or a bold redo.\n\nWhat it can do:\n• Turn photos into watercolor, anime, or sketch styles\n• Swap backgrounds or outfits\n• Pet portraits, product shots, headshots\n• Restore old photos\n• Turn images into GIFs\n\nIt has three models: Nano Banana Pro, GPT Image 2.6, and Seedream 5. Run the same image through each and the results can be really different.\n\nI used to think a site like this would take weeks. With AI writing the code, it went from idea to something usable in one afternoon.\n\n3 free generations, no sign-up, no credit card. Give it a try, I'd love your feedback 🙏\n\n👉 https://t.co/7BgEsqdDt3",
+                "url": "https://x.com/yingyen_/status/2120085660224655361",
+                "source": "@yingyen_",
+                "date": "Tue Nov 10 09:26:25 +0000 2026",
+                "metrics": {
+                  "favorites": 0,
+                  "retweets": 0,
+                  "views": null
+                }
+              },
+              {
+                "title": "Seedream 5.5 beats GPT Image 2.6 Sunburst in this Casio watch multi-turn editing test.",
+                "summary": "Seedream 5.5 beats GPT Image 2.6 Sunburst in this Casio watch multi-turn editing test.\n\nBetter results, lower cost. ⌚🔥\n\nLeft: Seedream 5.5 — $0.84\nRight: GPT Image 2.6 Sunburst — $1.91\n\nSeedream 5.5 is coming soon. Register interest 👇\nhttps://t.co/kojRNq4cBQ",
+                "url": "https://x.com/EvoLinkAi/status/2120085634438021140",
+                "source": "@EvoLinkAi",
+                "date": "Tue Nov 10 09:26:19 +0000 2026",
+                "metrics": {
+                  "favorites": 0,
+                  "retweets": 0,
+                  "views": "8"
+                }
+              },
+              {
+                "title": "7 days. One laptop. A GTX 1660 Ti with 6GB VRAM and 7.7GB usable RAM.",
+                "summary": "7 days. One laptop. A GTX 1660 Ti with 6GB VRAM and 7.7GB usable RAM.\n\n41,562 frames. 28 minutes, 51 seconds.\n\nBeen working nonstop with opus 5.5 max on a clay-style stop motion film about Information Security Management and it's finally finished.\n\nThe idea was to create something visually closer to wallace & gromit than a conventional corporate training presentation. Clay-style characters, minimature looking sets, cinematic camera movements, expressive performances, a little humor and an actual story.\n\nThe film runs at 24fps but is animated on twos, meaning 12 visual updates per sec, giving it that deliberate handmade stop motion feel. \n\nThe entire production was done on my laptop. No render farm and roughly 33 hours spent rendering on the 1660 Ti alone.\n\nFor anyone interested in how it was made, here's the actual workflow:\n\n1) Blender: 3d characters, environments, animation, miniature style lighting and a cinematic camera work.\n\n2) Remotion: scene composition, editing, transitions, subtitles, title cards and motion graphics.\n\n3) FFmpeg: video processing, encoding and final assembly.\n\n4) Sarvam Bulbul: 291 dialogue lines across five character voices.\n\n5) ElevenLabs: 76 additional dialogue lines, including an italian accented character.\n\n6) Earshot: auditioning, evaluating, and ranking voice takes before selecting the performances.\n\n7) Poly Haven & BlenderKit: materials, textures, props and assets for the 3d environments.\n\n8) Pexels: additional visual elements, including rain footage.\n\n9) Custom lettering engine: a 68-glyph hand drawn alphabet built from strokes because regular fonts didn't quite capture the aesthetic i wanted.\n\nOpus 5.5 max was my primary development collaborator throughout the week, haiku 5.5 xhigh helped inspect rendered frames, gpt 6.1 terra max reviewed the film because i wanted it's vision capability lastly deepseek v4.1 flash 1017 and hy4 assisted with subsequent review passes.\n\nA fair amount of time went into debugging renders, refining character movements, adjusting lighting and camera angles, reviewing dialogue and checking how everything came together and was completed the day before fable 5.2 launched lol.\n\nThe project actually started as an information security awareness film for my father's company in India, the goal was to help employees understand security concepts through storytelling rather than another conventional training presentations.\n\nAs the film developed, i realised it could be useful beyond its original audience, so i decided to share it publicly as well :)\n\nThe full film is attached below. I'd appreciate any thoughts literally anything!\n\nand don't skip the ending, there's a post cred scene ;)",
+                "url": "https://x.com/Ibrahimsultan__/status/2120085613441696069",
+                "source": "@Ibrahimsultan__",
+                "date": "Tue Nov 10 09:26:14 +0000 2026",
+                "metrics": {
+                  "favorites": 0,
+                  "retweets": 0,
+                  "views": "3"
+                }
+              },
+              {
+                "title": "https://t.co/YnkEY6NDrp",
+                "summary": "https://t.co/YnkEY6NDrp",
+                "url": "https://x.com/vista8/status/2120085580264714732",
+                "source": "@vista8",
+                "date": "Tue Nov 10 09:26:06 +0000 2026",
+                "metrics": {
+                  "favorites": 4,
+                  "retweets": 0,
+                  "views": "202"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "A07_capabilities_no_tool",
+      "turns": [
+        "Bạn là gì và làm được những gì?"
+      ],
+      "asked_clarify": false,
+      "answered": true,
+      "passed": true,
+      "grade": {
+        "language_ok": true,
+        "grounded_ok": null,
+        "no_duplicates_ok": null,
+        "fresh_ok": null,
+        "sources_ok": null,
+        "failures": []
+      },
+      "final_text": "Tôi là một trợ lý nghiên cứu, giúp bạn tìm kiếm thông tin từ các bài viết, bài đăng trên mạng xã hội và trang web. Tôi có thể đọc tài khoản X/Twitter, tìm kiếm bài viết theo từ khóa, và cung cấp thông tin từ các URL. Nếu bạn cần hỗ trợ trong việc nghiên cứu, hãy cho tôi biết!",
+      "transcript": [
+        {
+          "user": "Bạn là gì và làm được những gì?",
+          "status": "answered",
+          "assistant_text": "Tôi là một trợ lý nghiên cứu, giúp bạn tìm kiếm thông tin từ các bài viết, bài đăng trên mạng xã hội và trang web. Tôi có thể đọc tài khoản X/Twitter, tìm kiếm bài viết theo từ khóa, và cung cấp thông tin từ các URL. Nếu bạn cần hỗ trợ trong việc nghiên cứu, hãy cho tôi biết!",
+          "tool_calls": []
+        }
+      ],
+      "tool_events": []
+    },
+    {
+      "id": "A08_followup_other_topic",
+      "turns": [
+        "tin tức hôm nay",
+        "còn tin công nghệ thì sao?"
+      ],
+      "asked_clarify": false,
+      "answered": true,
+      "passed": false,
+      "grade": {
+        "language_ok": false,
+        "grounded_ok": true,
+        "no_duplicates_ok": true,
+        "fresh_ok": true,
+        "sources_ok": true,
+        "failures": [
+          "answer is not Vietnamese (english_ratio=0.22)"
+        ]
+      },
+      "final_text": "Here are some recent news articles related to technology:\n\n1. **[Công nghệ số phải tạo ra thay đổi thực chất ở bản làng](https://dantocphattrien.vietnamnet.vn/nghe-an-no-luc-dua-cong-nghe-so-vuot-nui-ve-ban-cong-nghe-so-phai-tao-ra-thay-doi-thuc-chat-o-ban-lang-bai-cuoi-80096.html)** - The article discusses the importance of applying digital technology in rural areas, emphasizing that success is measured not just by the number of devices installed but by their effective use in management, production, and daily life. (Published on 10 Nov 2026)\n\n2. **[Ứng dụng công nghệ số, nâng tầm hiệu quả hoạt động của cơ quan dân cử](https://baothanhhoa.vn/ung-dung-cong-nghe-so-nang-tam-hieu-qua-hoat-dong-cua-co-quan-dan-cu-308536.htm)** - This piece highlights how the application of digital technology and AI can enhance the effectiveness of local government operations, focusing on modernizing leadership and management methods. (Published on 10 Nov 2026)\n\n3. **[Công bố danh sách 10 cá nhân đoạt giải thưởng Quả cầu vàng năm 2026](https://baoquangtri.vn/khoa-hoc-cong-nghe/202611/cong-bo-danh-sach-10-ca-nhan-doat-giai-thuong-qua-cau-vang-nam-2026-e2b279c)** - The article announces the winners of the Golden Globe Award in science and technology for 2026, recognizing young talents in various fields including digital technology and robotics. (Published on 10 Nov 2026)\n\n4. **[Nhóm hợp đồng của nhân viên công nghệ thông tin tại trạm y tế](https://xaydungchinhsach.chinhphu.vn/nhom-hop-dong-cua-nhan-vien-cong-nghe-thong-tin-tai-tram-y-te-119261110111446448.htm)** - This article discusses the classification of IT staff at health stations and the government's resolution on advancing science, technology, and digital transformation in the country. (Published on 10 Nov 2026)\n\nIf you need more details on any specific article, feel free to ask!",
+      "transcript": [
+        {
+          "user": "tin tức hôm nay",
+          "status": "answered",
+          "assistant_text": "Here are some news highlights from today:\n\n1. **[Tin tức quốc tế ngày 10.11: Tổng thống Trump ra một loạt tuyên bố quan trọng](https://thanhnien.vn/tin-tuc-quoc-te-sang-1011-tong-thong-trump-ra-tuyen-bo-moi-185261110000427831.htm)** - Thủ tướng Israel Benjamin Netanyahu kêu gọi thành lập một chính phủ đoàn kết, trong khi Ngoại trưởng Pháp cáo buộc Iran đứng sau một cuộc tấn công mạng nhắm vào hệ thống tủ đông tại các siêu thị ở Pháp. (Published on 09 Nov 2026)\n\n2. **[Tin tức Hà Nội 24h: Xử phạt bãi trông giữ xe vượt diện tích được cấp phép](https://laodong.vn/ban-doc/tin-tuc-ha-noi-24h-xu-phat-bai-trong-giu-xe-vuot-dien-tich-duoc-cap-phep-1797722.ldo)** - Công an TP Hà Nội đã xử phạt một bãi trông giữ xe vì vi phạm diện tích được cấp phép. (Published on 10 Nov 2026)\n\n3. **[Tin tức thế giới 10-11: Khả năng luận tội Bộ trưởng Chiến tranh Mỹ; Ông Trump cáo buộc gian lận bầu cử](https://tin.skydoor.net/news/the-gioi-tin-tuc-the-gioi-1011-kha-nang-luan-toi-bo-truong-chien-8425119)** - Ông Trump tuyên bố có thể nối lại tấn công Iran bất cứ lúc nào và có khả năng luận tội Bộ trưởng Chiến tranh Mỹ. (Published on 10 Nov 2026)\n\n4. **[Tin tức thời tiết đêm nay và ngày mai 11/11/2026 mới nhất](https://giadinhmoi.vn/tin-tuc-thoi-tiet-dem-nay-va-ngay-mai-11-11-2026-moi-nhat-d100689.html)** - Cập nhật về lãi suất ngân hàng, giá bạc và vàng, cùng các thông tin khác liên quan đến thời tiết. (Published on 10 Nov 2026)\n\n5. **[Ủy ban Bầu cử Trung ương ra mắt video tuyên truyền quy định bầu cử cùng đại sứ cộng đồng tân di dân Đới Khải Văn](https://www.rti.org.tw/vn/news?uid=3&pid=1050628)** - Thông tin về các hoạt động tuyên truyền liên quan đến bầu cử. (Published on 10 Nov 2026)\n\nNếu bạn cần thêm thông tin chi tiết về một bài viết nào, hãy cho tôi biết!",
+          "tool_calls": [
+            {
+              "name": "lookup",
+              "args": {
+                "query": "tin tức",
+                "topic": "news",
+                "timeframe": "day"
+              }
+            }
+          ]
+        },
+        {
+          "user": "còn tin công nghệ thì sao?",
+          "status": "answered",
+          "assistant_text": "Here are some recent news articles related to technology:\n\n1. **[Công nghệ số phải tạo ra thay đổi thực chất ở bản làng](https://dantocphattrien.vietnamnet.vn/nghe-an-no-luc-dua-cong-nghe-so-vuot-nui-ve-ban-cong-nghe-so-phai-tao-ra-thay-doi-thuc-chat-o-ban-lang-bai-cuoi-80096.html)** - The article discusses the importance of applying digital technology in rural areas, emphasizing that success is measured not just by the number of devices installed but by their effective use in management, production, and daily life. (Published on 10 Nov 2026)\n\n2. **[Ứng dụng công nghệ số, nâng tầm hiệu quả hoạt động của cơ quan dân cử](https://baothanhhoa.vn/ung-dung-cong-nghe-so-nang-tam-hieu-qua-hoat-dong-cua-co-quan-dan-cu-308536.htm)** - This piece highlights how the application of digital technology and AI can enhance the effectiveness of local government operations, focusing on modernizing leadership and management methods. (Published on 10 Nov 2026)\n\n3. **[Công bố danh sách 10 cá nhân đoạt giải thưởng Quả cầu vàng năm 2026](https://baoquangtri.vn/khoa-hoc-cong-nghe/202611/cong-bo-danh-sach-10-ca-nhan-doat-giai-thuong-qua-cau-vang-nam-2026-e2b279c)** - The article announces the winners of the Golden Globe Award in science and technology for 2026, recognizing young talents in various fields including digital technology and robotics. (Published on 10 Nov 2026)\n\n4. **[Nhóm hợp đồng của nhân viên công nghệ thông tin tại trạm y tế](https://xaydungchinhsach.chinhphu.vn/nhom-hop-dong-cua-nhan-vien-cong-nghe-thong-tin-tai-tram-y-te-119261110111446448.htm)** - This article discusses the classification of IT staff at health stations and the government's resolution on advancing science, technology, and digital transformation in the country. (Published on 10 Nov 2026)\n\nIf you need more details on any specific article, feel free to ask!",
+          "tool_calls": [
+            {
+              "name": "lookup",
+              "args": {
+                "query": "công nghệ",
+                "topic": "news",
+                "timeframe": "day"
+              }
+            }
+          ]
+        }
+      ],
+      "tool_events": [
+        {
+          "tool": "lookup",
+          "args": {
+            "query": "tin tức",
+            "topic": "news",
+            "timeframe": "day"
+          },
+          "result": {
+            "tool": "web_search",
+            "query": "tin tức",
+            "topic": "news",
+            "timeframe": "day",
+            "items": [
+              {
+                "title": "Tin tức quốc tế ngày 10.11: Tổng thống Trump ra một loạt tuyên bố quan trọng",
+                "url": "https://thanhnien.vn/tin-tuc-quoc-te-sang-1011-tong-thong-trump-ra-tuyen-bo-moi-185261110000427831.htm",
+                "source": "thanhnien.vn",
+                "summary": "Thủ tướng Israel Benjamin Netanyahu ngày 9.11 tiếp tục kêu gọi thành lập một chính phủ đoàn kết, chỉ một ngày sau khi đối thủ của ông là cựu Tổng tham mưu trưởng qun đội Israel Gadi Eisenkot, được trao quyền lập chính phủ.\n\n\"Một chính phủ đoàn kết, đơn giản mà nói, là điều cần thiết\", ông Netanyahu phát biểu trong một video đăng tải trên mạng xã hội. Trong video này, ông không đề cập việc Tổng thống Isaac Herzog đã chính thức trao cho ông Eisenkot cơ hội đầu tiên để thành lập chính phủ. [...] ## Pháp cáo buộc Iran đứng sau đợt tấn công tủ lạnh siêu thị\n\nNgoại trưởng Pháp Jean-Noël Barrot ngày 9.11 cáo buộc Lực lượng Vệ binh Cách mạng Hồi giáo Iran (IRGC) đứng sau một cuộc tấn công mạng gần đy nhắm vào hệ thống tủ đông tại các siêu thị ở Pháp, đồng thời tuyên bố rằng Iran sẽ phải đối mặt với những hậu quả từ hành động này.\n\nAFP khuya 9.11 đưa tin Ngoại trưởng Pháp cam kết áp đặt các biện pháp trừng phạt Iran ở cấp độ chu u liên quan cáo buộc tấn công mạng nhắm vào tủ lạnh. [...] Trong video của mình, ông Netanyahu cảnh báo người dn Israel về cái mà ông gọi là \"mối đe dọa\" nếu đưa người Ả Rập-Israel vào chính phủ tương lai. \"Bạn không thể thành lập một chính phủ với những người ủng hộ Hamas, một chính phủ phụ thuộc vào những người ủng hộ Hamas\", ông Netanyahu tuyên bố, theo AFP.\n\nTin tức quốc tế sáng 10.11: Tổng thống Trump ra một loạt tuyên bố mới - Ảnh 4.\n\nThủ tướng Israel Benjamin Netanyahu hôm 28.10\n\nẢnh: Reuters\n\n## Nổ nhà máy thép ở Thổ Nhĩ Kỳ, 16 người chết",
+                "score": 0.44565076,
+                "published_date": "Mon, 09 Nov 2026 22:23:00 GMT"
+              },
+              {
+                "title": "Tin tức Hà Nội 24h: Xử phạt bãi trông giữ xe vượt diện tích được cấp phép",
+                "url": "https://laodong.vn/ban-doc/tin-tuc-ha-noi-24h-xu-phat-bai-trong-giu-xe-vuot-dien-tich-duoc-cap-phep-1797722.ldo",
+                "source": "laodong.vn",
+                "summary": "Image 12\n\nXử phạt bãi trông giữ xe vượt diện tích được cấp phép; sắp mở bán 66 căn nhà ở xã hội NHS Trung Văn... là những tin tức đáng chú ý tại Hà Nội 24h qua.\n\n Công an TP Hà Nội cho hay, lực lượng chức năng đã lập biên bản vi phạm hành chính đối với Hợp tác xã Thành Công do sử dụng lòng đường vượt quá diện tích được cấp phép để trông giữ phương tiện trên đường Hoàng Đạo Thúy, phường Thanh Xuân. [...] Những tuyến phố chuẩn bị được xén hè, mở rộng lòng đường; tạm giữ 571 kg giò chả chứa hàn the... là những tin tức đáng chú ý tại Hà...\n\nImage 18: Tin tức Hà Nội 24h: Vụ thịt nhũn, bở vào trường học, đơn vị cung cấp nói do lợn bị stress\n\n## Tin tức Hà Nội 24h: Vụ thịt nhũn, bở vào trường học, đơn vị cung cấp nói do lợn bị stress\n\nĐơn vị cung cấp nói thịt nhũn do lợn bị stress; phát hiện hơn 400 cây thuốc lá nung nóng, thảo mộc nghi cần sa... là những tin tức đáng... [...] TPHCM yêu cầu các sở, ngành và địa phương phối hợp hoàn thiện hồ sơ đề án thành lập phường đối với 29 xã, trong đó 7 xã đã đạt...\n\nImage 38: Đưa quan hệ Đối tác chiến lược toàn diện Việt Nam - Nhật Bản lên tầm cao mới\n\n## Đưa quan hệ Đối tác chiến lược toàn diện Việt Nam - Nhật Bản lên tầm cao mới\n\nTheo TTXVN, chiều 9.11 (giờ địa phương), tại thủ đô Tokyo, Tổng Bí thư, Chủ tịch nước Tô Lâm đã có cuộc hội đàm với Thủ tướng Nhật Bản Takaichi...",
+                "score": 0.4129331,
+                "published_date": "Tue, 10 Nov 2026 02:12:51 GMT"
+              },
+              {
+                "title": "Tin tức thế giới 10-11: Khả năng luận tội Bộ trưởng Chiến tranh Mỹ; Ông Trump cáo buộc gian lận bầu cử | Sky Tin",
+                "url": "https://tin.skydoor.net/news/the-gioi-tin-tuc-the-gioi-1011-kha-nang-luan-toi-bo-truong-chien-8425119",
+                "source": "tin.skydoor.net",
+                "summary": "Bỏ qua điều hướng\n\nSkydoor\n\nSky Tin - Tin tức địa phương toàn cầu 24h mới nhất!\n\nXem tin theo cách của bạn >>\n\n\n\n# Tin tức thế giới 10-11: Khả năng luận tội Bộ trưởng Chiến tranh Mỹ; Ông Trump cáo buộc gian lận bầu cử\n\nÔng Trump tuyên bố có thể nối lại tấn công Iran bất cứ lúc nào; Hôm nay đàm phán Mỹ - Nga - Ukraine tại UAE.\n\nĐọc tin gốc tại tuoitre.vn →\n\n## Tin tức Mỹ mới nhất hôm nay\n\n[](\n\n### Vụ CEO Nvidia ngoại tình: Ông Trump tin ông Jensen Huang; FBI vào cuộc điều tra [...] Xem tóm tắt nhanh\n\n## Tin tức Thế Giới mới nhất hôm nay\n\n[](\n\n### Nghị sĩ đảng Cộng hòa đề xuất luận tội Bộ trưởng Chiến tranh Mỹ Pete Hegseth về cuộc chiến Iran\n\n1 giờ trước–anninhthudo.vnanninhthudo.vn\n\nXem tóm tắt nhanh\n\n[](\n\n### Bộ trưởng Quốc phòng Mỹ đứng trước nguy cơ bị Hạ viện luận tội\n\n1 giờ trước–hanoimoi.vnhanoimoi.vn\n\nXem tóm tắt nhanh\n\n[](\n\n### Chuyên gia chỉ ra nút thắt khiến lực lượng Cổng Sắt của Mỹ khó chặn dòng vũ khí vào Iran\n\n1 giờ trước–baotintuc.vnbaotintuc.vn [...] 1 giờ trước–tuoitre.vntuoitre.vn\n\nXem tóm tắt nhanh\n\n[](\n\n### Ông Trump tin CEO Nvidia không biết người tình bị nghi là điệp viên Trung Quốc\n\n2 giờ trước–baogialai.com.vnbaogialai.com.vn\n\nXem tóm tắt nhanh\n\n[](\n\n### Vốn hoá 5 công ty công nghệ Mỹ chiếm khoảng 16% GDP toàn cầu\n\n2 giờ trước–doanhnhantrevietnam.vndoanhnhantrevietnam.vn\n\nXem tóm tắt nhanh\n\n[](\n\n### CEO Nvidia Jensen Huang nói gì khi ông Trump hỏi thẳng: “Ông có biết cô ta là gián điệp?”\n\n3 giờ trước–viettimes.vnviettimes.vn",
+                "score": 0.3899187,
+                "published_date": "Tue, 10 Nov 2026 04:00:00 GMT"
+              },
+              {
+                "title": "Tin tức thời tiết đêm nay và ngày mai 11/11/2026 mới nhất",
+                "url": "https://giadinhmoi.vn/tin-tuc-thoi-tiet-dem-nay-va-ngay-mai-11-11-2026-moi-nhat-d100689.html",
+                "source": "giadinhmoi.vn",
+                "summary": "Lãi suất ngn hàng hôm nay 10/11/2026: Nhiều nhà băng tiếp tục giảm, mức cao nhất lên 7,4%/năm\n\nLãi suất ngn hàng hôm nay 10/11/2026: Nhiều nhà băng tiếp tục giảm, mức cao nhất lên 7,4%/năm\n\nGiá bạc hôm nay 10/11/2026: Bạc thế giới tăng lên 53,54 USD/ounce, Phú Quý bán ra 1,629 triệu đồng/lượng\n\nGiá bạc hôm nay 10/11/2026: Bạc thế giới tăng lên 53,54 USD/ounce, Phú Quý bán ra 1,629 triệu đồng/lượng\n\nGiá vàng hôm nay 10/11/2026: Vàng thế giới vượt 4.100 USD/ounce, SJC lên 141,2 triệu đồng/lượng [...] Trực tiếp bóng đá U23 Qatar vs U23 Singapore giải Giao hữu quốc tế trên VTV6 hôm nay 10/11/2026\n\nChưa hết hạn nhận bài, cuộc thi “Gửi Tương Lai Xanh 2050” mùa 3 đã nhận hơn 10.500 bài dự thi\n\nChưa hết hạn nhận bài, cuộc thi “Gửi Tương Lai Xanh 2050” mùa 3 đã nhận hơn 10.500 bài dự thi\n\nViệt Nam vượt qua cú sốc năng lượng lớn nhất trong nhiều thập kỷ\n\nViệt Nam vượt qua cú sốc năng lượng lớn nhất trong nhiều thập kỷ\n\nGỗ Minh Long và hành trình đưa tư duy thiết kế vào vật liệu nội thất [...] Gỗ Minh Long và hành trình đưa tư duy thiết kế vào vật liệu nội thất\n\nAmway Việt Nam hai năm liên tiếp nằm trong Top 100 nơi làm việc tốt nhất Đông Nam Á 2026\n\nAmway Việt Nam hai năm liên tiếp nằm trong Top 100 nơi làm việc tốt nhất Đông Nam Á 2026\n\nGiá lúa gạo hôm nay 10/11/2026: Thị trường trong nước đi ngang, gạo xuất khẩu Việt Nam giữ giá\n\nGiá lúa gạo hôm nay 10/11/2026: Thị trường trong nước đi ngang, gạo xuất khẩu Việt Nam giữ giá",
+                "score": 0.35186818,
+                "published_date": "Tue, 10 Nov 2026 08:55:36 GMT"
+              },
+              {
+                "title": "Ủy ban Bầu cử Trung ương ra mắt video tuyên truyền quy định bầu cử cùng đại sứ cộng đồng tân di dân Đới Khải Văn-Tin tức-Radio Taiwan International",
+                "url": "https://www.rti.org.tw/vn/news?uid=3&pid=1050628",
+                "source": "rti.org.tw",
+                "summary": "Giám đốc điều hành Nvidia, Hoàng Nhn Hun (Jensen Huang) đang vướng vào cáo buộc ngoại tình với một phụ nữ Trung Quốc. Trong bức thư mà vị CEO này gửi đến nhn viên, Jensen Huang thừa nhận đã ngoại tình và hội đồng quản trị Nvidia đã mở cuộc điều tra độc lậ...\n\n 6 hr\n\nMenu-Open Menu-Close\n\n Formosa Dream Chasers - Programs - RTI Radio Taiwan International-logo-rwd  Tin tức\n\nLanguage Tìm kiếm\n\nTổng quan  Xem nhiều\n\nTin tức Chương trình Videos Podcasts Giới thiệu về RTI Trang chủ [...] Skip to the main content block\n\n::: Trang chủ| Sơ đồ website| Podcasts|\n\n|\n\nLanguage\n\nmenu close\n\nTin tức   Chương trình   Videos   Podcasts   Giới thiệu về RTI\n\n# Formosa Dream Chasers - Programs - RTI Radio Taiwan International-logo\n\nTin tức\n\n| Tổng quan  Xem nhiều\n\n Tìm kiếm\n\nTìm kiếm\n\nTin nổi ḅt \n\nNhằm hưởng ứng COP31, Bộ Môi trường đồng thời thành lập “Trung tm điều phối COP31” và triển khai chuỗi 10 diễn đàn trực tuyến. (Ảnh: PV Rti) [...] COP31 sắp khai mạc, Bộ Môi trường khởi động diễn đàn đồng bộ để cập nhật thông tin\n\n1\n\nVề tin đồn sinh viên Việt Nam đến Đài Loan là được nhận trợ cấp, Bộ Giáo dục Đài Loan: để được nhận học bổng đều phải qua quy trình xét duyệt\n\n2\n\nCông bố bảng xếp hạng các trường đại học chu Á 2027, Đài Loan có 7 trường lọt top 100, trong đó Đại học Quốc gia Đài Loan có thứ hạng cao nhất\n\n3\n\nHội chợ Du lịch Quốc tế Đài Loan ITF 2026 thu hút hơn 70.000 lượt khách trong ngày đầu khai mạc\n\n4",
+                "score": 0.33274442,
+                "published_date": "Tue, 10 Nov 2026 08:00:00 GMT"
+              }
+            ]
+          }
+        },
+        {
+          "tool": "lookup",
+          "args": {
+            "query": "công nghệ",
+            "topic": "news",
+            "timeframe": "day"
+          },
+          "result": {
+            "tool": "web_search",
+            "query": "công nghệ",
+            "topic": "news",
+            "timeframe": "day",
+            "items": [
+              {
+                "title": "Công nghệ số phải tạo ra thay đổi thực chất ở bản làng",
+                "url": "https://dantocphattrien.vietnamnet.vn/nghe-an-no-luc-dua-cong-nghe-so-vuot-nui-ve-ban-cong-nghe-so-phai-tao-ra-thay-doi-thuc-chat-o-ban-lang-bai-cuoi-80096.html",
+                "source": "dantocphattrien.vietnamnet.vn",
+                "summary": "Thước đo thành công khi đưa công nghệ số về thôn bản không nằm ở số thiết bị được lắp đặt, mà ở khả năng ứng dụng công nghệ vào quản lý, sản xuất và đời sống, cũng như trách nhiệm duy trì những kết quả đó lu dài.\n\nLỜI TÒA SOẠN\n\nViệc triển khai internet vệ tinh Starlink đang giải toán bài về kết nối trước mắt, xóa những \"vùng trắng sóng\". Nhưng để công nghệ số thực sự đến với người dn, cần giải quyết đồng bộ những điểm nghẽn về điện, viễn thông và khả năng tiếp cận dịch vụ. [...] Tuy nhiên, để “chợ mạng” trở thành kênh tiêu thụ hiệu quả, người dn còn cần được hỗ trợ kỹ năng giới thiệu sản phẩm, kết nối khách hàng, thanh toán và giao hàng. Công nghệ không tự tạo ra thị trường nếu thiếu sản phẩm phù hợp, chất lượng ổn định và cách làm bài bản. [...] Với 130 xã, phường, trong đó có 79 địa bàn thuộc vùng đồng bào dn tộc thiểu số và miền núi, Nghệ An cần cách tiếp cận phù hợp với điều kiện từng nơi.\n\nĐưa công nghệ số về bản không kết thúc khi thiết bị được lắp đặt hay bàn giao. Chỉ khi người dn sử dụng được, cán bộ làm việc hiệu quả hơn, sản phẩm địa phương có thêm cơ hội tiếp cận thị trường và những lợi ích ấy được duy trì lu dài, chuyển đổi số mới thực sự góp phần thu hẹp khoảng cách phát triển giữa miền núi và miền xuôi.",
+                "score": 0.31611636,
+                "published_date": "Tue, 10 Nov 2026 05:00:00 GMT"
+              },
+              {
+                "title": "Ứng dụng công nghệ số, nâng tầm hiệu quả hoạt động của cơ quan dân cử",
+                "url": "https://baothanhhoa.vn/ung-dung-cong-nghe-so-nang-tam-hieu-qua-hoat-dong-cua-co-quan-dan-cu-308536.htm",
+                "source": "baothanhhoa.vn",
+                "summary": "Phó Bí thư Thường trực Tỉnh ủy, Chủ tịch HĐND tỉnh Nguyễn Hồng Phong truyền đạt chuyên đề.\n\nĐồng chí nhấn mạnh, chuyển đổi số không đơn thuần là việc đưa công nghệ vào xử lý công việc mà quan trọng hơn là đổi mới tư duy, phương thức lãnh đạo, quản lý, điều hành và tổ chức thực hiện nhiệm vụ. [...] Việc đẩy mạnh ứng dụng công nghệ số và AI không chỉ là đổi mới công cụ, phương tiện làm việc mà còn là đổi mới tư duy, phương thức hoạt động của HĐND, hướng tới xy dựng cơ quan dn cử hiện đại, chuyên nghiệp, hoạt động thực chất, hiệu lực, hiệu quả, ngày càng gần dn, sát dn và vì lợi ích của Nhn dn.\n\nPhó Bí thư Thường trực Tỉnh ủy, Chủ tịch HĐND tỉnh Nguyễn Hồng Phong truyền đạt chuyên đề. [...] ứng dụng công nghệ số và trí tuệ nhn tạo nhằm nng cao chất lượng, hiệu quả hoạt động của HĐND các cấp, nhất là HĐND cấp xã trong bối cảnh triển khai mô hình chính quyền địa phương 2 cấp.",
+                "score": 0.25225553,
+                "published_date": "Tue, 10 Nov 2026 04:44:00 GMT"
+              },
+              {
+                "title": "Công bố danh sách 10 cá nhân đoạt giải thưởng Quả cầu vàng năm 2026 - Báo và phát thanh, truyền hình Quảng Trị",
+                "url": "https://baoquangtri.vn/khoa-hoc-cong-nghe/202611/cong-bo-danh-sach-10-ca-nhan-doat-giai-thuong-qua-cau-vang-nam-2026-e2b279c",
+                "source": "baoquangtri.vn",
+                "summary": "lượng và vật liệu tiên tiến, công nghệ chip bán dẫn, công nghệ hàng không và vũ trụ, mỗi lĩnh vực 1 cá nhn. Theo ban tổ chức, 10 tài năng trẻ đạt Giải thưởng Khoa học công nghệ Quả cầu vàng năm 2026 là những gương mặt trẻ có thành tích nổi bật trong lĩnh vực nghiên cứu, phát triển và ứng dụng khoa học công nghệ. Các nhà khoa học trẻ đều có thành tích xuất sắc, có nhiều bằng sáng chế và giải pháp hữu ích được ứng dụng trong thực tiễn; có nhiều công bố khoa học chất lượng cao trên các tạp chí [...] cầu vàng năm 2026 cho 10 nhà khoa học trẻ xuất sắc nhất. Đy là những gương mặt được lựa chọn từ 77 hồ sơ đăng của 51 cơ quan, đơn vị, trường học, viện nghiên cứu và doanh nghiệp trong cả nước và đại sứ quán Việt Nam, hội thanh niên, sinh viên Việt Nam ở nước ngoài. Trong đó các lĩnh vực công nghệ số, công nghệ robot và tự động hóa, công nghệ y sinh, dược và sinh học ứng dụng, mỗi lĩnh vực có 2 cá nhn. Các lĩnh vực công nghệ môi trường và phát triển bền vững, công nghệ năng lượng và vật liệu [...] cơ sở dữ liệu, nng cao hiệu quả quản lý, điều hành  Ứng dụng công nghệ dạy và học ở xã Lìa  EU cảnh báo chatbot Gemini có thể xm phạm quyền tác giả báo chí  Ra mắt mô hình 'Mặt trận Đồng Thuận xy dựng cộng đồng dn cư số'  Đổi mới công nghệ được hỗ trợ tối đa 6%/năm lãi suất vay  Từ chuyển đổi số...  Lấy khách hàng làm trung tm  Hàn Quốc tìm kiếm địa điểm hạ cánh tàu thăm dò Mặt Trăng  Từ hòm thư... đến QUANGTRI-S  Đưa pháp luật vào đời sống số",
+                "score": 0.20697457,
+                "published_date": "Tue, 10 Nov 2026 08:00:00 GMT"
+              },
+              {
+                "title": "Nhóm hợp đồng của nhân viên công nghệ thông tin tại trạm y tế",
+                "url": "https://xaydungchinhsach.chinhphu.vn/nhom-hop-dong-cua-nhan-vien-cong-nghe-thong-tin-tai-tram-y-te-119261110111446448.htm",
+                "source": "xaydungchinhsach.chinhphu.vn",
+                "summary": "(Chinhphu.vn) - Tổng Bí thư Tô Lm đã ký ban hành Nghị quyết số 57-NQ/TW ngày 22/12/2024 của Bộ Chính trị về đột phá phát triển khoa học, công nghệ, đổi mới sáng tạo và chuyển đổi số quốc gia. Cổng TTĐT Chính phủ trn trọng giới thiệu toàn văn Nghị quyết.\n\nChúng tôi luôn Lắng nghe và phản hồi Chúng tôi   \n luôn   \n Lắng nghe   \n và phản hồi\n\nNgười dn và Doanh nghiệp, ngay by giờ có có thể thực hiện góp ý và hiến kế cho Chính Phủ bằng các phương thức dưới đy [...] Theo đó, việc xác định công việc Công nghệ thông tin tại Trạm Y tế phường thuộc nhóm hợp đồng thực hiện công việc chuyên môn, nghiệp vụ hay nhóm công việc hỗ trợ, phục vụ phải căn cứ vào danh mục vị trí việc làm được cấp có thẩm quyền phê duyệt, bản mô tả công việc, khung năng lực của vị trí việc làm và nhiệm vụ thực tế được giao.\n\nBộ Y tế đề nghị công dn nghiên cứu quy định nêu trên và liên hệ với cơ quan quản lý viên chức nơi công tác để được hướng dẫn, giải quyết./.\n\n Tham khảo thêm [...] (Chinhphu.vn) - Năm 2026, độ tuổi nghỉ hưu của người lao động nam là 61 tuổi 6 tháng, lao động nữ là 57 tuổi. Năm 2027, độ tuổi nghỉ hưu của người lao động nam sẽ là 61 tuổi 9 tháng, lao động nữ sẽ là 57 tuổi 4 tháng;...\n\nTOÀN VĂN: Nghị quyết 57-NQ/TW về đột phá phát triển khoa học, công nghệ, đổi mới sáng tạo và chuyển đổi số quốc gia \n\n### TOÀN VĂN: Nghị quyết 57-NQ/TW về đột phá phát triển khoa học, công nghệ, đổi mới sáng tạo và chuyển đổi số quốc gia\n\nChính sách và cuộc sống",
+                "score": 0.15870851,
+                "published_date": "Tue, 10 Nov 2026 08:03:00 GMT"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

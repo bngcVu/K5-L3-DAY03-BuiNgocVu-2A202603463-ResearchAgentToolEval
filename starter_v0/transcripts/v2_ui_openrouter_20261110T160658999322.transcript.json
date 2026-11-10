@@ -1,0 +1,153 @@
+{
+  "transcript_id": "v2_ui_openrouter_20261110T160658999322",
+  "version": "v2",
+  "artifact_version": "v2+pc3e508553a00+t010a41c1b7a9",
+  "prompt_hash": "c3e508553a00f02d61ba4921bae6982164bb61752fd7d98c3b8f1a45eab9ec0d",
+  "tools_hash": "010a41c1b7a9420786641f38690a7294cc022a9451f096d0cd5e66c2f9d25668",
+  "provider": "openrouter",
+  "model": "openai/gpt-4o-mini",
+  "system_prompt": "C:\\Users\\Admin\\OneDrive\\Desktop\\VinAI\\Lab-Day03\\K5-L3-DAY03-BuiNgocVu-2A202603463-ResearchAgentToolEval\\starter_v0\\artifacts\\versions\\v2\\system_prompt.md",
+  "tools": "C:\\Users\\Admin\\OneDrive\\Desktop\\VinAI\\Lab-Day03\\K5-L3-DAY03-BuiNgocVu-2A202603463-ResearchAgentToolEval\\starter_v0\\artifacts\\versions\\v2\\tools.yaml",
+  "history_window": 5,
+  "max_tool_rounds": 4,
+  "created_at": "2026-11-10T16:06:46",
+  "turns": [
+    {
+      "turn_index": 1,
+      "started_at": "2026-11-10T16:06:46",
+      "user": "tin tức hôm nay",
+      "status": "answered",
+      "assistant_text": "Here are some notable news articles from today:\n\n1. **[Tin tức nổi bật ngày 9/11: Hành khách có thể mua vé tàu hỏa trên VNeID](https://petrotimes.vn/tin-tuc-noi-bat-ngay-9-11-hanh-khach-co-the-mua-ve-tau-hoa-tren-vneid-747742.html)** - Hành khách có thể mua vé tàu hỏa trên VNeID; 9 ngân hàng lên kế hoạch lập công ty con tại Trung tâm Tài chính Quốc tế; Hà Nội yêu cầu rà soát, giảm giá cước vận tải khi chi phí nhiên liệu giảm. (Source: petrotimes.vn)\n\n2. **[Tin tức nổi bật ngày 10/11/2026 có gì?](https://htv.vn/tin-tuc-noi-bat-ngay-10-11-2026-co-gi-22226111011494945.htm)** - Nhiều cây xanh ở Đà Nẵng ngã đổ tối qua do mưa lớn kèm gió giật mạnh. (Source: htv.vn)\n\n3. **[Điểm tin kinh tế thế giới nổi bật ngày 9/11/2026](https://www.vietnam.vn/diem-tin-kinh-te-the-gioi-noi-bat-ngay-9-11-2026)** - Hoạt động vận tải qua kênh đào Suez đang ghi nhận sự phục hồi, với lưu lượng tàu chở dầu thô trong tháng 10 đạt 47 triệu tấn DWT. (Source: vietnam.vn)\n\n4. **[Thời báo Tân di dân toàn cầu-Nam Đầu kết nối mùa hoa mận và hoa anh đào trong chuỗi du lịch kéo dài ba tháng](https://news.immigration.gov.tw/NewsSection/Detail/BF4BEC2A-C1CE-4D90-B439-A736E8657BF2?lang=VN)** - Tin tức về kết nối mùa hoa mận và hoa anh đào trong chuỗi du lịch kéo dài ba tháng. (Source: news.immigration.gov.tw)\n\n5. **[50 nông dân trẻ Indonesia sang Đài Loan thực tập, kỳ vọng góp phần phát triển nông nghiệp quê nhà](https://www.rti.org.tw/vn/news?uid=3&pid=1050501)** - Thông tin về việc 50 nông dân trẻ Indonesia sang Đài Loan thực tập. (Source: rti.org.tw)\n\nIf you need more details or specific topics, feel free to ask!",
+      "rounds": [
+        {
+          "round": 1,
+          "assistant_text": null,
+          "tool_calls": [
+            {
+              "name": "lookup",
+              "args": {
+                "query": "",
+                "topic": "news",
+                "timeframe": "day"
+              }
+            }
+          ],
+          "tool_results": [
+            {
+              "tool": "lookup",
+              "args": {
+                "query": "",
+                "topic": "news",
+                "timeframe": "day"
+              },
+              "result": {
+                "tool": "web_search",
+                "query": "tin tức nổi bật",
+                "topic": "news",
+                "timeframe": "day",
+                "items": [
+                  {
+                    "title": "Tin tức nổi bật ngày 9/11: Hành khách có thể mua vé tàu hỏa trên VNeID",
+                    "url": "https://petrotimes.vn/tin-tuc-noi-bat-ngay-9-11-hanh-khach-co-the-mua-ve-tau-hoa-tren-vneid-747742.html",
+                    "source": "petrotimes.vn",
+                    "summary": "| Ngày Văn hóa Việt Nam: Lan tỏa giá trị di sản và tinh thần đại đoàn kếtNgày Văn hóa Việt Nam: Lan tỏa giá trị di sản và tinh thần đại đoàn kết |\n| Tin tức nổi bật ngày 6/11: Du lịch Hà Nội xác lập kỷ lục mới với hơn 30 triệu lượt kháchTin tức nổi bật ngày 6/11: Du lịch Hà Nội xác lập kỷ lục mới với hơn 30 triệu lượt khách | [...] kinh tế\n doanh nghiệp\n vé tàu\n VNeID\n ngn hàng\n giảm giá\n cước vận tải\n vốn\n nhà ở xã hội\n\n vingroup\n\n## Tin liên quan;)\n\n Hoàn thiện thể chế, tạo động lực phát triển kinh tế biển bền vững \n\n  ### Hoàn thiện thể chế, tạo động lực phát triển kinh tế biển bền vững\n Tin tức nổi bật ngày 6/11: Du lịch Hà Nội xác lập kỷ lục mới với hơn 30 triệu lượt khách [...] Qun sự\n\nSức khỏe\n\nGiáo dục\n\nThể thao\n\n Trang chủ\n /\n Kinh tế & Hội nhập\n\n# Tin tức nổi bật ngày 9/11: Hành khách có thể mua vé tàu hỏa trên VNeID\n\n20:13 | 09/11/2026\n\n46 lượt xem\n\n|\n\n(PetroTimes) -  Hành khách có thể mua vé tàu hỏa trên VNeID; 9 ngn hàng lên kế hoạch lập công ty con tại Trung tm Tài chính Quốc tế; Hà Nội yêu cầu rà soát, giảm giá cước vận tải khi chi phí nhiên liệu giảm… là những tin tức đáng chú ý ngày 9/11.\n\nHành khách có thể mua vé tàu hỏa trên VNeID",
+                    "score": 0.7208996
+                  },
+                  {
+                    "title": "Tin tức nổi bật ngày 10/11/2026 có gì?",
+                    "url": "https://htv.vn/tin-tuc-noi-bat-ngay-10-11-2026-co-gi-22226111011494945.htm",
+                    "source": "htv.vn",
+                    "summary": "Bỏ qua đến nội dung chính\n\nCƠ QUAN BÁO VÀ PHÁT THANH, TRUYỀN HÌNH TP. HỒ CHÍ MINH\n\n HTV\n\nĐÀI PHÁT THANH VÀ TRUYỀN HÌNH   \nTHÀNH PHỐ HỒ CHÍ MINH\n\nTV LIVE   RADIO LIVE   GIỚI THIỆU HTV\n\nBạn hãy chọn Profile tiện dụng\n\nXu hướng\n\ngiá vàng hôm nay\n\nphim HTV\n\ngiá xăng dầu\n\ncông an tphcm\n\nKinh tế\n\ncông nghệ\n\ngiải trí\n\n# Tin tức nổi bật ngày 10/11/2026 có gì?\n\nThời sự 00:00:35.78\n\nTRẦN HÙNG, PHƯƠNG MAI, NGỌC PHẠM\n\n(HTV) - Nhiều cy xanh ở Đà Nẵng ngã đổ tối qua do mưa lớn kèm gió giật mạnh. [...] ## Danh sách tập\n\nTin tức nổi bật ngày 9/11/2026 có gì? \n\n### Tin tức nổi bật ngày 9/11/2026 có gì?\n\nTin tức nổi bật ngày 8/11/2026 có gì? \n\n### Tin tức nổi bật ngày 8/11/2026 có gì?\n\nTin tức nổi bật ngày 7/11/2026 có gì? \n\n### Tin tức nổi bật ngày 7/11/2026 có gì?\n\nTin tức nổi bật ngày 6/11/2026 có gì? \n\n### Tin tức nổi bật ngày 6/11/2026 có gì?\n\nTin tức nổi bật ngày 5/11/2026 có gì? \n\n### Tin tức nổi bật ngày 5/11/2026 có gì?\n\n## Các chương trình khác",
+                    "score": 0.6680367
+                  },
+                  {
+                    "title": "Điểm tin kinh tế thế giới nổi bật ngày 9/11/2026",
+                    "url": "https://www.vietnam.vn/diem-tin-kinh-te-the-gioi-noi-bat-ngay-9-11-2026",
+                    "source": "vietnam.vn",
+                    "summary": "Hoạt động vận tải qua kênh đào Suez đang ghi nhận sự phục hồi khi lưu lượng tàu chở dầu thô trong tháng 10 đạt 47 triệu tấn DWT, vượt mức bình qun trước khủng hoảng Biển Đỏ năm 2023. Động lực chính đến từ việc Saudi Arabia chuyển hướng xuất khẩu dầu qua Biển Đỏ và các chuyến tàu chở dầu Nga hướng tới Ấn Độ. Dù vậy, giới phn tích nhận định đà phục hồi này chưa thực sự bền vững do tổng trọng tải vận chuyển vẫn thấp hơn 1/3 so với giai đoạn trước khủng hoảng, trong khi rủi ro an ninh hàng hải tại [...] Vietnam.vn - Nền tảng quảng bá Việt Nam\n\n# Điểm tin kinh tế thế giới nổi bật ngày 9/11/2026\n\nNgày 9/11/2026, kinh tế thế giới có nhiều thông tin đáng chú ý.\n\nBáo Tin TứcBáo Tin Tức•09/11/2026\n\nCông nhn làm việc tại một công ty ở tỉnh Giang Ty, Trung Quốc. Ảnh: THX/TTXVN \n\nCông nhn làm việc tại một công ty ở tỉnh Giang Ty, Trung Quốc. Ảnh: THX/TTXVN\n\n \n\n1. Trung Quốc: Giá sản xuất tăng nhanh nhất trong hơn 4 năm [...] Bộ Tài chính Nhật Bản công bố đã tiến hành can thiệp quy mô lớn trên thị trường ngoại hối để hỗ trợ đồng nội tệ, trong đó riêng ngày 30/7 ghi nhận mức chi kỷ lục 7.980 tỷ yen (khoảng 50,36 tỷ USD). Đy là quy mô can thiệp trong một ngày lớn nhất từ trước đến nay của Tokyo nhằm ngăn đà trượt giá khi đồng yen rơi xuống mức thấp nhất trong 40 năm, sát ngưỡng 164 yen đổi 1 USD. Tuy vậy, các chuyên gia cảnh báo đồng yen vẫn đối mặt áp lực giảm giá kéo dài do rủi ro địa chính trị chưa lắng dịu.",
+                    "score": 0.6366926
+                  },
+                  {
+                    "title": "Thời báo Tân di dân toàn cầu-Nam Đầu kết nối mùa hoa mận và hoa anh đào trong chuỗi du lịch kéo dài ba tháng",
+                    "url": "https://news.immigration.gov.tw/NewsSection/Detail/BF4BEC2A-C1CE-4D90-B439-A736E8657BF2?lang=VN",
+                    "source": "news.immigration.gov.tw",
+                    "summary": "按下ENTER到主內容區\n\n:::\n\n# 新住民全球新聞網Logo\n\n Facebook社群網站icon\")\n Instagram社群網站icon\")\n Line通訊軟體icon\")\n Youtube頻道icon\")\n Twitter社群網站icon\")\n\n 搜尋icon\n\n手機版導覽列按鈕\n\n 正體中文\n Tiếng Việt\n ภาษาไทย\n bahasa Indonesia\n English\n\n 搜尋icon\n\n:::\n\n Tin tức chuyên đề\n Tin tức nổi bật\n\nTin tức nổi bật\n\n 台灣國旗\n 越南國旗\n 泰國國旗\n\n# Nam Đầu kết nối mùa hoa mận và hoa anh đào trong chuỗi du lịch kéo dài ba tháng",
+                    "score": 0.5405607
+                  },
+                  {
+                    "title": "50 nông dân trẻ Indonesia sang Đài Loan thực tập, kỳ vọng góp phần phát triển nông nghiệp quê nhà -Tin tức-Radio Taiwan International",
+                    "url": "https://www.rti.org.tw/vn/news?uid=3&pid=1050501",
+                    "source": "rti.org.tw",
+                    "summary": "Đức Mạnh\n\nQuay về Tổng quan Về trang trước\n\nTin tức nổi ḅt trong tùn\n\nCOP31 sắp khai mạc, Bộ Môi trường khởi động diễn đàn đồng bộ để cập nhật thông tin\n\n1\n\nVề tin đồn sinh viên Việt Nam đến Đài Loan là được nhận trợ cấp, Bộ Giáo dục Đài Loan: để được nhận học bổng đều phải qua quy trình xét duyệt\n\n2\n\nCông bố bảng xếp hạng các trường đại học chu Á 2027, Đài Loan có 7 trường lọt top 100, trong đó Đại học Quốc gia Đài Loan có thứ hạng cao nhất\n\n3 [...] Skip to the main content block\n\n::: Trang chủ| Sơ đồ website| Podcasts|\n\n|\n\nLanguage\n\nmenu close\n\nTin tức   Chương trình   Videos   Podcasts   Giới thiệu về RTI\n\n# Formosa Dream Chasers - Programs - RTI Radio Taiwan International-logo\n\nTin tức\n\n| Tổng quan  Xem nhiều\n\n Tìm kiếm\n\nTìm kiếm\n\nTin nổi ḅt \n\nBê bối ngoại tình của CEO Nvidia Jensen Huang: Vị trí CEO sẽ gặp thách thức nếu rò rỉ thông tin mật (ảnh tư liệu: Reuters) [...] Giải chạy Điền Trung (Tianzhong), huyện Chương Hóa (Zhanghua), đã chính thức diễn ra vào sáng ngày8/11. Sự kiện này nổi tiếng với những quầy ẩm thực tiếp sức vô cùng thịnh soạn, với hơn 100 con gà quay, hơn 300 kg thịt bò bít tết, hơn 100 con vịt quay và cả hơn 1...\n\n 19 hr\n\nTổng thống: Đầu tư vào vũ trụ là đầu tư cho tương lai, kỳ vọng năng lực công nghệ Đài Loan trở thành động lực mới đưa nhn loại vươn ra vũ trụ. (Ảnh: CNA)",
+                    "score": 0.5271467
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "round": 2,
+          "assistant_text": "Here are some notable news articles from today:\n\n1. **[Tin tức nổi bật ngày 9/11: Hành khách có thể mua vé tàu hỏa trên VNeID](https://petrotimes.vn/tin-tuc-noi-bat-ngay-9-11-hanh-khach-co-the-mua-ve-tau-hoa-tren-vneid-747742.html)** - Hành khách có thể mua vé tàu hỏa trên VNeID; 9 ngân hàng lên kế hoạch lập công ty con tại Trung tâm Tài chính Quốc tế; Hà Nội yêu cầu rà soát, giảm giá cước vận tải khi chi phí nhiên liệu giảm. (Source: petrotimes.vn)\n\n2. **[Tin tức nổi bật ngày 10/11/2026 có gì?](https://htv.vn/tin-tuc-noi-bat-ngay-10-11-2026-co-gi-22226111011494945.htm)** - Nhiều cây xanh ở Đà Nẵng ngã đổ tối qua do mưa lớn kèm gió giật mạnh. (Source: htv.vn)\n\n3. **[Điểm tin kinh tế thế giới nổi bật ngày 9/11/2026](https://www.vietnam.vn/diem-tin-kinh-te-the-gioi-noi-bat-ngay-9-11-2026)** - Hoạt động vận tải qua kênh đào Suez đang ghi nhận sự phục hồi, với lưu lượng tàu chở dầu thô trong tháng 10 đạt 47 triệu tấn DWT. (Source: vietnam.vn)\n\n4. **[Thời báo Tân di dân toàn cầu-Nam Đầu kết nối mùa hoa mận và hoa anh đào trong chuỗi du lịch kéo dài ba tháng](https://news.immigration.gov.tw/NewsSection/Detail/BF4BEC2A-C1CE-4D90-B439-A736E8657BF2?lang=VN)** - Tin tức về kết nối mùa hoa mận và hoa anh đào trong chuỗi du lịch kéo dài ba tháng. (Source: news.immigration.gov.tw)\n\n5. **[50 nông dân trẻ Indonesia sang Đài Loan thực tập, kỳ vọng góp phần phát triển nông nghiệp quê nhà](https://www.rti.org.tw/vn/news?uid=3&pid=1050501)** - Thông tin về việc 50 nông dân trẻ Indonesia sang Đài Loan thực tập. (Source: rti.org.tw)\n\nIf you need more details or specific topics, feel free to ask!",
+          "tool_calls": [],
+          "tool_results": []
+        }
+      ],
+      "tool_events": [
+        {
+          "tool": "lookup",
+          "args": {
+            "query": "",
+            "topic": "news",
+            "timeframe": "day"
+          },
+          "result": {
+            "tool": "web_search",
+            "query": "tin tức nổi bật",
+            "topic": "news",
+            "timeframe": "day",
+            "items": [
+              {
+                "title": "Tin tức nổi bật ngày 9/11: Hành khách có thể mua vé tàu hỏa trên VNeID",
+                "url": "https://petrotimes.vn/tin-tuc-noi-bat-ngay-9-11-hanh-khach-co-the-mua-ve-tau-hoa-tren-vneid-747742.html",
+                "source": "petrotimes.vn",
+                "summary": "| Ngày Văn hóa Việt Nam: Lan tỏa giá trị di sản và tinh thần đại đoàn kếtNgày Văn hóa Việt Nam: Lan tỏa giá trị di sản và tinh thần đại đoàn kết |\n| Tin tức nổi bật ngày 6/11: Du lịch Hà Nội xác lập kỷ lục mới với hơn 30 triệu lượt kháchTin tức nổi bật ngày 6/11: Du lịch Hà Nội xác lập kỷ lục mới với hơn 30 triệu lượt khách | [...] kinh tế\n doanh nghiệp\n vé tàu\n VNeID\n ngn hàng\n giảm giá\n cước vận tải\n vốn\n nhà ở xã hội\n\n vingroup\n\n## Tin liên quan;)\n\n Hoàn thiện thể chế, tạo động lực phát triển kinh tế biển bền vững \n\n  ### Hoàn thiện thể chế, tạo động lực phát triển kinh tế biển bền vững\n Tin tức nổi bật ngày 6/11: Du lịch Hà Nội xác lập kỷ lục mới với hơn 30 triệu lượt khách [...] Qun sự\n\nSức khỏe\n\nGiáo dục\n\nThể thao\n\n Trang chủ\n /\n Kinh tế & Hội nhập\n\n# Tin tức nổi bật ngày 9/11: Hành khách có thể mua vé tàu hỏa trên VNeID\n\n20:13 | 09/11/2026\n\n46 lượt xem\n\n|\n\n(PetroTimes) -  Hành khách có thể mua vé tàu hỏa trên VNeID; 9 ngn hàng lên kế hoạch lập công ty con tại Trung tm Tài chính Quốc tế; Hà Nội yêu cầu rà soát, giảm giá cước vận tải khi chi phí nhiên liệu giảm… là những tin tức đáng chú ý ngày 9/11.\n\nHành khách có thể mua vé tàu hỏa trên VNeID",
+                "score": 0.7208996
+              },
+              {
+                "title": "Tin tức nổi bật ngày 10/11/2026 có gì?",
+                "url": "https://htv.vn/tin-tuc-noi-bat-ngay-10-11-2026-co-gi-22226111011494945.htm",
+                "source": "htv.vn",
+                "summary": "Bỏ qua đến nội dung chính\n\nCƠ QUAN BÁO VÀ PHÁT THANH, TRUYỀN HÌNH TP. HỒ CHÍ MINH\n\n HTV\n\nĐÀI PHÁT THANH VÀ TRUYỀN HÌNH   \nTHÀNH PHỐ HỒ CHÍ MINH\n\nTV LIVE   RADIO LIVE   GIỚI THIỆU HTV\n\nBạn hãy chọn Profile tiện dụng\n\nXu hướng\n\ngiá vàng hôm nay\n\nphim HTV\n\ngiá xăng dầu\n\ncông an tphcm\n\nKinh tế\n\ncông nghệ\n\ngiải trí\n\n# Tin tức nổi bật ngày 10/11/2026 có gì?\n\nThời sự 00:00:35.78\n\nTRẦN HÙNG, PHƯƠNG MAI, NGỌC PHẠM\n\n(HTV) - Nhiều cy xanh ở Đà Nẵng ngã đổ tối qua do mưa lớn kèm gió giật mạnh. [...] ## Danh sách tập\n\nTin tức nổi bật ngày 9/11/2026 có gì? \n\n### Tin tức nổi bật ngày 9/11/2026 có gì?\n\nTin tức nổi bật ngày 8/11/2026 có gì? \n\n### Tin tức nổi bật ngày 8/11/2026 có gì?\n\nTin tức nổi bật ngày 7/11/2026 có gì? \n\n### Tin tức nổi bật ngày 7/11/2026 có gì?\n\nTin tức nổi bật ngày 6/11/2026 có gì? \n\n### Tin tức nổi bật ngày 6/11/2026 có gì?\n\nTin tức nổi bật ngày 5/11/2026 có gì? \n\n### Tin tức nổi bật ngày 5/11/2026 có gì?\n\n## Các chương trình khác",
+                "score": 0.6680367
+              },
+              {
+                "title": "Điểm tin kinh tế thế giới nổi bật ngày 9/11/2026",
+                "url": "https://www.vietnam.vn/diem-tin-kinh-te-the-gioi-noi-bat-ngay-9-11-2026",
+                "source": "vietnam.vn",
+                "summary": "Hoạt động vận tải qua kênh đào Suez đang ghi nhận sự phục hồi khi lưu lượng tàu chở dầu thô trong tháng 10 đạt 47 triệu tấn DWT, vượt mức bình qun trước khủng hoảng Biển Đỏ năm 2023. Động lực chính đến từ việc Saudi Arabia chuyển hướng xuất khẩu dầu qua Biển Đỏ và các chuyến tàu chở dầu Nga hướng tới Ấn Độ. Dù vậy, giới phn tích nhận định đà phục hồi này chưa thực sự bền vững do tổng trọng tải vận chuyển vẫn thấp hơn 1/3 so với giai đoạn trước khủng hoảng, trong khi rủi ro an ninh hàng hải tại [...] Vietnam.vn - Nền tảng quảng bá Việt Nam\n\n# Điểm tin kinh tế thế giới nổi bật ngày 9/11/2026\n\nNgày 9/11/2026, kinh tế thế giới có nhiều thông tin đáng chú ý.\n\nBáo Tin TứcBáo Tin Tức•09/11/2026\n\nCông nhn làm việc tại một công ty ở tỉnh Giang Ty, Trung Quốc. Ảnh: THX/TTXVN \n\nCông nhn làm việc tại một công ty ở tỉnh Giang Ty, Trung Quốc. Ảnh: THX/TTXVN\n\n \n\n1. Trung Quốc: Giá sản xuất tăng nhanh nhất trong hơn 4 năm [...] Bộ Tài chính Nhật Bản công bố đã tiến hành can thiệp quy mô lớn trên thị trường ngoại hối để hỗ trợ đồng nội tệ, trong đó riêng ngày 30/7 ghi nhận mức chi kỷ lục 7.980 tỷ yen (khoảng 50,36 tỷ USD). Đy là quy mô can thiệp trong một ngày lớn nhất từ trước đến nay của Tokyo nhằm ngăn đà trượt giá khi đồng yen rơi xuống mức thấp nhất trong 40 năm, sát ngưỡng 164 yen đổi 1 USD. Tuy vậy, các chuyên gia cảnh báo đồng yen vẫn đối mặt áp lực giảm giá kéo dài do rủi ro địa chính trị chưa lắng dịu.",
+                "score": 0.6366926
+              },
+              {
+                "title": "Thời báo Tân di dân toàn cầu-Nam Đầu kết nối mùa hoa mận và hoa anh đào trong chuỗi du lịch kéo dài ba tháng",
+                "url": "https://news.immigration.gov.tw/NewsSection/Detail/BF4BEC2A-C1CE-4D90-B439-A736E8657BF2?lang=VN",
+                "source": "news.immigration.gov.tw",
+                "summary": "按下ENTER到主內容區\n\n:::\n\n# 新住民全球新聞網Logo\n\n Facebook社群網站icon\")\n Instagram社群網站icon\")\n Line通訊軟體icon\")\n Youtube頻道icon\")\n Twitter社群網站icon\")\n\n 搜尋icon\n\n手機版導覽列按鈕\n\n 正體中文\n Tiếng Việt\n ภาษาไทย\n bahasa Indonesia\n English\n\n 搜尋icon\n\n:::\n\n Tin tức chuyên đề\n Tin tức nổi bật\n\nTin tức nổi bật\n\n 台灣國旗\n 越南國旗\n 泰國國旗\n\n# Nam Đầu kết nối mùa hoa mận và hoa anh đào trong chuỗi du lịch kéo dài ba tháng",
+                "score": 0.5405607
+              },
+              {
+                "title": "50 nông dân trẻ Indonesia sang Đài Loan thực tập, kỳ vọng góp phần phát triển nông nghiệp quê nhà -Tin tức-Radio Taiwan International",
+                "url": "https://www.rti.org.tw/vn/news?uid=3&pid=1050501",
+                "source": "rti.org.tw",
+                "summary": "Đức Mạnh\n\nQuay về Tổng quan Về trang trước\n\nTin tức nổi ḅt trong tùn\n\nCOP31 sắp khai mạc, Bộ Môi trường khởi động diễn đàn đồng bộ để cập nhật thông tin\n\n1\n\nVề tin đồn sinh viên Việt Nam đến Đài Loan là được nhận trợ cấp, Bộ Giáo dục Đài Loan: để được nhận học bổng đều phải qua quy trình xét duyệt\n\n2\n\nCông bố bảng xếp hạng các trường đại học chu Á 2027, Đài Loan có 7 trường lọt top 100, trong đó Đại học Quốc gia Đài Loan có thứ hạng cao nhất\n\n3 [...] Skip to the main content block\n\n::: Trang chủ| Sơ đồ website| Podcasts|\n\n|\n\nLanguage\n\nmenu close\n\nTin tức   Chương trình   Videos   Podcasts   Giới thiệu về RTI\n\n# Formosa Dream Chasers - Programs - RTI Radio Taiwan International-logo\n\nTin tức\n\n| Tổng quan  Xem nhiều\n\n Tìm kiếm\n\nTìm kiếm\n\nTin nổi ḅt \n\nBê bối ngoại tình của CEO Nvidia Jensen Huang: Vị trí CEO sẽ gặp thách thức nếu rò rỉ thông tin mật (ảnh tư liệu: Reuters) [...] Giải chạy Điền Trung (Tianzhong), huyện Chương Hóa (Zhanghua), đã chính thức diễn ra vào sáng ngày8/11. Sự kiện này nổi tiếng với những quầy ẩm thực tiếp sức vô cùng thịnh soạn, với hơn 100 con gà quay, hơn 300 kg thịt bò bít tết, hơn 100 con vịt quay và cả hơn 1...\n\n 19 hr\n\nTổng thống: Đầu tư vào vũ trụ là đầu tư cho tương lai, kỳ vọng năng lực công nghệ Đài Loan trở thành động lực mới đưa nhn loại vươn ra vũ trụ. (Ảnh: CNA)",
+                "score": 0.5271467
+              }
+            ]
+          }
+        }
+      ],
+      "ended_at": "2026-11-10T16:06:58"
+    }
+  ],
+  "updated_at": "2026-11-10T16:06:58"
+}

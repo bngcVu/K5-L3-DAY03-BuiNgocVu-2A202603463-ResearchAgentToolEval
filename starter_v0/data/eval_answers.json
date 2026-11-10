@@ -1,0 +1,50 @@
+{
+  "dataset_id": "day03_answers",
+  "dataset_role": "answers",
+  "description": "Chấm CÂU TRẢ LỜI CUỐI (đa lượt) bằng run_answer_eval.py: ngôn ngữ, URL có thật, không trùng, còn mới. clarify_reply chỉ được dùng nếu agent hỏi lại.",
+  "cases": [
+    {
+      "id": "A01_news_no_subject",
+      "turns": ["tin tức hôm nay"],
+      "clarify_reply": "Tin Việt Nam",
+      "expect": {"language": "vi", "requires_sources": true, "timeframe": "day"}
+    },
+    {
+      "id": "A02_news_with_subject",
+      "turns": ["Tin AI hôm nay có gì nổi bật?"],
+      "expect": {"language": "vi", "requires_sources": true, "timeframe": "day"}
+    },
+    {
+      "id": "A03_news_tech_week",
+      "turns": ["tin công nghệ trong tuần này"],
+      "expect": {"language": "vi", "requires_sources": true, "timeframe": "week"}
+    },
+    {
+      "id": "A04_vague_new_news",
+      "turns": ["cho mình xem tin mới"],
+      "clarify_reply": "Tin công nghệ",
+      "expect": {"language": "vi", "requires_sources": true}
+    },
+    {
+      "id": "A05_tweets_account",
+      "turns": ["Tweet mới nhất của Sam Altman là gì?"],
+      "expect": {"language": "vi", "requires_sources": true}
+    },
+    {
+      "id": "A06_social_topic",
+      "turns": ["Mọi người đang bàn gì về GPT-5 trên Twitter?"],
+      "expect": {"language": "vi", "requires_sources": true}
+    },
+    {
+      "id": "A07_capabilities_no_tool",
+      "turns": ["Bạn là gì và làm được những gì?"],
+      "expect": {"language": "vi"}
+    },
+    {
+      "id": "A08_followup_other_topic",
+      "turns": ["tin tức hôm nay", "còn tin công nghệ thì sao?"],
+      "clarify_reply": "Tin Việt Nam",
+      "expect": {"language": "vi", "requires_sources": true}
+    }
+  ]
+}
