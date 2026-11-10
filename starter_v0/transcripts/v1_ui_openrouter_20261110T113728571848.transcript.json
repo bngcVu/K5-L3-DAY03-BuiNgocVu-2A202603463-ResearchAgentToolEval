@@ -1,0 +1,34 @@
+{
+  "transcript_id": "v1_ui_openrouter_20261110T113728571848",
+  "version": "v1",
+  "artifact_version": "v1+pc3e508553a00+t8db0ba629f52",
+  "prompt_hash": "c3e508553a00f02d61ba4921bae6982164bb61752fd7d98c3b8f1a45eab9ec0d",
+  "tools_hash": "8db0ba629f52ad1ec171bae4e4e84472c12f950fa1a6db5e1d27bad6e749b740",
+  "provider": "openrouter",
+  "model": "openai/gpt-4o-mini",
+  "system_prompt": "D:\\VIN_AI_ThucChien\\K5-L3-DAY03-BuiNgocVu-2A202603463-ResearchAgentToolEval\\starter_v0\\artifacts\\versions\\v1\\system_prompt.md",
+  "tools": "D:\\VIN_AI_ThucChien\\K5-L3-DAY03-BuiNgocVu-2A202603463-ResearchAgentToolEval\\starter_v0\\artifacts\\versions\\v1\\tools.yaml",
+  "history_window": 5,
+  "max_tool_rounds": 4,
+  "created_at": "2026-11-10T11:37:26",
+  "turns": [
+    {
+      "turn_index": 1,
+      "started_at": "2026-11-10T11:37:26",
+      "user": "thời tiết hà nội hôm nay",
+      "status": "answered",
+      "assistant_text": "Tôi không thể cung cấp thông tin thời tiết. Bạn có thể kiểm tra trên các trang web thời tiết hoặc ứng dụng di động để biết thông tin chi tiết về thời tiết Hà Nội hôm nay.",
+      "rounds": [
+        {
+          "round": 1,
+          "assistant_text": "Tôi không thể cung cấp thông tin thời tiết. Bạn có thể kiểm tra trên các trang web thời tiết hoặc ứng dụng di động để biết thông tin chi tiết về thời tiết Hà Nội hôm nay.",
+          "tool_calls": [],
+          "tool_results": []
+        }
+      ],
+      "tool_events": [],
+      "ended_at": "2026-11-10T11:37:28"
+    }
+  ],
+  "updated_at": "2026-11-10T11:37:28"
+}

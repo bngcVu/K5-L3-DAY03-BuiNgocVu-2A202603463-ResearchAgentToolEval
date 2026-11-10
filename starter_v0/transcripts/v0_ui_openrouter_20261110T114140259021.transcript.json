@@ -1,0 +1,150 @@
+{
+  "transcript_id": "v0_ui_openrouter_20261110T114140259021",
+  "version": "v0",
+  "artifact_version": "v0+peb1c8179815b+t5b22a2476d41",
+  "prompt_hash": "eb1c8179815bd79d34de7d326420bb99b3072e6e8ae96464c02d4411f905fc68",
+  "tools_hash": "5b22a2476d41b989d5dc1e54f24ce7890e781909deb2f7afafb856ab53a6d7c0",
+  "provider": "openrouter",
+  "model": "openai/gpt-4o-mini",
+  "system_prompt": "D:\\VIN_AI_ThucChien\\K5-L3-DAY03-BuiNgocVu-2A202603463-ResearchAgentToolEval\\starter_v0\\artifacts\\versions\\v0\\system_prompt.md",
+  "tools": "D:\\VIN_AI_ThucChien\\K5-L3-DAY03-BuiNgocVu-2A202603463-ResearchAgentToolEval\\starter_v0\\artifacts\\versions\\v0\\tools.yaml",
+  "history_window": 5,
+  "max_tool_rounds": 4,
+  "created_at": "2026-11-10T11:41:31",
+  "turns": [
+    {
+      "turn_index": 1,
+      "started_at": "2026-11-10T11:41:31",
+      "user": "hồ chí minh là ai ",
+      "status": "answered",
+      "assistant_text": "Hồ Chí Minh, tên thật là Nguyễn Sinh Cung, sinh ngày 19 tháng 5 năm 1890 tại Kim Liên, Nghệ An, Việt Nam. Ông là một nhà lãnh đạo quan trọng trong lịch sử Việt Nam, nổi bật với vai trò là người sáng lập Đảng Cộng sản Việt Nam và là Chủ tịch nước Việt Nam Dân chủ Cộng hòa. Ông đã có nhiều hoạt động cách mạng từ năm 1911 đến khi qua đời vào ngày 2 tháng 9 năm 1969.\n\nHồ Chí Minh không chỉ là một chính trị gia mà còn là một nhà văn, nhà thơ và nhà báo. Ông đã viết nhiều tác phẩm bằng tiếng Việt, tiếng Hán và tiếng Pháp. Ông được biết đến với những chính sách đối ngoại mềm dẻo và nhẫn nhịn, cũng như những nỗ lực để cứu đói cho nhân dân trong thời kỳ khó khăn.\n\nĐể tìm hiểu thêm về cuộc đời và sự nghiệp của Hồ Chí Minh, bạn có thể tham khảo các bài viết sau:\n- [Hoạt động của Hồ Chí Minh trong giai đoạn 1911–1941 – Wikipedia tiếng Việt](https://vi.wikipedia.org/wiki/Ho%E1%BA%A1t_%C4%91%E1%BB%99ng_c%E1%BB%A7a_H%E1%BB%93_Ch%C3%AD_Minh_trong_giai_%C4%91o%E1%BA%A1n_1911%E2%80%931941)\n- [Hồ Chí Minh – Wikipedia tiếng Việt](https://vi.wikipedia.org/wiki/H%E1%BB%93_Ch%C3%AD_Minh)",
+      "rounds": [
+        {
+          "round": 1,
+          "assistant_text": null,
+          "tool_calls": [
+            {
+              "name": "lookup",
+              "args": {
+                "query": "Hồ Chí Minh",
+                "topic": "general"
+              }
+            }
+          ],
+          "tool_results": [
+            {
+              "tool": "lookup",
+              "args": {
+                "query": "Hồ Chí Minh",
+                "topic": "general"
+              },
+              "result": {
+                "tool": "web_search",
+                "query": "Hồ Chí Minh",
+                "topic": "general",
+                "timeframe": "week",
+                "items": [
+                  {
+                    "title": "Hoạt động của Hồ Chí Minh trong giai đoạn 1911–1941 – Wikipedia tiếng Việt",
+                    "url": "https://vi.wikipedia.org/wiki/Ho%E1%BA%A1t_%C4%91%E1%BB%99ng_c%E1%BB%A7a_H%E1%BB%93_Ch%C3%AD_Minh_trong_giai_%C4%91o%E1%BA%A1n_1911%E2%80%931941",
+                    "source": "vi.wikipedia.org",
+                    "summary": "| Hồ Chí Minh |\n\n| Chn dung Chủ tịch Hồ Chí Minh năm 1946 |\n| Sinh | Nguyễn Sinh Cung 19 tháng 5 năm 1890 Kim Liên, Nam Đàn \"Nam Đàn (huyện)\"), Nghệ An, Liên bang Đông Dương |\n| Mất | 2 tháng 9 năm 1969 (79 tuổi) Hà Nội, Việt Nam Dn chủ Cộng hòa |\n| Quốc tịch | Việt Nam |\n| Nghề nghiệp | Phụ bếp   Nhà báo Đại biểu Đông Dương của Đảng Xã hội Pháp | [...] Hồ Chí Minh chủ trương tuyên truyền cho kiều bào và tổ chức họ vào những hội thn ái, tổ chức các buổi sinh hoạt văn hóa cho họ, xin chính phủ Thái cho mở trường dành cho Việt kiều, Hồ Chí Minh đi (chủ yếu là đi bộ) và vận động hầu khắp các vùng có kiều bào ở Thái Lan. Giống như tại nhiều nơi đã hoạt động, ông cho in báo – tờ Thn ái.\n\nCuối năm 1929, Hồ Chí Minh rời Thái Lan, theo ngả Singapore để sang Trung Quốc.\n\n## Thành lập Đảng Cộng sản Việt Nam\n\n[sửa | sửa mã nguồn] [...] Hoạt động của Chủ tịch nước Việt Nam Dn chủ Cộng hòa Hồ Chí Minh giai đoạn 1911–1941 hay còn được gọi là Thời kỳ Bôn ba Hải ngoại kéo dài 30 năm (từ 5 tháng 6 năm 1911 đến 28 tháng 1 năm 1941). Trong tổng cộng 30 năm bôn ba ấy, Hồ Chí Minh đã phải rời xa quê hương để đến các nước phát triển học hỏi để giúp dn tộc Việt Nam thoát khỏi ách thống trị của thực dn Pháp. Bắt đầu khi Hồ Chí Minh quyết định trở thành phụ bếp trên tàu Đô đốc Latouche-Tréville với cái tên Nguyễn Văn Ba lên đường sang",
+                    "score": 0.7064943
+                  },
+                  {
+                    "title": "Hồ Chí Minh – Wikipedia tiếng Việt",
+                    "url": "https://vi.wikipedia.org/wiki/H%E1%BB%93_Ch%C3%AD_Minh",
+                    "source": "vi.wikipedia.org",
+                    "summary": "Sài Gòn \"Sài Gòn (thành phố)\") – Gia Định \"Gia Định (tỉnh)\") được đổi tên thành Thành phố Hồ Chí Minh để tôn vinh ông cũng như sự kiện này. Ngoài hoạt động chính trị, Hồ Chí Minh cũng là nhà văn, nhà thơ và nhà báo với nhiều tác phẩm viết bằng tiếng Việt, tiếng Hán và tiếng Pháp. [...] Để diệt \"giặc đói\", ngoài việc kêu gọi tăng gia sản xuất, ông đề nghị đồng bào \"cứ 10 ngày nhịn ăn 1 bữa, mỗi tháng nhịn 3 bữa\" để đem số gạo tiết kiệm được cứu dn nghèo. Bản thn Hồ Chí Minh cũng gương mẫu thực hiện việc nhịn ăn cứu đói này.\n\nĐể đối phó với giặc ngoại xm, Hồ Chí Minh thi hành một chính sách đối ngoại mềm dẻo và nhẫn nhịn. Ông nói:\n\n|  |  |  |\n --- \n| “ | Chính sách của ta hiện nay là chính sách Cu Tiễn, nhưng nhẫn nhục không phải là khuất phục. | ” |\n| — Hồ Chí Minh | [...] , sau khi trở thành Chủ tịch nước Việt Nam Dn chủ Cộng hòa, Hồ Chí Minh và Tăng Tuyết Minh đã thử tìm nhau thông qua tổ chức Đảng Cộng sản Trung Quốc và cơ quan ngoại giao Việt Nam tại Trung Quốc nhưng không thành công. Một số Ủy viên Bộ Chính trị Đảng Lao động Việt Nam, đặc biệt là Lê Duẩn phản đối việc này vì Hồ Chí Minh được nhn dn xem là cha già dn tộc, việc đoàn tụ với Tăng Tuyết Minh sẽ làm ảnh hưởng đến hình ảnh của Hồ Chí Minh cũng như sự nghiệp kháng chiến chống Mỹ cứu nước.",
+                    "score": 0.6971968
+                  },
+                  {
+                    "title": "Ho Chi Minh City | Location, History, Map, & Facts | Britannica",
+                    "url": "https://www.britannica.com/place/Ho-Chi-Minh-City",
+                    "source": "britannica.com",
+                    "summary": "Before it was named Ho Chi Minh City, the city was known as Saigon. It served as the capital of the French protectorate of Cochinchina from 1862 to 1954 and later as the capital of South Vietnam from 1954 to 1975. On April 30, 1975, North Vietnamese troops captured Saigon, and the city was renamed Ho Chi Minh City. This renaming honored Ho Chi Minh, who played a seminal role in making Vietnam independent. Today, Ho Chi Minh City retains a European look from its time as a French colony. [...] • Oct. 6, 2026, 5:08 AM ET (AP)\n\nTop Questions\n\n What is Ho Chi Minh City?\n\n  Ho Chi Minh City is the largest city in Vietnam. It sits along the Saigon River, north of the Mekong River delta, roughly 50 miles from the South China Sea. Formerly known as Saigon, it served as the capital of French Cochinchina from 1862 to 1954 and then as the capital of South Vietnam from 1954 to 1975. [...] Ho Chi Minh City, largest city in Vietnam. It was the capital of the French protectorate of Cochinchina (1862–1954) and of South Vietnam (1954–75). The city lies along the Saigon River (Song Sai Gon) to the north of the Mekong River delta, about 50 miles (80 km) from the South China Sea. The commercial centre of Cho Lon lies immediately west of Ho Chi Minh City.\n\nHo Chi Minh City, Vietnam\n\nHo Chi Minh City, Vietnam",
+                    "score": 0.6272665
+                  },
+                  {
+                    "title": "Letter from Nguyen ai Quac [Ho Chi Minh] to Secretary of State Robert Lansing (with enclosure) - DocsTeach",
+                    "url": "https://docsteach.org/document/ho-chi-minh-lansing",
+                    "source": "docsteach.org",
+                    "summary": "## Description\n\nHo Chi Minh appealed to the United States to help the Vietnamese win independence from the French several times. His first attempt to win American support was at the Paris Peace Conference at the end of World War I, in which the Allied forces met to set the peace terms for the defeated nations. [...] The letter contains the enclosure “Revendications du Peuple Annamite” (“Claims of the Annamite People”). It’s a call for reform of the French colonial system, directed at French colonial officials. Ho Chi Minh used the term “Annamite” because “Vietnamien” (Vietnamese) with its nationalist overtones, was forbidden by the French. Annam is the name the French gave the central region of French Indochina. The petition was published in L’Humanité, a French socialist newspaper. Copies were distributed [...] Nguyen Ai Quoc (one of Ho Chi Minh’s early aliases) sent this letter as a representative of “le Groupe des Patriotes Annamites” (“the Group of Annamite Patriots”) to Secretary of State Robert Lansing. He had reason to be hopeful. President Wilson’s Fourteen Points Declaration (a statement of principles for peace to end World War I) called for self-determination for all peoples. But Wilson’s priority was European self-government. Although Ho Chi Minh received a note saying that the petition",
+                    "score": 0.5935504
+                  },
+                  {
+                    "title": "Trang chủ - Sở Dân tộc và Tôn giáo Thành phố Hồ Chí Minh",
+                    "url": "https://sdttg.hochiminhcity.gov.vn/web/bdt/trang-chu",
+                    "source": "sdttg.hochiminhcity.gov.vn",
+                    "summary": "## Thành phố Hô Chí Minh triển khai thực hiện tiêu chuẩn “5 KHÔNG, 3 SẠCH, 3 AN” trong Bộ tiêu chí quốc gia về nông thôn mới giai đoạn 2026 - 2030\n\n  Ngày xuất bản: 11:33 05/11/2026 [...] Bác Hồ lúc sinh thời, Đảng và Nhà nước ta đã tổ chức hai Đại hội đại biểu các dn tộc thiểu số ở hai miền Bắc và Nam. Nhn dịp kỷ niệm các ngày lễ lớn của năm 2010, Ban Bí thư quyết định tổ chức...\n\n# TIẾP CÔNG DN, GIẢI QUYẾT KN, TC VÀ PCTN TIẾP CÔNG DN, GIẢI QUYẾT KN, TC VÀ PCTN\n\nXem thêm »\n\n Giới thiệu và Hướng dẫn việc gửi phản ánh, kiến nghị về văn bản quy phạm pháp luật\n\n  ## Giới thiệu và Hướng dẫn việc gửi phản ánh, kiến nghị về văn bản quy phạm pháp luật [...] Ủy ban nhn dn Thành phố Hồ Chí Minh đã ban hành Kế hoạch số 524/KH-UBND về triển khai thực hiện nội dung tiêu chí 6.4 “Tỷ lệ hộ đạt tiêu chuẩn 5 không, 3 sạch, 3 an” trong Bộ tiêu chí quốc gia về...\n Sở Dn tộc và Tôn giáo Thành phố Hồ Chí Minh triển khai Kế hoạch thực hiện Thỏa thuận toàn cầu về di cư giai đoạn 2026 - 2035\n\n  ## Sở Dn tộc và Tôn giáo Thành phố Hồ Chí Minh triển khai Kế hoạch thực hiện Thỏa thuận toàn cầu về di cư giai đoạn 2026 - 2035\n\n  Ngày xuất bản: 10:27 05/11/2026",
+                    "score": 0.35064372
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "round": 2,
+          "assistant_text": "Hồ Chí Minh, tên thật là Nguyễn Sinh Cung, sinh ngày 19 tháng 5 năm 1890 tại Kim Liên, Nghệ An, Việt Nam. Ông là một nhà lãnh đạo quan trọng trong lịch sử Việt Nam, nổi bật với vai trò là người sáng lập Đảng Cộng sản Việt Nam và là Chủ tịch nước Việt Nam Dân chủ Cộng hòa. Ông đã có nhiều hoạt động cách mạng từ năm 1911 đến khi qua đời vào ngày 2 tháng 9 năm 1969.\n\nHồ Chí Minh không chỉ là một chính trị gia mà còn là một nhà văn, nhà thơ và nhà báo. Ông đã viết nhiều tác phẩm bằng tiếng Việt, tiếng Hán và tiếng Pháp. Ông được biết đến với những chính sách đối ngoại mềm dẻo và nhẫn nhịn, cũng như những nỗ lực để cứu đói cho nhân dân trong thời kỳ khó khăn.\n\nĐể tìm hiểu thêm về cuộc đời và sự nghiệp của Hồ Chí Minh, bạn có thể tham khảo các bài viết sau:\n- [Hoạt động của Hồ Chí Minh trong giai đoạn 1911–1941 – Wikipedia tiếng Việt](https://vi.wikipedia.org/wiki/Ho%E1%BA%A1t_%C4%91%E1%BB%99ng_c%E1%BB%A7a_H%E1%BB%93_Ch%C3%AD_Minh_trong_giai_%C4%91o%E1%BA%A1n_1911%E2%80%931941)\n- [Hồ Chí Minh – Wikipedia tiếng Việt](https://vi.wikipedia.org/wiki/H%E1%BB%93_Ch%C3%AD_Minh)",
+          "tool_calls": [],
+          "tool_results": []
+        }
+      ],
+      "tool_events": [
+        {
+          "tool": "lookup",
+          "args": {
+            "query": "Hồ Chí Minh",
+            "topic": "general"
+          },
+          "result": {
+            "tool": "web_search",
+            "query": "Hồ Chí Minh",
+            "topic": "general",
+            "timeframe": "week",
+            "items": [
+              {
+                "title": "Hoạt động của Hồ Chí Minh trong giai đoạn 1911–1941 – Wikipedia tiếng Việt",
+                "url": "https://vi.wikipedia.org/wiki/Ho%E1%BA%A1t_%C4%91%E1%BB%99ng_c%E1%BB%A7a_H%E1%BB%93_Ch%C3%AD_Minh_trong_giai_%C4%91o%E1%BA%A1n_1911%E2%80%931941",
+                "source": "vi.wikipedia.org",
+                "summary": "| Hồ Chí Minh |\n\n| Chn dung Chủ tịch Hồ Chí Minh năm 1946 |\n| Sinh | Nguyễn Sinh Cung 19 tháng 5 năm 1890 Kim Liên, Nam Đàn \"Nam Đàn (huyện)\"), Nghệ An, Liên bang Đông Dương |\n| Mất | 2 tháng 9 năm 1969 (79 tuổi) Hà Nội, Việt Nam Dn chủ Cộng hòa |\n| Quốc tịch | Việt Nam |\n| Nghề nghiệp | Phụ bếp   Nhà báo Đại biểu Đông Dương của Đảng Xã hội Pháp | [...] Hồ Chí Minh chủ trương tuyên truyền cho kiều bào và tổ chức họ vào những hội thn ái, tổ chức các buổi sinh hoạt văn hóa cho họ, xin chính phủ Thái cho mở trường dành cho Việt kiều, Hồ Chí Minh đi (chủ yếu là đi bộ) và vận động hầu khắp các vùng có kiều bào ở Thái Lan. Giống như tại nhiều nơi đã hoạt động, ông cho in báo – tờ Thn ái.\n\nCuối năm 1929, Hồ Chí Minh rời Thái Lan, theo ngả Singapore để sang Trung Quốc.\n\n## Thành lập Đảng Cộng sản Việt Nam\n\n[sửa | sửa mã nguồn] [...] Hoạt động của Chủ tịch nước Việt Nam Dn chủ Cộng hòa Hồ Chí Minh giai đoạn 1911–1941 hay còn được gọi là Thời kỳ Bôn ba Hải ngoại kéo dài 30 năm (từ 5 tháng 6 năm 1911 đến 28 tháng 1 năm 1941). Trong tổng cộng 30 năm bôn ba ấy, Hồ Chí Minh đã phải rời xa quê hương để đến các nước phát triển học hỏi để giúp dn tộc Việt Nam thoát khỏi ách thống trị của thực dn Pháp. Bắt đầu khi Hồ Chí Minh quyết định trở thành phụ bếp trên tàu Đô đốc Latouche-Tréville với cái tên Nguyễn Văn Ba lên đường sang",
+                "score": 0.7064943
+              },
+              {
+                "title": "Hồ Chí Minh – Wikipedia tiếng Việt",
+                "url": "https://vi.wikipedia.org/wiki/H%E1%BB%93_Ch%C3%AD_Minh",
+                "source": "vi.wikipedia.org",
+                "summary": "Sài Gòn \"Sài Gòn (thành phố)\") – Gia Định \"Gia Định (tỉnh)\") được đổi tên thành Thành phố Hồ Chí Minh để tôn vinh ông cũng như sự kiện này. Ngoài hoạt động chính trị, Hồ Chí Minh cũng là nhà văn, nhà thơ và nhà báo với nhiều tác phẩm viết bằng tiếng Việt, tiếng Hán và tiếng Pháp. [...] Để diệt \"giặc đói\", ngoài việc kêu gọi tăng gia sản xuất, ông đề nghị đồng bào \"cứ 10 ngày nhịn ăn 1 bữa, mỗi tháng nhịn 3 bữa\" để đem số gạo tiết kiệm được cứu dn nghèo. Bản thn Hồ Chí Minh cũng gương mẫu thực hiện việc nhịn ăn cứu đói này.\n\nĐể đối phó với giặc ngoại xm, Hồ Chí Minh thi hành một chính sách đối ngoại mềm dẻo và nhẫn nhịn. Ông nói:\n\n|  |  |  |\n --- \n| “ | Chính sách của ta hiện nay là chính sách Cu Tiễn, nhưng nhẫn nhục không phải là khuất phục. | ” |\n| — Hồ Chí Minh | [...] , sau khi trở thành Chủ tịch nước Việt Nam Dn chủ Cộng hòa, Hồ Chí Minh và Tăng Tuyết Minh đã thử tìm nhau thông qua tổ chức Đảng Cộng sản Trung Quốc và cơ quan ngoại giao Việt Nam tại Trung Quốc nhưng không thành công. Một số Ủy viên Bộ Chính trị Đảng Lao động Việt Nam, đặc biệt là Lê Duẩn phản đối việc này vì Hồ Chí Minh được nhn dn xem là cha già dn tộc, việc đoàn tụ với Tăng Tuyết Minh sẽ làm ảnh hưởng đến hình ảnh của Hồ Chí Minh cũng như sự nghiệp kháng chiến chống Mỹ cứu nước.",
+                "score": 0.6971968
+              },
+              {
+                "title": "Ho Chi Minh City | Location, History, Map, & Facts | Britannica",
+                "url": "https://www.britannica.com/place/Ho-Chi-Minh-City",
+                "source": "britannica.com",
+                "summary": "Before it was named Ho Chi Minh City, the city was known as Saigon. It served as the capital of the French protectorate of Cochinchina from 1862 to 1954 and later as the capital of South Vietnam from 1954 to 1975. On April 30, 1975, North Vietnamese troops captured Saigon, and the city was renamed Ho Chi Minh City. This renaming honored Ho Chi Minh, who played a seminal role in making Vietnam independent. Today, Ho Chi Minh City retains a European look from its time as a French colony. [...] • Oct. 6, 2026, 5:08 AM ET (AP)\n\nTop Questions\n\n What is Ho Chi Minh City?\n\n  Ho Chi Minh City is the largest city in Vietnam. It sits along the Saigon River, north of the Mekong River delta, roughly 50 miles from the South China Sea. Formerly known as Saigon, it served as the capital of French Cochinchina from 1862 to 1954 and then as the capital of South Vietnam from 1954 to 1975. [...] Ho Chi Minh City, largest city in Vietnam. It was the capital of the French protectorate of Cochinchina (1862–1954) and of South Vietnam (1954–75). The city lies along the Saigon River (Song Sai Gon) to the north of the Mekong River delta, about 50 miles (80 km) from the South China Sea. The commercial centre of Cho Lon lies immediately west of Ho Chi Minh City.\n\nHo Chi Minh City, Vietnam\n\nHo Chi Minh City, Vietnam",
+                "score": 0.6272665
+              },
+              {
+                "title": "Letter from Nguyen ai Quac [Ho Chi Minh] to Secretary of State Robert Lansing (with enclosure) - DocsTeach",
+                "url": "https://docsteach.org/document/ho-chi-minh-lansing",
+                "source": "docsteach.org",
+                "summary": "## Description\n\nHo Chi Minh appealed to the United States to help the Vietnamese win independence from the French several times. His first attempt to win American support was at the Paris Peace Conference at the end of World War I, in which the Allied forces met to set the peace terms for the defeated nations. [...] The letter contains the enclosure “Revendications du Peuple Annamite” (“Claims of the Annamite People”). It’s a call for reform of the French colonial system, directed at French colonial officials. Ho Chi Minh used the term “Annamite” because “Vietnamien” (Vietnamese) with its nationalist overtones, was forbidden by the French. Annam is the name the French gave the central region of French Indochina. The petition was published in L’Humanité, a French socialist newspaper. Copies were distributed [...] Nguyen Ai Quoc (one of Ho Chi Minh’s early aliases) sent this letter as a representative of “le Groupe des Patriotes Annamites” (“the Group of Annamite Patriots”) to Secretary of State Robert Lansing. He had reason to be hopeful. President Wilson’s Fourteen Points Declaration (a statement of principles for peace to end World War I) called for self-determination for all peoples. But Wilson’s priority was European self-government. Although Ho Chi Minh received a note saying that the petition",
+                "score": 0.5935504
+              },
+              {
+                "title": "Trang chủ - Sở Dân tộc và Tôn giáo Thành phố Hồ Chí Minh",
+                "url": "https://sdttg.hochiminhcity.gov.vn/web/bdt/trang-chu",
+                "source": "sdttg.hochiminhcity.gov.vn",
+                "summary": "## Thành phố Hô Chí Minh triển khai thực hiện tiêu chuẩn “5 KHÔNG, 3 SẠCH, 3 AN” trong Bộ tiêu chí quốc gia về nông thôn mới giai đoạn 2026 - 2030\n\n  Ngày xuất bản: 11:33 05/11/2026 [...] Bác Hồ lúc sinh thời, Đảng và Nhà nước ta đã tổ chức hai Đại hội đại biểu các dn tộc thiểu số ở hai miền Bắc và Nam. Nhn dịp kỷ niệm các ngày lễ lớn của năm 2010, Ban Bí thư quyết định tổ chức...\n\n# TIẾP CÔNG DN, GIẢI QUYẾT KN, TC VÀ PCTN TIẾP CÔNG DN, GIẢI QUYẾT KN, TC VÀ PCTN\n\nXem thêm »\n\n Giới thiệu và Hướng dẫn việc gửi phản ánh, kiến nghị về văn bản quy phạm pháp luật\n\n  ## Giới thiệu và Hướng dẫn việc gửi phản ánh, kiến nghị về văn bản quy phạm pháp luật [...] Ủy ban nhn dn Thành phố Hồ Chí Minh đã ban hành Kế hoạch số 524/KH-UBND về triển khai thực hiện nội dung tiêu chí 6.4 “Tỷ lệ hộ đạt tiêu chuẩn 5 không, 3 sạch, 3 an” trong Bộ tiêu chí quốc gia về...\n Sở Dn tộc và Tôn giáo Thành phố Hồ Chí Minh triển khai Kế hoạch thực hiện Thỏa thuận toàn cầu về di cư giai đoạn 2026 - 2035\n\n  ## Sở Dn tộc và Tôn giáo Thành phố Hồ Chí Minh triển khai Kế hoạch thực hiện Thỏa thuận toàn cầu về di cư giai đoạn 2026 - 2035\n\n  Ngày xuất bản: 10:27 05/11/2026",
+                "score": 0.35064372
+              }
+            ]
+          }
+        }
+      ],
+      "ended_at": "2026-11-10T11:41:40"
+    }
+  ],
+  "updated_at": "2026-11-10T11:41:40"
+}
