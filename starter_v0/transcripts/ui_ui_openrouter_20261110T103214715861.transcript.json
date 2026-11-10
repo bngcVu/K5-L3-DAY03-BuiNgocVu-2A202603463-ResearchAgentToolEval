@@ -62,7 +62,35 @@
       ],
       "tool_events": [],
       "ended_at": "2026-11-10T10:33:10"
+    },
+    {
+      "turn_index": 4,
+      "started_at": "2026-11-10T10:35:43",
+      "user": "bạn có nói được tiếng việt không?",
+      "status": "answered",
+      "assistant_text": "Có, tôi có thể nói tiếng Việt! Bạn cần giúp gì hôm nay?",
+      "rounds": [
+        {
+          "round": 1,
+          "assistant_text": "Có, tôi có thể nói tiếng Việt! Bạn cần giúp gì hôm nay?",
+          "tool_calls": [],
+          "tool_results": []
+        }
+      ],
+      "tool_events": [],
+      "ended_at": "2026-11-10T10:35:44"
+    },
+    {
+      "turn_index": 5,
+      "started_at": "2026-11-10T10:50:50",
+      "user": "thời tiết hà nội hôm qua như nào",
+      "status": "provider_error",
+      "assistant_text": null,
+      "rounds": [],
+      "tool_events": [],
+      "error": "UnicodeEncodeError: 'charmap' codec can't encode character '\\U0001f527' in position 0: character maps to <undefined>",
+      "ended_at": "2026-11-10T10:50:52"
     }
   ],
-  "updated_at": "2026-11-10T10:33:10"
+  "updated_at": "2026-11-10T10:50:52"
 }
