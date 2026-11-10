@@ -1,0 +1,247 @@
+{
+  "transcript_id": "v2_ui_openrouter_20261110T124442953317",
+  "version": "v2",
+  "artifact_version": "v2+pc3e508553a00+t010a41c1b7a9",
+  "prompt_hash": "c3e508553a00f02d61ba4921bae6982164bb61752fd7d98c3b8f1a45eab9ec0d",
+  "tools_hash": "010a41c1b7a9420786641f38690a7294cc022a9451f096d0cd5e66c2f9d25668",
+  "provider": "openrouter",
+  "model": "openai/gpt-4o-mini",
+  "system_prompt": "D:\\VIN_AI_ThucChien\\K5-L3-DAY03-BuiNgocVu-2A202603463-ResearchAgentToolEval\\starter_v0\\artifacts\\versions\\v2\\system_prompt.md",
+  "tools": "D:\\VIN_AI_ThucChien\\K5-L3-DAY03-BuiNgocVu-2A202603463-ResearchAgentToolEval\\starter_v0\\artifacts\\versions\\v2\\tools.yaml",
+  "history_window": 5,
+  "max_tool_rounds": 4,
+  "created_at": "2026-11-10T12:44:38",
+  "turns": [
+    {
+      "turn_index": 1,
+      "started_at": "2026-11-10T12:44:38",
+      "user": "tin tức hôm nay",
+      "status": "answered",
+      "assistant_text": "Hiện tại, tôi không thể truy cập tin tức hôm nay do lỗi từ nguồn dữ liệu. Bạn có muốn thử lại sau hoặc tìm kiếm một chủ đề cụ thể nào khác không?",
+      "rounds": [
+        {
+          "round": 1,
+          "assistant_text": null,
+          "tool_calls": [
+            {
+              "name": "lookup",
+              "args": {
+                "query": "",
+                "topic": "news",
+                "timeframe": "day"
+              }
+            }
+          ],
+          "tool_results": [
+            {
+              "tool": "lookup",
+              "args": {
+                "query": "",
+                "topic": "news",
+                "timeframe": "day"
+              },
+              "result": {
+                "tool": "web_search",
+                "error": "HTTPError",
+                "message": "400 Client Error: Bad Request for url: https://api.tavily.com/search"
+              }
+            }
+          ]
+        },
+        {
+          "round": 2,
+          "assistant_text": "Hiện tại, tôi không thể truy cập tin tức hôm nay do lỗi từ nguồn dữ liệu. Bạn có muốn thử lại sau hoặc tìm kiếm một chủ đề cụ thể nào khác không?",
+          "tool_calls": [],
+          "tool_results": []
+        }
+      ],
+      "tool_events": [
+        {
+          "tool": "lookup",
+          "args": {
+            "query": "",
+            "topic": "news",
+            "timeframe": "day"
+          },
+          "result": {
+            "tool": "web_search",
+            "error": "HTTPError",
+            "message": "400 Client Error: Bad Request for url: https://api.tavily.com/search"
+          }
+        }
+      ],
+      "ended_at": "2026-11-10T12:44:42"
+    },
+    {
+      "turn_index": 2,
+      "started_at": "2026-11-10T12:45:01",
+      "user": "tôi có thể hỏi bạn những gì?",
+      "status": "answered",
+      "assistant_text": "Bạn có thể hỏi tôi về việc tìm kiếm tin tức, bài viết trên mạng, hoặc các bài đăng trên X/Twitter. Tôi cũng có thể giúp bạn tóm tắt nội dung từ một URL cụ thể. Nếu bạn cần thông tin gì, hãy cho tôi biết!",
+      "rounds": [
+        {
+          "round": 1,
+          "assistant_text": "Bạn có thể hỏi tôi về việc tìm kiếm tin tức, bài viết trên mạng, hoặc các bài đăng trên X/Twitter. Tôi cũng có thể giúp bạn tóm tắt nội dung từ một URL cụ thể. Nếu bạn cần thông tin gì, hãy cho tôi biết!",
+          "tool_calls": [],
+          "tool_results": []
+        }
+      ],
+      "tool_events": [],
+      "ended_at": "2026-11-10T12:45:03"
+    },
+    {
+      "turn_index": 3,
+      "started_at": "2026-11-10T12:45:15",
+      "user": "tìm kiếm tin tức ",
+      "status": "answered",
+      "assistant_text": "Bạn có thể cho tôi biết chủ đề cụ thể mà bạn muốn tìm kiếm tin tức không?",
+      "rounds": [
+        {
+          "round": 1,
+          "assistant_text": "Bạn có thể cho tôi biết chủ đề cụ thể mà bạn muốn tìm kiếm tin tức không?",
+          "tool_calls": [],
+          "tool_results": []
+        }
+      ],
+      "tool_events": [],
+      "ended_at": "2026-11-10T12:45:17"
+    },
+    {
+      "turn_index": 4,
+      "started_at": "2026-11-10T12:45:20",
+      "user": "tin học",
+      "status": "answered",
+      "assistant_text": "Dưới đây là một số tin tức về công nghệ hôm nay:\n\n1. **[Khoa học công nghệ Việt Nam bứt tốc](https://daidoanket.vn/khoa-hoc-cong-nghe-viet-nam-but-toc.html)** - Thủ tướng Chính phủ đã xác định 20 bài toán lớn và giao 10 bộ, ngành, cơ quan chủ trì. Công nghiệp công nghệ số duy trì đà tăng trưởng, với doanh thu toàn ngành dự kiến đạt 215 tỷ USD vào năm 2025. (Nguồn: daidoanket.vn)\n\n2. **[Nâng cao năng lực công nghệ và đổi mới sáng tạo cho doanh nghiệp chế biến, chế tạo khu vực phía Nam](https://baovinhlong.com.vn/khoa-hoc-cong-nghe/202611/nang-cao-nang-luc-cong-nghe-va-doi-moi-sang-tao-cho-doanh-nghiep-che-bien-che-tao-khu-vuc-phia-nam-d5a7c34)** - Tỉnh xác định khoa học, công nghệ và đổi mới sáng tạo phải gắn chặt với yêu cầu phát triển kinh tế - xã hội. (Nguồn: baovinhlong.com.vn)\n\n3. **[Ngoại giao khoa học công nghệ mở rộng kết nối chuyên gia quốc tế](https://doanhnhan.congly.vn/ngoai-giao-khoa-hoc-cong-nghe-mo-rong-ket-noi-chuyen-gia-quoc-te.html)** - Bộ Khoa học và Công nghệ đang triển khai các biện pháp để tăng cường khả năng tiếp cận và huy động nguồn lực chuyên gia quốc tế. (Nguồn: doanhnhan.congly.vn)\n\n4. **[Ứng dụng công nghệ số, nâng tầm hiệu quả hoạt động của cơ quan dân cử](https://baothanhhoa.vn/ung-dung-cong-nghe-so-nang-tam-hieu-qua-hoat-dong-cua-co-quan-dan-cu-308536.htm)** - Chuyển đổi số không chỉ là việc đưa công nghệ vào xử lý công việc mà còn là đổi mới tư duy và phương thức lãnh đạo. (Nguồn: baothanhhoa.vn)\n\n5. **[RISC - V và chip A.I, cơ hội làm chủ công nghệ](https://hanoionline.vn/risc-v-va-chip-ai-co-hoi-lam-chu-cong-nghe-cong-nghe-va-doi-song-10-11-2026-246261109120139799.htm)** - Đổi mới sáng tạo không chỉ được đo bằng công nghệ mới mà còn bằng khả năng đưa công nghệ vào thực tiễn. (Nguồn: hanoionline.vn)\n\nNếu bạn cần thêm thông tin hoặc muốn tìm kiếm một chủ đề khác, hãy cho tôi biết!",
+      "rounds": [
+        {
+          "round": 1,
+          "assistant_text": null,
+          "tool_calls": [
+            {
+              "name": "lookup",
+              "args": {
+                "query": "công nghệ",
+                "topic": "news",
+                "timeframe": "day"
+              }
+            }
+          ],
+          "tool_results": [
+            {
+              "tool": "lookup",
+              "args": {
+                "query": "công nghệ",
+                "topic": "news",
+                "timeframe": "day"
+              },
+              "result": {
+                "tool": "web_search",
+                "query": "công nghệ",
+                "topic": "news",
+                "timeframe": "day",
+                "items": [
+                  {
+                    "title": "Khoa học công nghệ Việt Nam bứt tốc",
+                    "url": "https://daidoanket.vn/khoa-hoc-cong-nghe-viet-nam-but-toc.html",
+                    "source": "daidoanket.vn",
+                    "summary": "Cùng với đó, Thủ tướng Chính phủ đã xác định 20 bài toán lớn, giao 10 bộ, ngành, cơ quan chủ trì; đến ngày 3/11/2026, có 18 nhiệm vụ công nghệ chiến lược được phê duyệt.\n\nNhững kết quả sau gần hai năm triển khai Nghị quyết 57 cho thấy khoa học, công nghệ, đổi mới sáng tạo và chuyển đổi số đang từng bước chuyển từ định hướng chính sách sang các sản phẩm, ứng dụng cụ thể. [...] Công nghiệp công nghệ số cũng duy trì đà tăng trưởng. Năm 2025, doanh thu toàn ngành đạt 215 tỷ USD, kim ngạch xuất khẩu đạt 172 tỷ USD. Trong 10 tháng đầu năm 2026, doanh thu ước đạt 254,6 tỷ USD, xuất khẩu đạt 212 tỷ USD, tăng lần lượt 53% và 46,2% so với cùng kỳ năm trước. [...] Cùng với đó, công tác hoàn thiện thể chế được đẩy mạnh. Bộ Khoa học và Công nghệ đã chủ trì xy dựng, trình cấp có thẩm quyền ban hành hoặc ban hành theo thẩm quyền 195 văn bản quy phạm pháp luật. Quốc hội cũng thông qua 11 luật do Bộ Khoa học và Công nghệ được giao chủ trì soạn thảo.\n\nCác cơ chế, chính sách mới tập trung tháo gỡ điểm nghẽn, thúc đẩy nghiên cứu, phát triển và ứng dụng công nghệ, đồng thời tạo điều kiện để doanh nghiệp tham gia su hơn vào hoạt động đổi mới sáng tạo.",
+                    "score": 0.31852806
+                  },
+                  {
+                    "title": "Nâng cao năng lực công nghệ và đổi mới sáng tạo cho doanh nghiệp chế biến, chế tạo khu vực phía Nam - Báo điện tử Báo và phát thanh, truyền hình Vĩnh Long",
+                    "url": "https://baovinhlong.com.vn/khoa-hoc-cong-nghe/202611/nang-cao-nang-luc-cong-nghe-va-doi-moi-sang-tao-cho-doanh-nghiep-che-bien-che-tao-khu-vuc-phia-nam-d5a7c34",
+                    "source": "baovinhlong.com.vn",
+                    "summary": "Quán triệt tinh thần Nghị quyết số 57-NQ/TW của Bộ Chính trị, tỉnh xác định khoa học, công nghệ, đổi mới sáng tạo và chuyển đổi số phải gắn chặt với yêu cầu phát triển kinh tế - xã hội và nhu cầu thực tiễn của doanh nghiệp. Hoạt động quản lý nhà nước về khoa học và công nghệ không chỉ dừng ở việc triển khai nhiệm vụ, chính sách, mà cần chú trọng kết nối cung - cầu công nghệ, hỗ trợ doanh nghiệp xác định đúng vấn đề cần giải quyết và tiếp cận được giải pháp phù hợp. [...] Một trong những điểm nhấn của hội thảo là các tham luận gắn với những bài toán cụ thể của doanh nghiệp và lợi thế ngành hàng của tỉnh. Trong đó, đề xuất giải pháp công nghệ nng cao chất lượng sầu riêng xuất khẩu; nghiên cứu sử dụng vỏ dừa làm nhiên liệu sinh khối cho lò hơi công nghiệp, hướng đến kinh tế tuần hoàn trong ngành chế biến dừa; đề xuất quy trình, công nghệ chế biến khoai lang nhằm nng cao giá trị gia tăng; ứng dụng thiết bị, robot, công nghệ số và truy xuất nguồn gốc trong hoạt động [...] sáng tạo trước ngày 20/12/2026. Đy là bước đi thiết thực, tạo cơ sở để đánh giá đúng thực trạng, nhận diện những hạn chế và nhu cầu công nghệ của doanh nghiệp, từ đó đề xuất các giải pháp hỗ trợ và xy dựng lộ trình đổi mới công nghệ phù hợp với điều kiện thực tiễn của địa phương.",
+                    "score": 0.30194885
+                  },
+                  {
+                    "title": "Ngoại giao khoa học công nghệ mở rộng kết nối chuyên gia quốc tế",
+                    "url": "https://doanhnhan.congly.vn/ngoai-giao-khoa-hoc-cong-nghe-mo-rong-ket-noi-chuyen-gia-quoc-te.html",
+                    "source": "doanhnhan.congly.vn",
+                    "summary": "Đy là những trọng tm Bộ Khoa học và Công nghệ đang triển khai nhằm tăng cường khả năng tiếp cận, huy động và phát huy nguồn lực chuyên gia quốc tế phục vụ các nhiệm vụ phát triển của đất nước.\n\nKết nối chuyên gia với những bài toán lớn của đất nước [...] Trao đổi với báo chí về vấn đề này, Phó Vụ trưởng Vụ Hợp tác Quốc tế (Bộ KH&CN) Đỗ Quỳnh Hoa cho biết tinh thần này được thể hiện trong các nghị quyết như Nghị quyết 57, Nghị quyết 59 và Nghị quyết 06 vừa được ban hành. Trong đó, ngoại giao khoa học công nghệ được xác định là một trọng tm, có vai trò đột phá trong thu hút nguồn lực phục vụ phát triển khoa học công nghệ, đổi mới sáng tạo và chuyển đổi số.\n\nĐổi mới phương thức thu hút chuyên gia quốc tế [...] Cùng với việc đa dạng hóa phương thức hợp tác, xy dựng cơ sở dữ liệu và mạng lưới chuyên gia theo lĩnh vực chuyên môn cũng được chú trọng. Bộ Ngoại giao đang chủ trì xy dựng cơ sở dữ liệu mạng lưới chuyên gia tri thức trong các lĩnh vực. Bộ Khoa học và Công nghệ đã có chương trình chuyên gia tri thức trong lĩnh vực trí tuệ nhn tạo, đồng thời kết nối xy dựng, triển khai mô hình với kỳ vọng có thể nhn rộng sang các mạng lưới chuyên gia ở những lĩnh vực khác.",
+                    "score": 0.29596242
+                  },
+                  {
+                    "title": "Ứng dụng công nghệ số, nâng tầm hiệu quả hoạt động của cơ quan dân cử",
+                    "url": "https://baothanhhoa.vn/ung-dung-cong-nghe-so-nang-tam-hieu-qua-hoat-dong-cua-co-quan-dan-cu-308536.htm",
+                    "source": "baothanhhoa.vn",
+                    "summary": "Phó Bí thư Thường trực Tỉnh ủy, Chủ tịch HĐND tỉnh Nguyễn Hồng Phong truyền đạt chuyên đề.\n\nĐồng chí nhấn mạnh, chuyển đổi số không đơn thuần là việc đưa công nghệ vào xử lý công việc mà quan trọng hơn là đổi mới tư duy, phương thức lãnh đạo, quản lý, điều hành và tổ chức thực hiện nhiệm vụ. [...] Việc đẩy mạnh ứng dụng công nghệ số và AI không chỉ là đổi mới công cụ, phương tiện làm việc mà còn là đổi mới tư duy, phương thức hoạt động của HĐND, hướng tới xy dựng cơ quan dn cử hiện đại, chuyên nghiệp, hoạt động thực chất, hiệu lực, hiệu quả, ngày càng gần dn, sát dn và vì lợi ích của Nhn dn.\n\nPhó Bí thư Thường trực Tỉnh ủy, Chủ tịch HĐND tỉnh Nguyễn Hồng Phong truyền đạt chuyên đề. [...] ứng dụng công nghệ số và trí tuệ nhn tạo nhằm nng cao chất lượng, hiệu quả hoạt động của HĐND các cấp, nhất là HĐND cấp xã trong bối cảnh triển khai mô hình chính quyền địa phương 2 cấp.",
+                    "score": 0.25225553
+                  },
+                  {
+                    "title": "RISC - V và chip A.I, cơ hội làm chủ công nghệ | Công nghệ và đời sống | 10/11/2026",
+                    "url": "https://hanoionline.vn/risc-v-va-chip-ai-co-hoi-lam-chu-cong-nghe-cong-nghe-va-doi-song-10-11-2026-246261109120139799.htm",
+                    "source": "hanoionline.vn",
+                    "summary": "Đổi mới sáng tạo không chỉ được đo bằng những công nghệ mới mà còn bằng khả năng đưa công nghệ vào thực tiễn, giải quyết các bài toán của doanh nghiệp và nng cao chất lượng cuộc sống.\n\nTừ khoá\n\nCông nghệ và đời sống\n\n## Công nghệ đời sống\n\nĐưa tiện ích số đảm bảo an ninh đến từng người dn | Công nghệ và đời sống | 03/11/2026\n\n### Đưa tiện ích số đảm bảo an ninh đến từng người dn | Công nghệ và đời sống | 03/11/2026\n\nChương trình chuyên đề [...] Từ các trung tm dữ liệu đến những thiết bị nhỏ ở biên mạng, yêu cầu về hiệu năng, tốc độ xử lý và tiết kiệm điện, đang thúc đẩy một hướng phát triển mới của công nghệ bán dẫn: Chip AI tiết kiệm năng lượng.\n\nĐang tải thêm tin...\n\n Xem thêm [...] RISC - V và chip A.I, cơ hội làm chủ công nghệ | Công nghệ và đời sống | 10/11/2026\n\n## Tin liên quan\n\nĐưa tiện ích số đảm bảo an ninh đến từng người dn | Công nghệ và đời sống | 03/11/2026 \n\n### Đưa tiện ích số đảm bảo an ninh đến từng người dn | Công nghệ và đời sống | 03/11/2026\n\nĐể giúp người dn tiếp cận và sử dụng thành thạo các nền tảng số, xã Sơn Đồng vừa tổ chức Hội nghị ra mắt mô hình “Điểm hỗ trợ xã hội số”.\n\nTừ nền tảng số đến giá trị thực chất | Công nghệ và đời sống | 27/10/2026",
+                    "score": 0.22066174
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "round": 2,
+          "assistant_text": "Dưới đây là một số tin tức về công nghệ hôm nay:\n\n1. **[Khoa học công nghệ Việt Nam bứt tốc](https://daidoanket.vn/khoa-hoc-cong-nghe-viet-nam-but-toc.html)** - Thủ tướng Chính phủ đã xác định 20 bài toán lớn và giao 10 bộ, ngành, cơ quan chủ trì. Công nghiệp công nghệ số duy trì đà tăng trưởng, với doanh thu toàn ngành dự kiến đạt 215 tỷ USD vào năm 2025. (Nguồn: daidoanket.vn)\n\n2. **[Nâng cao năng lực công nghệ và đổi mới sáng tạo cho doanh nghiệp chế biến, chế tạo khu vực phía Nam](https://baovinhlong.com.vn/khoa-hoc-cong-nghe/202611/nang-cao-nang-luc-cong-nghe-va-doi-moi-sang-tao-cho-doanh-nghiep-che-bien-che-tao-khu-vuc-phia-nam-d5a7c34)** - Tỉnh xác định khoa học, công nghệ và đổi mới sáng tạo phải gắn chặt với yêu cầu phát triển kinh tế - xã hội. (Nguồn: baovinhlong.com.vn)\n\n3. **[Ngoại giao khoa học công nghệ mở rộng kết nối chuyên gia quốc tế](https://doanhnhan.congly.vn/ngoai-giao-khoa-hoc-cong-nghe-mo-rong-ket-noi-chuyen-gia-quoc-te.html)** - Bộ Khoa học và Công nghệ đang triển khai các biện pháp để tăng cường khả năng tiếp cận và huy động nguồn lực chuyên gia quốc tế. (Nguồn: doanhnhan.congly.vn)\n\n4. **[Ứng dụng công nghệ số, nâng tầm hiệu quả hoạt động của cơ quan dân cử](https://baothanhhoa.vn/ung-dung-cong-nghe-so-nang-tam-hieu-qua-hoat-dong-cua-co-quan-dan-cu-308536.htm)** - Chuyển đổi số không chỉ là việc đưa công nghệ vào xử lý công việc mà còn là đổi mới tư duy và phương thức lãnh đạo. (Nguồn: baothanhhoa.vn)\n\n5. **[RISC - V và chip A.I, cơ hội làm chủ công nghệ](https://hanoionline.vn/risc-v-va-chip-ai-co-hoi-lam-chu-cong-nghe-cong-nghe-va-doi-song-10-11-2026-246261109120139799.htm)** - Đổi mới sáng tạo không chỉ được đo bằng công nghệ mới mà còn bằng khả năng đưa công nghệ vào thực tiễn. (Nguồn: hanoionline.vn)\n\nNếu bạn cần thêm thông tin hoặc muốn tìm kiếm một chủ đề khác, hãy cho tôi biết!",
+          "tool_calls": [],
+          "tool_results": []
+        }
+      ],
+      "tool_events": [
+        {
+          "tool": "lookup",
+          "args": {
+            "query": "công nghệ",
+            "topic": "news",
+            "timeframe": "day"
+          },
+          "result": {
+            "tool": "web_search",
+            "query": "công nghệ",
+            "topic": "news",
+            "timeframe": "day",
+            "items": [
+              {
+                "title": "Khoa học công nghệ Việt Nam bứt tốc",
+                "url": "https://daidoanket.vn/khoa-hoc-cong-nghe-viet-nam-but-toc.html",
+                "source": "daidoanket.vn",
+                "summary": "Cùng với đó, Thủ tướng Chính phủ đã xác định 20 bài toán lớn, giao 10 bộ, ngành, cơ quan chủ trì; đến ngày 3/11/2026, có 18 nhiệm vụ công nghệ chiến lược được phê duyệt.\n\nNhững kết quả sau gần hai năm triển khai Nghị quyết 57 cho thấy khoa học, công nghệ, đổi mới sáng tạo và chuyển đổi số đang từng bước chuyển từ định hướng chính sách sang các sản phẩm, ứng dụng cụ thể. [...] Công nghiệp công nghệ số cũng duy trì đà tăng trưởng. Năm 2025, doanh thu toàn ngành đạt 215 tỷ USD, kim ngạch xuất khẩu đạt 172 tỷ USD. Trong 10 tháng đầu năm 2026, doanh thu ước đạt 254,6 tỷ USD, xuất khẩu đạt 212 tỷ USD, tăng lần lượt 53% và 46,2% so với cùng kỳ năm trước. [...] Cùng với đó, công tác hoàn thiện thể chế được đẩy mạnh. Bộ Khoa học và Công nghệ đã chủ trì xy dựng, trình cấp có thẩm quyền ban hành hoặc ban hành theo thẩm quyền 195 văn bản quy phạm pháp luật. Quốc hội cũng thông qua 11 luật do Bộ Khoa học và Công nghệ được giao chủ trì soạn thảo.\n\nCác cơ chế, chính sách mới tập trung tháo gỡ điểm nghẽn, thúc đẩy nghiên cứu, phát triển và ứng dụng công nghệ, đồng thời tạo điều kiện để doanh nghiệp tham gia su hơn vào hoạt động đổi mới sáng tạo.",
+                "score": 0.31852806
+              },
+              {
+                "title": "Nâng cao năng lực công nghệ và đổi mới sáng tạo cho doanh nghiệp chế biến, chế tạo khu vực phía Nam - Báo điện tử Báo và phát thanh, truyền hình Vĩnh Long",
+                "url": "https://baovinhlong.com.vn/khoa-hoc-cong-nghe/202611/nang-cao-nang-luc-cong-nghe-va-doi-moi-sang-tao-cho-doanh-nghiep-che-bien-che-tao-khu-vuc-phia-nam-d5a7c34",
+                "source": "baovinhlong.com.vn",
+                "summary": "Quán triệt tinh thần Nghị quyết số 57-NQ/TW của Bộ Chính trị, tỉnh xác định khoa học, công nghệ, đổi mới sáng tạo và chuyển đổi số phải gắn chặt với yêu cầu phát triển kinh tế - xã hội và nhu cầu thực tiễn của doanh nghiệp. Hoạt động quản lý nhà nước về khoa học và công nghệ không chỉ dừng ở việc triển khai nhiệm vụ, chính sách, mà cần chú trọng kết nối cung - cầu công nghệ, hỗ trợ doanh nghiệp xác định đúng vấn đề cần giải quyết và tiếp cận được giải pháp phù hợp. [...] Một trong những điểm nhấn của hội thảo là các tham luận gắn với những bài toán cụ thể của doanh nghiệp và lợi thế ngành hàng của tỉnh. Trong đó, đề xuất giải pháp công nghệ nng cao chất lượng sầu riêng xuất khẩu; nghiên cứu sử dụng vỏ dừa làm nhiên liệu sinh khối cho lò hơi công nghiệp, hướng đến kinh tế tuần hoàn trong ngành chế biến dừa; đề xuất quy trình, công nghệ chế biến khoai lang nhằm nng cao giá trị gia tăng; ứng dụng thiết bị, robot, công nghệ số và truy xuất nguồn gốc trong hoạt động [...] sáng tạo trước ngày 20/12/2026. Đy là bước đi thiết thực, tạo cơ sở để đánh giá đúng thực trạng, nhận diện những hạn chế và nhu cầu công nghệ của doanh nghiệp, từ đó đề xuất các giải pháp hỗ trợ và xy dựng lộ trình đổi mới công nghệ phù hợp với điều kiện thực tiễn của địa phương.",
+                "score": 0.30194885
+              },
+              {
+                "title": "Ngoại giao khoa học công nghệ mở rộng kết nối chuyên gia quốc tế",
+                "url": "https://doanhnhan.congly.vn/ngoai-giao-khoa-hoc-cong-nghe-mo-rong-ket-noi-chuyen-gia-quoc-te.html",
+                "source": "doanhnhan.congly.vn",
+                "summary": "Đy là những trọng tm Bộ Khoa học và Công nghệ đang triển khai nhằm tăng cường khả năng tiếp cận, huy động và phát huy nguồn lực chuyên gia quốc tế phục vụ các nhiệm vụ phát triển của đất nước.\n\nKết nối chuyên gia với những bài toán lớn của đất nước [...] Trao đổi với báo chí về vấn đề này, Phó Vụ trưởng Vụ Hợp tác Quốc tế (Bộ KH&CN) Đỗ Quỳnh Hoa cho biết tinh thần này được thể hiện trong các nghị quyết như Nghị quyết 57, Nghị quyết 59 và Nghị quyết 06 vừa được ban hành. Trong đó, ngoại giao khoa học công nghệ được xác định là một trọng tm, có vai trò đột phá trong thu hút nguồn lực phục vụ phát triển khoa học công nghệ, đổi mới sáng tạo và chuyển đổi số.\n\nĐổi mới phương thức thu hút chuyên gia quốc tế [...] Cùng với việc đa dạng hóa phương thức hợp tác, xy dựng cơ sở dữ liệu và mạng lưới chuyên gia theo lĩnh vực chuyên môn cũng được chú trọng. Bộ Ngoại giao đang chủ trì xy dựng cơ sở dữ liệu mạng lưới chuyên gia tri thức trong các lĩnh vực. Bộ Khoa học và Công nghệ đã có chương trình chuyên gia tri thức trong lĩnh vực trí tuệ nhn tạo, đồng thời kết nối xy dựng, triển khai mô hình với kỳ vọng có thể nhn rộng sang các mạng lưới chuyên gia ở những lĩnh vực khác.",
+                "score": 0.29596242
+              },
+              {
+                "title": "Ứng dụng công nghệ số, nâng tầm hiệu quả hoạt động của cơ quan dân cử",
+                "url": "https://baothanhhoa.vn/ung-dung-cong-nghe-so-nang-tam-hieu-qua-hoat-dong-cua-co-quan-dan-cu-308536.htm",
+                "source": "baothanhhoa.vn",
+                "summary": "Phó Bí thư Thường trực Tỉnh ủy, Chủ tịch HĐND tỉnh Nguyễn Hồng Phong truyền đạt chuyên đề.\n\nĐồng chí nhấn mạnh, chuyển đổi số không đơn thuần là việc đưa công nghệ vào xử lý công việc mà quan trọng hơn là đổi mới tư duy, phương thức lãnh đạo, quản lý, điều hành và tổ chức thực hiện nhiệm vụ. [...] Việc đẩy mạnh ứng dụng công nghệ số và AI không chỉ là đổi mới công cụ, phương tiện làm việc mà còn là đổi mới tư duy, phương thức hoạt động của HĐND, hướng tới xy dựng cơ quan dn cử hiện đại, chuyên nghiệp, hoạt động thực chất, hiệu lực, hiệu quả, ngày càng gần dn, sát dn và vì lợi ích của Nhn dn.\n\nPhó Bí thư Thường trực Tỉnh ủy, Chủ tịch HĐND tỉnh Nguyễn Hồng Phong truyền đạt chuyên đề. [...] ứng dụng công nghệ số và trí tuệ nhn tạo nhằm nng cao chất lượng, hiệu quả hoạt động của HĐND các cấp, nhất là HĐND cấp xã trong bối cảnh triển khai mô hình chính quyền địa phương 2 cấp.",
+                "score": 0.25225553
+              },
+              {
+                "title": "RISC - V và chip A.I, cơ hội làm chủ công nghệ | Công nghệ và đời sống | 10/11/2026",
+                "url": "https://hanoionline.vn/risc-v-va-chip-ai-co-hoi-lam-chu-cong-nghe-cong-nghe-va-doi-song-10-11-2026-246261109120139799.htm",
+                "source": "hanoionline.vn",
+                "summary": "Đổi mới sáng tạo không chỉ được đo bằng những công nghệ mới mà còn bằng khả năng đưa công nghệ vào thực tiễn, giải quyết các bài toán của doanh nghiệp và nng cao chất lượng cuộc sống.\n\nTừ khoá\n\nCông nghệ và đời sống\n\n## Công nghệ đời sống\n\nĐưa tiện ích số đảm bảo an ninh đến từng người dn | Công nghệ và đời sống | 03/11/2026\n\n### Đưa tiện ích số đảm bảo an ninh đến từng người dn | Công nghệ và đời sống | 03/11/2026\n\nChương trình chuyên đề [...] Từ các trung tm dữ liệu đến những thiết bị nhỏ ở biên mạng, yêu cầu về hiệu năng, tốc độ xử lý và tiết kiệm điện, đang thúc đẩy một hướng phát triển mới của công nghệ bán dẫn: Chip AI tiết kiệm năng lượng.\n\nĐang tải thêm tin...\n\n Xem thêm [...] RISC - V và chip A.I, cơ hội làm chủ công nghệ | Công nghệ và đời sống | 10/11/2026\n\n## Tin liên quan\n\nĐưa tiện ích số đảm bảo an ninh đến từng người dn | Công nghệ và đời sống | 03/11/2026 \n\n### Đưa tiện ích số đảm bảo an ninh đến từng người dn | Công nghệ và đời sống | 03/11/2026\n\nĐể giúp người dn tiếp cận và sử dụng thành thạo các nền tảng số, xã Sơn Đồng vừa tổ chức Hội nghị ra mắt mô hình “Điểm hỗ trợ xã hội số”.\n\nTừ nền tảng số đến giá trị thực chất | Công nghệ và đời sống | 27/10/2026",
+                "score": 0.22066174
+              }
+            ]
+          }
+        }
+      ],
+      "ended_at": "2026-11-10T12:45:41"
+    }
+  ],
+  "updated_at": "2026-11-10T12:45:41"
+}

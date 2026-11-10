@@ -1,0 +1,156 @@
+{
+  "transcript_id": "v0_ui_openrouter_20261110T144613966186",
+  "version": "v0",
+  "artifact_version": "v0+peb1c8179815b+t5b22a2476d41",
+  "prompt_hash": "eb1c8179815bd79d34de7d326420bb99b3072e6e8ae96464c02d4411f905fc68",
+  "tools_hash": "5b22a2476d41b989d5dc1e54f24ce7890e781909deb2f7afafb856ab53a6d7c0",
+  "provider": "openrouter",
+  "model": "openai/gpt-4o-mini",
+  "system_prompt": "D:\\VIN_AI_ThucChien\\K5-L3-DAY03-BuiNgocVu-2A202603463-ResearchAgentToolEval\\starter_v0\\artifacts\\versions\\v0\\system_prompt.md",
+  "tools": "D:\\VIN_AI_ThucChien\\K5-L3-DAY03-BuiNgocVu-2A202603463-ResearchAgentToolEval\\starter_v0\\artifacts\\versions\\v0\\tools.yaml",
+  "history_window": 5,
+  "max_tool_rounds": 4,
+  "created_at": "2026-11-10T14:46:00",
+  "turns": [
+    {
+      "turn_index": 1,
+      "started_at": "2026-11-10T14:46:00",
+      "user": "tin tức hôm nay",
+      "status": "answered",
+      "assistant_text": "Here are the latest news updates for today:\n\n1. **[Tin tức quốc tế ngày 10.11: Tổng thống Trump ra một loạt tuyên bố quan trọng](https://thanhnien.vn/tin-tuc-quoc-te-sang-1011-tong-thong-trump-ra-tuyen-bo-moi-185261110000427831.htm)** - Thủ tướng Israel Benjamin Netanyahu kêu gọi thành lập một chính phủ đoàn kết, trong khi Ngoại trưởng Pháp cáo buộc Iran đứng sau một cuộc tấn công mạng nhắm vào hệ thống tủ đông tại các siêu thị ở Pháp.\n\n2. **[Tin tức Hà Nội 24h: Xử phạt bãi trông giữ xe vượt diện tích được cấp phép](https://laodong.vn/ban-doc/tin-tuc-ha-noi-24h-xu-phat-bai-trong-giu-xe-vuot-dien-tich-duoc-cap-phep-1797722.ldo)** - Công an TP Hà Nội đã xử phạt một bãi trông giữ xe vì vi phạm diện tích được cấp phép và có nhiều tin tức đáng chú ý khác tại Hà Nội.\n\n3. **[Tin tức thế giới 10-11: Khả năng luận tội Bộ trưởng Chiến tranh Mỹ; Ông Trump cáo buộc gian lận bầu cử](https://tin.skydoor.net/news/the-gioi-tin-tuc-the-gioi-1011-kha-nang-luan-toi-bo-truong-chien-8425119)** - Ông Trump tuyên bố có thể nối lại tấn công Iran bất cứ lúc nào và có khả năng luận tội Bộ trưởng Chiến tranh Mỹ.\n\n4. **[Tin tức tai nạn giao thông mới nhất hôm nay 10/11/2026](https://baoxaydung.vn/tin-tuc-tai-nan-giao-thong-moi-nhat-hom-nay-10-11-2026-19226111007124908.htm)** - Một vụ tai nạn giao thông nghiêm trọng đã xảy ra tại TP.HCM khiến một người đàn ông tử vong.\n\n5. **[Không bảo trì máy chủ ngày 11/11/2026 - TIN TỨC - PUBG: BATTLEGROUNDS](https://pubg.com/vi/news/11384)** - PUBG: BATTLEGROUNDS sẽ không tiến hành bảo trì máy chủ vào sáng ngày 11/11 nhưng cần cập nhật Steam Client.\n\nFeel free to check the links for more details!",
+      "rounds": [
+        {
+          "round": 1,
+          "assistant_text": null,
+          "tool_calls": [
+            {
+              "name": "lookup",
+              "args": {
+                "query": "tin tức",
+                "topic": "news",
+                "timeframe": "day",
+                "max_results": 5
+              }
+            }
+          ],
+          "tool_results": [
+            {
+              "tool": "lookup",
+              "args": {
+                "query": "tin tức",
+                "topic": "news",
+                "timeframe": "day",
+                "max_results": 5
+              },
+              "result": {
+                "tool": "web_search",
+                "query": "tin tức",
+                "topic": "news",
+                "timeframe": "day",
+                "items": [
+                  {
+                    "title": "Tin tức quốc tế ngày 10.11: Tổng thống Trump ra một loạt tuyên bố quan trọng",
+                    "url": "https://thanhnien.vn/tin-tuc-quoc-te-sang-1011-tong-thong-trump-ra-tuyen-bo-moi-185261110000427831.htm",
+                    "source": "thanhnien.vn",
+                    "summary": "Thủ tướng Israel Benjamin Netanyahu ngày 9.11 tiếp tục kêu gọi thành lập một chính phủ đoàn kết, chỉ một ngày sau khi đối thủ của ông là cựu Tổng tham mưu trưởng qun đội Israel Gadi Eisenkot, được trao quyền lập chính phủ.\n\n\"Một chính phủ đoàn kết, đơn giản mà nói, là điều cần thiết\", ông Netanyahu phát biểu trong một video đăng tải trên mạng xã hội. Trong video này, ông không đề cập việc Tổng thống Isaac Herzog đã chính thức trao cho ông Eisenkot cơ hội đầu tiên để thành lập chính phủ. [...] ## Pháp cáo buộc Iran đứng sau đợt tấn công tủ lạnh siêu thị\n\nNgoại trưởng Pháp Jean-Noël Barrot ngày 9.11 cáo buộc Lực lượng Vệ binh Cách mạng Hồi giáo Iran (IRGC) đứng sau một cuộc tấn công mạng gần đy nhắm vào hệ thống tủ đông tại các siêu thị ở Pháp, đồng thời tuyên bố rằng Iran sẽ phải đối mặt với những hậu quả từ hành động này.\n\nAFP khuya 9.11 đưa tin Ngoại trưởng Pháp cam kết áp đặt các biện pháp trừng phạt Iran ở cấp độ chu u liên quan cáo buộc tấn công mạng nhắm vào tủ lạnh. [...] Trong video của mình, ông Netanyahu cảnh báo người dn Israel về cái mà ông gọi là \"mối đe dọa\" nếu đưa người Ả Rập-Israel vào chính phủ tương lai. \"Bạn không thể thành lập một chính phủ với những người ủng hộ Hamas, một chính phủ phụ thuộc vào những người ủng hộ Hamas\", ông Netanyahu tuyên bố, theo AFP.\n\nTin tức quốc tế sáng 10.11: Tổng thống Trump ra một loạt tuyên bố mới - Ảnh 4.\n\nThủ tướng Israel Benjamin Netanyahu hôm 28.10\n\nẢnh: Reuters\n\n## Nổ nhà máy thép ở Thổ Nhĩ Kỳ, 16 người chết",
+                    "score": 0.44565076
+                  },
+                  {
+                    "title": "Tin tức Hà Nội 24h: Xử phạt bãi trông giữ xe vượt diện tích được cấp phép",
+                    "url": "https://laodong.vn/ban-doc/tin-tuc-ha-noi-24h-xu-phat-bai-trong-giu-xe-vuot-dien-tich-duoc-cap-phep-1797722.ldo",
+                    "source": "laodong.vn",
+                    "summary": "Image 12\n\nXử phạt bãi trông giữ xe vượt diện tích được cấp phép; sắp mở bán 66 căn nhà ở xã hội NHS Trung Văn... là những tin tức đáng chú ý tại Hà Nội 24h qua.\n\n Công an TP Hà Nội cho hay, lực lượng chức năng đã lập biên bản vi phạm hành chính đối với Hợp tác xã Thành Công do sử dụng lòng đường vượt quá diện tích được cấp phép để trông giữ phương tiện trên đường Hoàng Đạo Thúy, phường Thanh Xuân. [...] Những tuyến phố chuẩn bị được xén hè, mở rộng lòng đường; tạm giữ 571 kg giò chả chứa hàn the... là những tin tức đáng chú ý tại Hà...\n\nImage 18: Tin tức Hà Nội 24h: Vụ thịt nhũn, bở vào trường học, đơn vị cung cấp nói do lợn bị stress\n\n## Tin tức Hà Nội 24h: Vụ thịt nhũn, bở vào trường học, đơn vị cung cấp nói do lợn bị stress\n\nĐơn vị cung cấp nói thịt nhũn do lợn bị stress; phát hiện hơn 400 cây thuốc lá nung nóng, thảo mộc nghi cần sa... là những tin tức đáng... [...] TPHCM yêu cầu các sở, ngành và địa phương phối hợp hoàn thiện hồ sơ đề án thành lập phường đối với 29 xã, trong đó 7 xã đã đạt...\n\nImage 38: Đưa quan hệ Đối tác chiến lược toàn diện Việt Nam - Nhật Bản lên tầm cao mới\n\n## Đưa quan hệ Đối tác chiến lược toàn diện Việt Nam - Nhật Bản lên tầm cao mới\n\nTheo TTXVN, chiều 9.11 (giờ địa phương), tại thủ đô Tokyo, Tổng Bí thư, Chủ tịch nước Tô Lâm đã có cuộc hội đàm với Thủ tướng Nhật Bản Takaichi...",
+                    "score": 0.4129331
+                  },
+                  {
+                    "title": "Tin tức thế giới 10-11: Khả năng luận tội Bộ trưởng Chiến tranh Mỹ; Ông Trump cáo buộc gian lận bầu cử | Sky Tin",
+                    "url": "https://tin.skydoor.net/news/the-gioi-tin-tuc-the-gioi-1011-kha-nang-luan-toi-bo-truong-chien-8425119",
+                    "source": "tin.skydoor.net",
+                    "summary": "Bỏ qua điều hướng\n\nSkydoor\n\nSky Tin - Tin tức địa phương toàn cầu 24h mới nhất!\n\nXem tin theo cách của bạn >>\n\n\n\n# Tin tức thế giới 10-11: Khả năng luận tội Bộ trưởng Chiến tranh Mỹ; Ông Trump cáo buộc gian lận bầu cử\n\nÔng Trump tuyên bố có thể nối lại tấn công Iran bất cứ lúc nào; Hôm nay đàm phán Mỹ - Nga - Ukraine tại UAE.\n\nĐọc tin gốc tại tuoitre.vn →\n\n## Tin tức Mỹ mới nhất hôm nay\n\n[](\n\n### Vụ CEO Nvidia ngoại tình: Ông Trump tin ông Jensen Huang; FBI vào cuộc điều tra [...] Xem tóm tắt nhanh\n\n## Tin tức Thế Giới mới nhất hôm nay\n\n[](\n\n### Nghị sĩ đảng Cộng hòa đề xuất luận tội Bộ trưởng Chiến tranh Mỹ Pete Hegseth về cuộc chiến Iran\n\n1 giờ trước–anninhthudo.vnanninhthudo.vn\n\nXem tóm tắt nhanh\n\n[](\n\n### Bộ trưởng Quốc phòng Mỹ đứng trước nguy cơ bị Hạ viện luận tội\n\n1 giờ trước–hanoimoi.vnhanoimoi.vn\n\nXem tóm tắt nhanh\n\n[](\n\n### Chuyên gia chỉ ra nút thắt khiến lực lượng Cổng Sắt của Mỹ khó chặn dòng vũ khí vào Iran\n\n1 giờ trước–baotintuc.vnbaotintuc.vn [...] 1 giờ trước–tuoitre.vntuoitre.vn\n\nXem tóm tắt nhanh\n\n[](\n\n### Ông Trump tin CEO Nvidia không biết người tình bị nghi là điệp viên Trung Quốc\n\n2 giờ trước–baogialai.com.vnbaogialai.com.vn\n\nXem tóm tắt nhanh\n\n[](\n\n### Vốn hoá 5 công ty công nghệ Mỹ chiếm khoảng 16% GDP toàn cầu\n\n2 giờ trước–doanhnhantrevietnam.vndoanhnhantrevietnam.vn\n\nXem tóm tắt nhanh\n\n[](\n\n### CEO Nvidia Jensen Huang nói gì khi ông Trump hỏi thẳng: “Ông có biết cô ta là gián điệp?”\n\n3 giờ trước–viettimes.vnviettimes.vn",
+                    "score": 0.38984904
+                  },
+                  {
+                    "title": "Tin tức tai nạn giao thông mới nhất hôm nay 10/11/2026",
+                    "url": "https://baoxaydung.vn/tin-tuc-tai-nan-giao-thong-moi-nhat-hom-nay-10-11-2026-19226111007124908.htm",
+                    "source": "baoxaydung.vn",
+                    "summary": "Chiều 9/11, Công an TP.HCM khám nghiệm hiện trường, điều tra nguyên nhn vụ tai nạn khi xe máy lao lên vỉa hè, tông vào cột biển báo khiến người đàn ông tử vong tại chỗ.\n\nTheo thông tin ban đầu, hơn 12h cùng ngày, ông Trịnh Mỹ Phước (58 tuổi, quê tỉnh Trà Vinh cũ) điều khiển xe máy lưu thông trên đường số 16 (phường Linh Xun), theo hướng từ đường số 17 đi đường Lê Văn Chí. Khi vừa qua khỏi Trường THPT Linh Trung, xe máy bất ngờ lao lên vỉa hè bên phải, tông vào cột biển thông báo. [...] Theo đó, vào khoảng 14h cùng ngày, một chiếc ô tô con quay đầu trên QL7, đoạn qua địa bàn xã Bảo Thành cũ, nay là xã Hợp Minh. Khi xe vừa ra giữa đường, một chiếc xe máy tay ga chở theo 3 người lao với tốc độ nhanh đã đm thẳng vào hông xe ô tô. Cú va chạm cực mạnh khiến chiếc xe máy văng lên và nằm gọn gàng trên nóc ô tô. Phần kính sau xe ô tô bị vỡ nát, hông xe bị hư hỏng nặng. [...] Theo đó, khoảng 8h30 cùng ngày, một máy cày kéo theo rơ-moóc chở máy xúc Kobe lưu thông qua cầu Tn Thành. Khi đoàn phương tiện di chuyển đến giữa cầu, nhịp cầu bất ngờ gãy và đổ xuống kênh. Sự cố xảy ra đột ngột khiến máy cày, rơ-moóc và máy xúc rơi xuống dòng kênh bên dưới. May mắn, vụ việc không gy thiệt hại về người.",
+                    "score": 0.3460776
+                  },
+                  {
+                    "title": "Không bảo trì máy chủ ngày 11/11/2026 - TIN TỨC - PUBG: BATTLEGROUNDS",
+                    "url": "https://pubg.com/vi/news/11384",
+                    "source": "pubg.com",
+                    "summary": "🔸 Vào lúc 9 giờ sáng ngày mai, các bạn hãy nhớ thoát game và cập nhật lại PUBG: BATTLEGROUNDS trên Steam Client để tránh các vấn đề có thể xảy ra. Sau đó, các bạn có thể tiếp tục trải nghiệm PUBG: BATTLEGROUNDS ngay lập tức.  \n  \nChúc các bạn vui vẻ,  \nPUBG: BATTLEGROUNDS [...] KHÔNG BẢO TRÌ ĐỊNH KỲ VÀO SÁNG NGÀY MAI 11/11 NHƯNG CẦN CẬP NHẬT STEAM CLIENT VÀO LÚC 9 GIỜ SÁNG.  \n  \nChào các bạn,  \n  \n⚠️ Sáng thứ tư tuần này, PUBG: BATTLEGROUNDS sẽ không tiến hành bảo trì máy chủ như định kỳ hàng tuần. Nhưng vẫn sẽ có một bản cập nhật nhỏ vào sáng ngày mai lúc 9 giờ sáng ngày 11/11/2026 (giờ Việt Nam). [...] Đội ngũ PUBG: BATTLEGROUNDS.\n\n TRƯỚC ĐÓ  Cập Nhật Chống Gian Lận: Ngăn chặn phát tán phần mềm & hành vi lách lệnh cấm thumbnail\n\n  PC\n\n  CONSOLE\n\n  Cập Nhật Chống Gian Lận: Ngăn chặn phát tán phần mềm & hành vi lách lệnh cấm\n  :   Hãy cùng theo dõi những tiến bộ mà chúng tôi đã đạt được trong cuộc chiến chống gian lận và bảo vệ những người chơi chn chính nhé.\n\n  TỪ NHÀ PHÁT TRIỂN\n  :   2026.11.05",
+                    "score": 0.2828375
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "round": 2,
+          "assistant_text": "Here are the latest news updates for today:\n\n1. **[Tin tức quốc tế ngày 10.11: Tổng thống Trump ra một loạt tuyên bố quan trọng](https://thanhnien.vn/tin-tuc-quoc-te-sang-1011-tong-thong-trump-ra-tuyen-bo-moi-185261110000427831.htm)** - Thủ tướng Israel Benjamin Netanyahu kêu gọi thành lập một chính phủ đoàn kết, trong khi Ngoại trưởng Pháp cáo buộc Iran đứng sau một cuộc tấn công mạng nhắm vào hệ thống tủ đông tại các siêu thị ở Pháp.\n\n2. **[Tin tức Hà Nội 24h: Xử phạt bãi trông giữ xe vượt diện tích được cấp phép](https://laodong.vn/ban-doc/tin-tuc-ha-noi-24h-xu-phat-bai-trong-giu-xe-vuot-dien-tich-duoc-cap-phep-1797722.ldo)** - Công an TP Hà Nội đã xử phạt một bãi trông giữ xe vì vi phạm diện tích được cấp phép và có nhiều tin tức đáng chú ý khác tại Hà Nội.\n\n3. **[Tin tức thế giới 10-11: Khả năng luận tội Bộ trưởng Chiến tranh Mỹ; Ông Trump cáo buộc gian lận bầu cử](https://tin.skydoor.net/news/the-gioi-tin-tuc-the-gioi-1011-kha-nang-luan-toi-bo-truong-chien-8425119)** - Ông Trump tuyên bố có thể nối lại tấn công Iran bất cứ lúc nào và có khả năng luận tội Bộ trưởng Chiến tranh Mỹ.\n\n4. **[Tin tức tai nạn giao thông mới nhất hôm nay 10/11/2026](https://baoxaydung.vn/tin-tuc-tai-nan-giao-thong-moi-nhat-hom-nay-10-11-2026-19226111007124908.htm)** - Một vụ tai nạn giao thông nghiêm trọng đã xảy ra tại TP.HCM khiến một người đàn ông tử vong.\n\n5. **[Không bảo trì máy chủ ngày 11/11/2026 - TIN TỨC - PUBG: BATTLEGROUNDS](https://pubg.com/vi/news/11384)** - PUBG: BATTLEGROUNDS sẽ không tiến hành bảo trì máy chủ vào sáng ngày 11/11 nhưng cần cập nhật Steam Client.\n\nFeel free to check the links for more details!",
+          "tool_calls": [],
+          "tool_results": []
+        }
+      ],
+      "tool_events": [
+        {
+          "tool": "lookup",
+          "args": {
+            "query": "tin tức",
+            "topic": "news",
+            "timeframe": "day",
+            "max_results": 5
+          },
+          "result": {
+            "tool": "web_search",
+            "query": "tin tức",
+            "topic": "news",
+            "timeframe": "day",
+            "items": [
+              {
+                "title": "Tin tức quốc tế ngày 10.11: Tổng thống Trump ra một loạt tuyên bố quan trọng",
+                "url": "https://thanhnien.vn/tin-tuc-quoc-te-sang-1011-tong-thong-trump-ra-tuyen-bo-moi-185261110000427831.htm",
+                "source": "thanhnien.vn",
+                "summary": "Thủ tướng Israel Benjamin Netanyahu ngày 9.11 tiếp tục kêu gọi thành lập một chính phủ đoàn kết, chỉ một ngày sau khi đối thủ của ông là cựu Tổng tham mưu trưởng qun đội Israel Gadi Eisenkot, được trao quyền lập chính phủ.\n\n\"Một chính phủ đoàn kết, đơn giản mà nói, là điều cần thiết\", ông Netanyahu phát biểu trong một video đăng tải trên mạng xã hội. Trong video này, ông không đề cập việc Tổng thống Isaac Herzog đã chính thức trao cho ông Eisenkot cơ hội đầu tiên để thành lập chính phủ. [...] ## Pháp cáo buộc Iran đứng sau đợt tấn công tủ lạnh siêu thị\n\nNgoại trưởng Pháp Jean-Noël Barrot ngày 9.11 cáo buộc Lực lượng Vệ binh Cách mạng Hồi giáo Iran (IRGC) đứng sau một cuộc tấn công mạng gần đy nhắm vào hệ thống tủ đông tại các siêu thị ở Pháp, đồng thời tuyên bố rằng Iran sẽ phải đối mặt với những hậu quả từ hành động này.\n\nAFP khuya 9.11 đưa tin Ngoại trưởng Pháp cam kết áp đặt các biện pháp trừng phạt Iran ở cấp độ chu u liên quan cáo buộc tấn công mạng nhắm vào tủ lạnh. [...] Trong video của mình, ông Netanyahu cảnh báo người dn Israel về cái mà ông gọi là \"mối đe dọa\" nếu đưa người Ả Rập-Israel vào chính phủ tương lai. \"Bạn không thể thành lập một chính phủ với những người ủng hộ Hamas, một chính phủ phụ thuộc vào những người ủng hộ Hamas\", ông Netanyahu tuyên bố, theo AFP.\n\nTin tức quốc tế sáng 10.11: Tổng thống Trump ra một loạt tuyên bố mới - Ảnh 4.\n\nThủ tướng Israel Benjamin Netanyahu hôm 28.10\n\nẢnh: Reuters\n\n## Nổ nhà máy thép ở Thổ Nhĩ Kỳ, 16 người chết",
+                "score": 0.44565076
+              },
+              {
+                "title": "Tin tức Hà Nội 24h: Xử phạt bãi trông giữ xe vượt diện tích được cấp phép",
+                "url": "https://laodong.vn/ban-doc/tin-tuc-ha-noi-24h-xu-phat-bai-trong-giu-xe-vuot-dien-tich-duoc-cap-phep-1797722.ldo",
+                "source": "laodong.vn",
+                "summary": "Image 12\n\nXử phạt bãi trông giữ xe vượt diện tích được cấp phép; sắp mở bán 66 căn nhà ở xã hội NHS Trung Văn... là những tin tức đáng chú ý tại Hà Nội 24h qua.\n\n Công an TP Hà Nội cho hay, lực lượng chức năng đã lập biên bản vi phạm hành chính đối với Hợp tác xã Thành Công do sử dụng lòng đường vượt quá diện tích được cấp phép để trông giữ phương tiện trên đường Hoàng Đạo Thúy, phường Thanh Xuân. [...] Những tuyến phố chuẩn bị được xén hè, mở rộng lòng đường; tạm giữ 571 kg giò chả chứa hàn the... là những tin tức đáng chú ý tại Hà...\n\nImage 18: Tin tức Hà Nội 24h: Vụ thịt nhũn, bở vào trường học, đơn vị cung cấp nói do lợn bị stress\n\n## Tin tức Hà Nội 24h: Vụ thịt nhũn, bở vào trường học, đơn vị cung cấp nói do lợn bị stress\n\nĐơn vị cung cấp nói thịt nhũn do lợn bị stress; phát hiện hơn 400 cây thuốc lá nung nóng, thảo mộc nghi cần sa... là những tin tức đáng... [...] TPHCM yêu cầu các sở, ngành và địa phương phối hợp hoàn thiện hồ sơ đề án thành lập phường đối với 29 xã, trong đó 7 xã đã đạt...\n\nImage 38: Đưa quan hệ Đối tác chiến lược toàn diện Việt Nam - Nhật Bản lên tầm cao mới\n\n## Đưa quan hệ Đối tác chiến lược toàn diện Việt Nam - Nhật Bản lên tầm cao mới\n\nTheo TTXVN, chiều 9.11 (giờ địa phương), tại thủ đô Tokyo, Tổng Bí thư, Chủ tịch nước Tô Lâm đã có cuộc hội đàm với Thủ tướng Nhật Bản Takaichi...",
+                "score": 0.4129331
+              },
+              {
+                "title": "Tin tức thế giới 10-11: Khả năng luận tội Bộ trưởng Chiến tranh Mỹ; Ông Trump cáo buộc gian lận bầu cử | Sky Tin",
+                "url": "https://tin.skydoor.net/news/the-gioi-tin-tuc-the-gioi-1011-kha-nang-luan-toi-bo-truong-chien-8425119",
+                "source": "tin.skydoor.net",
+                "summary": "Bỏ qua điều hướng\n\nSkydoor\n\nSky Tin - Tin tức địa phương toàn cầu 24h mới nhất!\n\nXem tin theo cách của bạn >>\n\n\n\n# Tin tức thế giới 10-11: Khả năng luận tội Bộ trưởng Chiến tranh Mỹ; Ông Trump cáo buộc gian lận bầu cử\n\nÔng Trump tuyên bố có thể nối lại tấn công Iran bất cứ lúc nào; Hôm nay đàm phán Mỹ - Nga - Ukraine tại UAE.\n\nĐọc tin gốc tại tuoitre.vn →\n\n## Tin tức Mỹ mới nhất hôm nay\n\n[](\n\n### Vụ CEO Nvidia ngoại tình: Ông Trump tin ông Jensen Huang; FBI vào cuộc điều tra [...] Xem tóm tắt nhanh\n\n## Tin tức Thế Giới mới nhất hôm nay\n\n[](\n\n### Nghị sĩ đảng Cộng hòa đề xuất luận tội Bộ trưởng Chiến tranh Mỹ Pete Hegseth về cuộc chiến Iran\n\n1 giờ trước–anninhthudo.vnanninhthudo.vn\n\nXem tóm tắt nhanh\n\n[](\n\n### Bộ trưởng Quốc phòng Mỹ đứng trước nguy cơ bị Hạ viện luận tội\n\n1 giờ trước–hanoimoi.vnhanoimoi.vn\n\nXem tóm tắt nhanh\n\n[](\n\n### Chuyên gia chỉ ra nút thắt khiến lực lượng Cổng Sắt của Mỹ khó chặn dòng vũ khí vào Iran\n\n1 giờ trước–baotintuc.vnbaotintuc.vn [...] 1 giờ trước–tuoitre.vntuoitre.vn\n\nXem tóm tắt nhanh\n\n[](\n\n### Ông Trump tin CEO Nvidia không biết người tình bị nghi là điệp viên Trung Quốc\n\n2 giờ trước–baogialai.com.vnbaogialai.com.vn\n\nXem tóm tắt nhanh\n\n[](\n\n### Vốn hoá 5 công ty công nghệ Mỹ chiếm khoảng 16% GDP toàn cầu\n\n2 giờ trước–doanhnhantrevietnam.vndoanhnhantrevietnam.vn\n\nXem tóm tắt nhanh\n\n[](\n\n### CEO Nvidia Jensen Huang nói gì khi ông Trump hỏi thẳng: “Ông có biết cô ta là gián điệp?”\n\n3 giờ trước–viettimes.vnviettimes.vn",
+                "score": 0.38984904
+              },
+              {
+                "title": "Tin tức tai nạn giao thông mới nhất hôm nay 10/11/2026",
+                "url": "https://baoxaydung.vn/tin-tuc-tai-nan-giao-thong-moi-nhat-hom-nay-10-11-2026-19226111007124908.htm",
+                "source": "baoxaydung.vn",
+                "summary": "Chiều 9/11, Công an TP.HCM khám nghiệm hiện trường, điều tra nguyên nhn vụ tai nạn khi xe máy lao lên vỉa hè, tông vào cột biển báo khiến người đàn ông tử vong tại chỗ.\n\nTheo thông tin ban đầu, hơn 12h cùng ngày, ông Trịnh Mỹ Phước (58 tuổi, quê tỉnh Trà Vinh cũ) điều khiển xe máy lưu thông trên đường số 16 (phường Linh Xun), theo hướng từ đường số 17 đi đường Lê Văn Chí. Khi vừa qua khỏi Trường THPT Linh Trung, xe máy bất ngờ lao lên vỉa hè bên phải, tông vào cột biển thông báo. [...] Theo đó, vào khoảng 14h cùng ngày, một chiếc ô tô con quay đầu trên QL7, đoạn qua địa bàn xã Bảo Thành cũ, nay là xã Hợp Minh. Khi xe vừa ra giữa đường, một chiếc xe máy tay ga chở theo 3 người lao với tốc độ nhanh đã đm thẳng vào hông xe ô tô. Cú va chạm cực mạnh khiến chiếc xe máy văng lên và nằm gọn gàng trên nóc ô tô. Phần kính sau xe ô tô bị vỡ nát, hông xe bị hư hỏng nặng. [...] Theo đó, khoảng 8h30 cùng ngày, một máy cày kéo theo rơ-moóc chở máy xúc Kobe lưu thông qua cầu Tn Thành. Khi đoàn phương tiện di chuyển đến giữa cầu, nhịp cầu bất ngờ gãy và đổ xuống kênh. Sự cố xảy ra đột ngột khiến máy cày, rơ-moóc và máy xúc rơi xuống dòng kênh bên dưới. May mắn, vụ việc không gy thiệt hại về người.",
+                "score": 0.3460776
+              },
+              {
+                "title": "Không bảo trì máy chủ ngày 11/11/2026 - TIN TỨC - PUBG: BATTLEGROUNDS",
+                "url": "https://pubg.com/vi/news/11384",
+                "source": "pubg.com",
+                "summary": "🔸 Vào lúc 9 giờ sáng ngày mai, các bạn hãy nhớ thoát game và cập nhật lại PUBG: BATTLEGROUNDS trên Steam Client để tránh các vấn đề có thể xảy ra. Sau đó, các bạn có thể tiếp tục trải nghiệm PUBG: BATTLEGROUNDS ngay lập tức.  \n  \nChúc các bạn vui vẻ,  \nPUBG: BATTLEGROUNDS [...] KHÔNG BẢO TRÌ ĐỊNH KỲ VÀO SÁNG NGÀY MAI 11/11 NHƯNG CẦN CẬP NHẬT STEAM CLIENT VÀO LÚC 9 GIỜ SÁNG.  \n  \nChào các bạn,  \n  \n⚠️ Sáng thứ tư tuần này, PUBG: BATTLEGROUNDS sẽ không tiến hành bảo trì máy chủ như định kỳ hàng tuần. Nhưng vẫn sẽ có một bản cập nhật nhỏ vào sáng ngày mai lúc 9 giờ sáng ngày 11/11/2026 (giờ Việt Nam). [...] Đội ngũ PUBG: BATTLEGROUNDS.\n\n TRƯỚC ĐÓ  Cập Nhật Chống Gian Lận: Ngăn chặn phát tán phần mềm & hành vi lách lệnh cấm thumbnail\n\n  PC\n\n  CONSOLE\n\n  Cập Nhật Chống Gian Lận: Ngăn chặn phát tán phần mềm & hành vi lách lệnh cấm\n  :   Hãy cùng theo dõi những tiến bộ mà chúng tôi đã đạt được trong cuộc chiến chống gian lận và bảo vệ những người chơi chn chính nhé.\n\n  TỪ NHÀ PHÁT TRIỂN\n  :   2026.11.05",
+                "score": 0.2828375
+              }
+            ]
+          }
+        }
+      ],
+      "ended_at": "2026-11-10T14:46:13"
+    }
+  ],
+  "updated_at": "2026-11-10T14:46:13"
+}

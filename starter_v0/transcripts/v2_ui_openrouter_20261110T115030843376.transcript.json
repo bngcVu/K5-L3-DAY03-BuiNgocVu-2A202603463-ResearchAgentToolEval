@@ -212,7 +212,24 @@
       ],
       "tool_events": [],
       "ended_at": "2026-11-10T11:52:21"
+    },
+    {
+      "turn_index": 6,
+      "started_at": "2026-11-10T12:44:15",
+      "user": "hello ",
+      "status": "answered",
+      "assistant_text": "Xin chào! Tôi có thể giúp gì cho bạn hôm nay?",
+      "rounds": [
+        {
+          "round": 1,
+          "assistant_text": "Xin chào! Tôi có thể giúp gì cho bạn hôm nay?",
+          "tool_calls": [],
+          "tool_results": []
+        }
+      ],
+      "tool_events": [],
+      "ended_at": "2026-11-10T12:44:16"
     }
   ],
-  "updated_at": "2026-11-10T11:52:21"
+  "updated_at": "2026-11-10T12:44:16"
 }
