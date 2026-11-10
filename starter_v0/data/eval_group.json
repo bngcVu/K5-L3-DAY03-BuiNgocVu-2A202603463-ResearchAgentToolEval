@@ -3,5 +3,107 @@
   "dataset_role": "group",
   "description": "Case do NHÓM tự viết thêm để cover thêm trường hợp. Mỗi case cần: id, phase='B', query HOẶC turns, failure_type (thuộc allowed_failure_types), và expect (tool_calls[...] hoặc no_tool=true). Nên kèm metadata.what_it_tests.",
   "allowed_failure_types": ["wrong_tool", "wrong_arg_value", "wrong_boundary", "unnecessary_tool", "out_of_scope", "missing_info"],
-  "cases": []
+  "cases": [
+    {
+      "id": "G01_internal_policy_privacy",
+      "phase": "B",
+      "query": "Theo chính sách nội bộ, có được đưa API key vào prompt không?",
+      "failure_type": "wrong_tool",
+      "expect": {"tool_calls": [{"name": "policy", "args": {"policy_area": "data_privacy"}}]},
+      "metadata": {"what_it_tests": "Câu hỏi về quy định nội bộ phải dùng policy, không tra cứu web."}
+    },
+    {
+      "id": "G02_find_academic_papers",
+      "phase": "B",
+      "query": "Tìm 3 paper arXiv mới nhất về đánh giá AI agents.",
+      "failure_type": "wrong_tool",
+      "expect": {"tool_calls": [{"name": "papers", "args": {"max_results": 3, "sort_by": "submittedDate"}}]},
+      "metadata": {"what_it_tests": "Tìm paper phải dùng papers, trích số lượng và yêu cầu mới nhất."}
+    },
+    {
+      "id": "G03_read_arxiv_paper",
+      "phase": "B",
+      "query": "Đọc paper arXiv 1706.03762, lấy nội dung 2 trang đầu.",
+      "failure_type": "wrong_tool",
+      "expect": {"tool_calls": [{"name": "paper_text", "args": {"arxiv_url": "1706.03762", "max_pages": 2}}]},
+      "metadata": {"what_it_tests": "Có arXiv ID và yêu cầu đọc paper thì dùng paper_text, không dùng papers hoặc fetch."}
+    },
+    {
+      "id": "G04_non_arxiv_url",
+      "phase": "B",
+      "query": "Tóm tắt trang nghiên cứu này: https://example.org/research",
+      "failure_type": "wrong_tool",
+      "expect": {"tool_calls": [{"name": "fetch", "args": {"url": "https://example.org/research"}}]},
+      "metadata": {"what_it_tests": "URL thường vẫn phải đọc bằng fetch, không nhầm với paper_text."}
+    },
+    {
+      "id": "G05_dedupe_user_supplied_items",
+      "phase": "B",
+      "query": "Bỏ kết quả trùng theo URL trong danh sách này: [{\"title\":\"AI agents\",\"url\":\"https://example.org/agents\"},{\"title\":\"AI agents copy\",\"url\":\"https://example.org/agents\"}]",
+      "failure_type": "wrong_tool",
+      "expect": {"tool_calls": [{"name": "dedupe", "args": {
+        "items": [
+          {"title": "AI agents", "url": "https://example.org/agents"},
+          {"title": "AI agents copy", "url": "https://example.org/agents"}
+        ],
+        "by": "url"
+      }}]},
+      "metadata": {"what_it_tests": "Chỉ dùng dedupe trên danh sách có sẵn; truyền đủ items và so trùng theo URL."}
+    },
+    {
+      "id": "G06_multiturn_policy_area",
+      "phase": "B",
+      "turns": [
+        {"role": "user", "content": "Theo chính sách công ty, quy trình nghiên cứu AI như thế nào?"},
+        {"role": "user", "content": "Cụ thể kiểm tra phần trích dẫn nguồn"}
+      ],
+      "failure_type": "wrong_arg_value",
+      "expect": {"tool_calls": [{"name": "policy", "args": {"policy_area": "source_citation"}}]},
+      "metadata": {"what_it_tests": "Theo ngữ cảnh nhiều lượt, giữ phạm vi policy và chọn đúng policy_area mới nhất."}
+    },
+    {
+      "id": "G07_multiturn_paper_limit_correction",
+      "phase": "B",
+      "turns": [
+        {"role": "user", "content": "Tìm 5 paper về retrieval augmented generation."},
+        {"role": "user", "content": "Sửa lại chỉ lấy 2 paper mới nộp gần đây."}
+      ],
+      "failure_type": "wrong_arg_value",
+      "expect": {"tool_calls": [{"name": "papers", "args": {"max_results": 2, "sort_by": "submittedDate"}}]},
+      "metadata": {"what_it_tests": "Giữ chủ đề paper từ lượt trước và áp dụng số lượng/sắp xếp được sửa ở lượt sau."}
+    },
+    {
+      "id": "G08_multiturn_read_paper_id",
+      "phase": "B",
+      "turns": [
+        {"role": "user", "content": "Mình có paper arXiv 1706.03762."},
+        {"role": "user", "content": "Đọc giúp 3 trang đầu của paper đó."}
+      ],
+      "failure_type": "wrong_arg_value",
+      "expect": {"tool_calls": [{"name": "paper_text", "args": {"arxiv_url": "1706.03762", "max_pages": 3}}]},
+      "metadata": {"what_it_tests": "Giữ arXiv ID từ lượt trước và dùng paper_text khi yêu cầu đọc paper."}
+    },
+    {
+      "id": "G09_multiturn_switch_to_internal_policy",
+      "phase": "B",
+      "turns": [
+        {"role": "user", "content": "Tìm tin tức AI hôm nay trên web."},
+        {"role": "user", "content": "Thôi, bỏ web; kiểm tra chính sách nội bộ về trích dẫn nguồn."}
+      ],
+      "failure_type": "wrong_tool",
+      "expect": {"tool_calls": [{"name": "policy", "args": {"policy_area": "source_citation"}}]},
+      "metadata": {"what_it_tests": "Yêu cầu mới thay nguồn web bằng policy; không gọi lookup thừa."}
+    },
+    {
+      "id": "G10_multiturn_arxiv_read_limit_correction",
+      "phase": "B",
+      "turns": [
+        {"role": "user", "content": "Đọc paper arXiv 1706.03762."},
+        {"role": "user", "content": "Chỉ cần 1 trang đầu thôi."}
+      ],
+      "failure_type": "wrong_arg_value",
+      "expect": {"tool_calls": [{"name": "paper_text", "args": {"arxiv_url": "1706.03762", "max_pages": 1}}]},
+      "metadata": {"what_it_tests": "Duy trì arXiv ID và áp dụng giới hạn trang được bổ sung ở lượt sau."}
+    }
+  ]
 }

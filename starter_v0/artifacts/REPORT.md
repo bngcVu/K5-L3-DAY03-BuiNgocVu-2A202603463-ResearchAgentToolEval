@@ -55,9 +55,9 @@ Nguồn: `artifacts/version_log.csv` và `runs/*.json`. Provider: OpenRouter, mo
 | Version | Changed Artifact | Hypothesis | Metric Before | Metric After | Run File |
 |---|---|---|---:|---:|---|
 | v0 | baseline (starter) | Đo điểm xuất phát; prompt starter cố ý bảo model đoán, gửi ngay, ép một bước | n/a | **0.70** (14/20) | `runs/v0_B_base_openrouter_20261110T102219270260.json` |
-| v1 |  |  |  |  |  |
-| v2 |  |  |  |  |  |
-| v3 |  |  |  |  |  |
+| v1 | `system_prompt.md` | Bỏ chỉ dẫn đoán/gửi ngay/ép một bước; thêm routing và clarify | 0.70 (14/20) | **0.85 (17/20)** | `runs/v1_B_base_openrouter_20261110T111517268942.json` |
+| v2 | `tools.yaml` | Mô tả rõ tool boundary và args để xử lý lỗi còn lại từ v1 | 0.85 (17/20) | **1.00 (20/20)** | `runs/v2_B_base_openrouter_20261110T112601133398.json` |
+| v3 | `system_prompt.md` + `eval_group.json` + comparator trong `run_eval.py` | Bổ sung routing cụ thể cho policy, yêu cầu kết hợp và quy tắc không gọi tool lặp sau refinement | Lượt trước: base 1.00 (20/20), group/extension 0.80 (8/10) | **Base: 1.00 (20/20); group: 1.00 (10/10); extension: 1.00 (10/10)** | `runs/v3_B_base_openrouter_20261110T141234753297.json`; `runs/v3_B_group_openrouter_20261110T141117853106.json`; `runs/v3_B_extension_openrouter_20261110T141142406985.json` |
 
 Chỉ số chi tiết v0: case_accuracy 0.70, tool_routing 0.75, argument 0.70, multiturn 1.00.
 
@@ -82,7 +82,18 @@ List the 10 cases added to `data/eval_group.json` (5 single turn + 5 multi turn)
 
 | Case ID | What It Tests | Expected Tool/Behavior | Result |
 |---|---|---|---|
-|  |  |  |  |
+| G01_internal_policy_privacy | Policy nội bộ, không tra web | `policy(policy_area=data_privacy)` | PASS |
+| G02_find_academic_papers | Paper mới nhất, giữ số lượng/sort | `papers(max_results=3, sort_by=submittedDate)` | PASS |
+| G03_read_arxiv_paper | Đọc paper bằng arXiv ID | `paper_text(arxiv_url=1706.03762, max_pages=2)` | PASS |
+| G04_non_arxiv_url | URL không phải arXiv | `fetch(url=...)` | PASS |
+| G05_dedupe_user_supplied_items | Bỏ trùng danh sách có sẵn | `dedupe(items=..., by=url)` | PASS sau khi sửa comparator eval hỗ trợ list object |
+| G06_multiturn_policy_area | Giữ policy context, chọn area ở lượt mới | `policy(policy_area=source_citation)` | PASS |
+| G07_multiturn_paper_limit_correction | Giữ chủ đề paper, sửa số lượng/sort | `papers(max_results=2, sort_by=submittedDate)` | PASS |
+| G08_multiturn_read_paper_id | Mang arXiv ID qua lượt | `paper_text(arxiv_url=1706.03762, max_pages=3)` | PASS |
+| G09_multiturn_switch_to_internal_policy | Chuyển từ web sang policy, không gọi lookup thừa | `policy(policy_area=source_citation)` | PASS |
+| G10_multiturn_arxiv_read_limit_correction | Giữ ID, cập nhật giới hạn trang | `paper_text(arxiv_url=1706.03762, max_pages=1)` | PASS |
+
+Extension eval sau khi sửa prompt: **10/10**. Các lỗi E01 (policy area quá rộng) và E06 (bỏ sót một tool trong request kết hợp) đều đã pass.
 
 ## B4. Live Chat Evidence
 
@@ -101,7 +112,7 @@ Only fill if your team did bonus.
 | send (Telegram) |  |  |  |
 | arXiv/company policy |  |  |  |
 | UI |  |  |  |
-| Tool unit tests (`tests/`) | `pytest` output |  |  |
+| Tool unit tests (`tests/`) | `pytest -q`: 103 passed, 0 skipped | Hoàn tất test challenge cho tool; eval comparator được kiểm tra với list object | Live eval dùng API cần credentials; unit test chạy offline |
 
 Tool unit tests: số test đã viết, số bug tìm được trong tool có sẵn (nếu có), và một ví dụ lỗi mà unit test bắt được nhưng eval không bắt được.
 
