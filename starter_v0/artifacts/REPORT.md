@@ -8,7 +8,12 @@
 ## Team
 
 - Team: Bùi Ngọc Vũ
-- Members: Bùi Ngọc Vũ
+- Members:
+  - Bùi Ngọc Vũ
+  - Nguyễn Thế Trường
+  - Trần Quốc Tuấn
+  - Nguyễn Nam Khánh
+  - Mai Tuấn Anh
 - Provider/model: OpenRouter, model `openai/gpt-4o-mini`, `temperature=0`
 
 ---
